@@ -14,8 +14,6 @@ An application for students on college campuses to set up personal intermural le
 
 ### How to use the app
 
-### User Stories
-
 ### Code Style
 For the **final project**, you can choose your own code
 style and pull-request workflow.
