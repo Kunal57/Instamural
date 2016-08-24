@@ -2,7 +2,7 @@
 
 An application for students on college campuses to set up personal intermural leagues, giving them the ability to create teams and schedule games.
 
-## Team
+### Team
 
 - Kunal Patel (Kunal57)
 - Amy Plant (plantoteachme)
@@ -10,11 +10,11 @@ An application for students on college campuses to set up personal intermural le
 - John Lindner (Jalindner)
 - Rob Dale (robdevbot)
 
-## How to install the code locally
+### How to install the code locally
 
-## How to use the app
+### How to use the app
 
-## User Stories
+### User Stories
 
 ### Code Style
 For the **final project**, you can choose your own code
