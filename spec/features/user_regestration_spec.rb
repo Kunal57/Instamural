@@ -12,13 +12,17 @@ feature 'create new user' do
   scenario 'create accout' do
     visit '/users/new'
 
-    fill_in 'first_name', with: 'John'
+    fill_in 'user_first_name', with: 'John'
 
-    fill_in'email', with: 'john@doe.com'
+    fill_in 'user_last_name', with: 'John'
 
-    fill_in('password', with: 'password')
+    fill_in'user_email', with: 'john@doe.com'
 
-    click_link('submit')
+    fill_in'user_phone', with: '555-555-5555'
+
+    fill_in 'user_password', with: 'password'
+
+    click_button('Create User')
 
     expect(page).to have_content("Welcome")
   end
