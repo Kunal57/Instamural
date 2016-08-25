@@ -15,8 +15,9 @@
                     </div>
                         <ul>
                         <% team.games.each do |game| %>
-                        <li><%= game.datetime %> <%= game.away_team %> vs <%= game.home_team %></li>
-                        <p>at <%= game.location %></p>
+                          <li><%= game.datetime %> <%= game.away_team %> vs <%= game.home_team %></li>
+                          <p>at <%= game.location %></p>
+                        <% end %>
                       </ul>
                 <% else %>
                   <h4>No games scheduled for <%= team.name %> at this time.</h4>
@@ -32,5 +33,5 @@
 <%= button_to "join a team", teams_path, form_class: "button" %>
 <%= button_to "create a team", new_team_path, form_class: "button" %>
 
-<h2>In all of the games you have played you have won <%= @user.wins</h2>
+<h2>You have won <%= @user.wins %> out of <%= @use.teams.games_played.length %></h2>
 
