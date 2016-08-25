@@ -14,6 +14,10 @@ gem 'coffee-rails', '~> 4.1.0'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
 
+gem 'rails_12factor', group: :production
+gem 'heroku', '~> 3.43', '>= 3.43.9'
+
+
 gem 'faker'
 
 # Use jquery as the JavaScript library
@@ -39,7 +43,7 @@ gem 'aws-sdk', '~> 2'
 
 group :development, :test do
   gem 'rspec-rails', '~> 3.5'
-  gem 'capybara'
+  gem 'capybara', '~> 2.8.0'
   gem 'launchy'
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'

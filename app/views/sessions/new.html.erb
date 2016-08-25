@@ -1,0 +1,13 @@
+
+<h1>Welcome back!</h1>
+
+<%= render '/errors' %>
+
+<%= form_for @user, url: {aciton: "post"} do |f| %>
+  <%= f.label :email %>
+  <%= f.email_field :email %><br>
+  <%= f.label :password %>
+  <%= f.password_field :password %>
+  <%= f.submit 'login' %>
+
+<% end %>
