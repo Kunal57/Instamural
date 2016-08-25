@@ -4,6 +4,8 @@
 
 <p>
 	Created: <%= time_ago_in_words(@sport.created_at) %>
+	| <%= link_to 'Edit', edit_sport_path(@sport) %>
+	| <%= link_to 'Delete', sport_path(@sport), method: :delete, data: { confirm: 'Are you sure?'} %>
 </p>
 
 <p>
