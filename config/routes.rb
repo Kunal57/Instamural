@@ -2,13 +2,12 @@ Rails.application.routes.draw do
 
 
   root "index#index"
-
-  get '/users/new' => 'users#new'
-  post '/users' => 'users#create'
+  resources :users
 
   get '/login' => 'sessions#new'
   post '/login' => 'sessions#create'
   delete '/logout' => 'sessions#destroy'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
@@ -21,6 +20,7 @@ Rails.application.routes.draw do
   # get '/teams' => 'teams#index', as: :team
 
   resources :sports
+  resources :games
 
   # Example of named route that can be invoked with purchase_url(id: product.id)
   #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase

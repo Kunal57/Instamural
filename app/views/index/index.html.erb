@@ -10,6 +10,9 @@
 <div>
 
 
-
-<%= link_to 'sign up', users_new_path %>
+<% if logged_in? %>
+  <%= link_to "find a team", teams_path %>
+<% else %>
+  <%= link_to 'sign up', new_user_path %>
+<% end %>
 </div>

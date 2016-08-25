@@ -7,8 +7,8 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 # Create 10 teams
-10.times do
-  Team.create!(
-    name: Faker::Team.name
-  )
-end
+# 10.times do
+#   Team.create!(
+#     name: Faker::Team.name
+#   )
+# end
