@@ -2169,3 +2169,39 @@ WHERE c.contype = 'f'
   AND t3.nspname = ANY (current_schemas(false))
 ORDER BY c.conname
 
+
+
+Started GET "/users/new" for ::1 at 2016-08-25 08:44:15 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsersController#new as HTML
+  Rendered _errors.html.erb (0.0ms)
+  Rendered users/new.html.erb within layouts/application (9.5ms)
+Completed 200 OK in 37ms (Views: 25.5ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/users/new" for ::1 at 2016-08-25 08:45:09 -0500
+Processing by UsersController#new as HTML
+  Rendered _errors.html.erb (0.0ms)
+  Rendered users/new.html.erb within layouts/application (5.7ms)
+Completed 200 OK in 22ms (Views: 21.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-08-25 08:45:09 -0500
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2016-08-25 08:45:09 -0500
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2016-08-25 08:45:09 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-08-25 08:45:09 -0500
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for ::1 at 2016-08-25 08:45:09 -0500
+
+
+Started GET "/" for ::1 at 2016-08-25 08:45:11 -0500
+Processing by IndexController#index as HTML
+  Rendered index/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 24ms (Views: 23.2ms | ActiveRecord: 0.0ms)
