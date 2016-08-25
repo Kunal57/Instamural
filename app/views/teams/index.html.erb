@@ -1,5 +1,5 @@
 <ul>
   <% @teams.each do |team| %>
-    <li><%= link_to team.name, team %></li>
+    <li><%= link_to team.name, show_team_path(team) %></li>
   <% end %>
 </ul>

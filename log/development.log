@@ -118,3 +118,597 @@ ORDER BY c.conname
   [1m[36m (0.1ms)[0m  [1mBEGIN[0m
   [1m[35mSQL (0.1ms)[0m  INSERT INTO "teams" ("name") VALUES ($1) RETURNING "id"  [["name", "New Jersey horses"]]
   [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+
+
+Started GET "/" for ::1 at 2016-08-25 10:18:11 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by IndexController#index as HTML
+  Rendered index/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 331ms (Views: 322.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for ::1 at 2016-08-25 10:18:14 -0500
+Processing by UsersController#new as HTML
+  Rendered _errors.html.erb (0.5ms)
+  Rendered users/new.html.erb within layouts/application (581.9ms)
+Completed 200 OK in 618ms (Views: 599.5ms | ActiveRecord: 4.2ms)
+
+
+Started POST "/users" for ::1 at 2016-08-25 10:18:45 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"BwvHyma3dmDjskXgVJv/RM1dz6UokFX5oVtQN0DVSpu2MEiRz12ajZkPRAigdrOVsRBQFiWdepPir+AoAJeuHQ==", "user"=>{"first_name"=>"The", "last_name"=>"coolest", "email"=>"person@ever.com", "phone"=>"123456789", "phone_approval"=>"0", "password"=>"[FILTERED]"}, "commit"=>"Create User"}
+Unpermitted parameter: phone_approval
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.8ms)[0m  [1mINSERT INTO "users" ("first_name", "last_name", "email", "phone", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["first_name", "The"], ["last_name", "coolest"], ["email", "person@ever.com"], ["phone", "123456789"], ["password_digest", "$2a$10$8.PjSNEQZAESkW4t2LLk9.ISqJXtAGSTJmsEeFBx8TMoCwHwLaNrq"], ["created_at", "2016-08-25 15:18:46.041820"], ["updated_at", "2016-08-25 15:18:46.041820"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+Redirected to http://localhost:3000/
+Completed 302 Found in 84ms (ActiveRecord: 1.6ms)
+
+
+Started GET "/" for ::1 at 2016-08-25 10:18:46 -0500
+Processing by IndexController#index as HTML
+  Rendered index/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 15ms (Views: 14.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for ::1 at 2016-08-25 10:18:57 -0500
+Processing by SessionsController#new as HTML
+  Rendered _errors.html.erb (0.1ms)
+  Rendered sessions/new.html.erb within layouts/application (6.9ms)
+Completed 200 OK in 27ms (Views: 25.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login?aciton=post" for ::1 at 2016-08-25 10:19:07 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"eruGf/xK8lI/ZTTXDz0DFuh47GLdzVAXpWGEXQanA+7LgAkkVaAev0XYNT/70E/HlDVz0dDAf33mlTRCRuXnaA==", "user"=>{"email"=>"person@ever.com", "password"=>"[FILTERED]"}, "commit"=>"login", "aciton"=>"post"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT 1[0m  [["email", "person@ever.com"]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 88ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2016-08-25 10:19:07 -0500
+Processing by IndexController#index as HTML
+  Rendered index/index.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 15ms (Views: 14.1ms | ActiveRecord: 0.0ms)
+
+
+Started DELETE "/logout" for ::1 at 2016-08-25 10:19:16 -0500
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"+XA4hxW3dX354onPwLBmG5Y/a+Y1WnTAdxV749DRG2NIS7fcvF2ZkINfiCc0XSrK6nL0VThXW6o04cv8kJP/5Q=="}
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-25 10:19:16 -0500
+Processing by IndexController#index as HTML
+  Rendered index/index.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 13ms (Views: 12.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-25 10:33:17 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by IndexController#index as HTML
+  Rendered index/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 354ms (Views: 344.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/teams" for ::1 at 2016-08-25 10:33:32 -0500
+Processing by TeamsController#index as HTML
+  [1m[35mTeam Load (0.6ms)[0m  SELECT "teams".* FROM "teams"
+  Rendered teams/index.html.erb within layouts/application (8.6ms)
+Completed 200 OK in 26ms (Views: 20.8ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/teams.1" for ::1 at 2016-08-25 10:33:38 -0500
+Processing by TeamsController#index as 
+  [1m[36mTeam Load (0.3ms)[0m  [1mSELECT "teams".* FROM "teams"[0m
+  Rendered teams/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 29ms (Views: 27.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/teams.2" for ::1 at 2016-08-25 10:33:41 -0500
+Processing by TeamsController#index as 
+  [1m[35mTeam Load (0.3ms)[0m  SELECT "teams".* FROM "teams"
+  Rendered teams/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 37ms (Views: 35.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/teams.4" for ::1 at 2016-08-25 10:33:44 -0500
+Processing by TeamsController#index as 
+  [1m[36mTeam Load (0.3ms)[0m  [1mSELECT "teams".* FROM "teams"[0m
+  Rendered teams/index.html.erb within layouts/application (11.5ms)
+Completed 200 OK in 48ms (Views: 47.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/teams.5" for ::1 at 2016-08-25 10:33:45 -0500
+Processing by TeamsController#index as 
+  [1m[35mTeam Load (0.4ms)[0m  SELECT "teams".* FROM "teams"
+  Rendered teams/index.html.erb within layouts/application (5.5ms)
+Completed 200 OK in 45ms (Views: 44.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/teams.6" for ::1 at 2016-08-25 10:33:47 -0500
+Processing by TeamsController#index as 
+  [1m[36mTeam Load (0.3ms)[0m  [1mSELECT "teams".* FROM "teams"[0m
+  Rendered teams/index.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 36ms (Views: 35.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/teams.7" for ::1 at 2016-08-25 10:33:47 -0500
+Processing by TeamsController#index as 
+  [1m[35mTeam Load (0.3ms)[0m  SELECT "teams".* FROM "teams"
+  Rendered teams/index.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 28ms (Views: 26.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/teams.8" for ::1 at 2016-08-25 10:33:48 -0500
+Processing by TeamsController#index as 
+  [1m[36mTeam Load (0.3ms)[0m  [1mSELECT "teams".* FROM "teams"[0m
+  Rendered teams/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 26ms (Views: 25.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/teams.9" for ::1 at 2016-08-25 10:33:49 -0500
+Processing by TeamsController#index as 
+  [1m[35mTeam Load (0.3ms)[0m  SELECT "teams".* FROM "teams"
+  Rendered teams/index.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 36ms (Views: 35.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/teams.10" for ::1 at 2016-08-25 10:33:49 -0500
+Processing by TeamsController#index as 
+  [1m[36mTeam Load (0.3ms)[0m  [1mSELECT "teams".* FROM "teams"[0m
+  Rendered teams/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 27ms (Views: 26.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/teams.3" for ::1 at 2016-08-25 10:33:52 -0500
+Processing by TeamsController#index as 
+  [1m[35mTeam Load (0.4ms)[0m  SELECT "teams".* FROM "teams"
+  Rendered teams/index.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 30ms (Views: 28.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/teams.3" for ::1 at 2016-08-25 10:37:10 -0500
+Processing by TeamsController#index as 
+  [1m[36mTeam Load (0.3ms)[0m  [1mSELECT "teams".* FROM "teams"[0m
+  Rendered teams/index.html.erb within layouts/application (19.6ms)
+Completed 500 Internal Server Error in 35ms (ActiveRecord: 2.6ms)
+
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"teams", :format=>"3"} missing required keys: [:id]):
+    1: <ul>
+    2:   <% @teams.each do |team| %>
+    3:     <li><%= link_to team.name, show_team_path %></li>
+    4:   <% end %>
+    5: </ul>
+  app/views/teams/index.html.erb:3:in `block in _app_views_teams_index_html_erb___3434423800856894872_70264475407220'
+  app/views/teams/index.html.erb:2:in `_app_views_teams_index_html_erb___3434423800856894872_70264475407220'
+
+
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (10.2ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.7ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (92.3ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (569.8ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (663.7ms)
+
+
+Started GET "/teams" for ::1 at 2016-08-25 10:38:26 -0500
+Processing by TeamsController#index as HTML
+  [1m[35mTeam Load (0.5ms)[0m  SELECT "teams".* FROM "teams"
+  Rendered teams/index.html.erb within layouts/application (9.8ms)
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 3.1ms)
+
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"teams"} missing required keys: [:id]):
+    1: <ul>
+    2:   <% @teams.each do |team| %>
+    3:     <li><%= link_to team.name, show_team_path %></li>
+    4:   <% end %>
+    5: </ul>
+  app/views/teams/index.html.erb:3:in `block in _app_views_teams_index_html_erb___3434423800856894872_70264478014960'
+  app/views/teams/index.html.erb:2:in `_app_views_teams_index_html_erb___3434423800856894872_70264478014960'
+
+
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (8.1ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.3ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (84.8ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (74.1ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.7ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (163.9ms)
+
+
+Started GET "/teams" for ::1 at 2016-08-25 10:39:35 -0500
+Processing by TeamsController#index as HTML
+  [1m[36mTeam Load (0.3ms)[0m  [1mSELECT "teams".* FROM "teams"[0m
+  Rendered teams/index.html.erb within layouts/application (7.4ms)
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 1.9ms)
+
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"teams"} missing required keys: [:id]):
+    1: <ul>
+    2:   <% @teams.each do |team| %>
+    3:     <li><%= link_to team.name, show_team_path %></li>
+    4:   <% end %>
+    5: </ul>
+  app/views/teams/index.html.erb:3:in `block in _app_views_teams_index_html_erb___3434423800856894872_70264478014960'
+  app/views/teams/index.html.erb:2:in `_app_views_teams_index_html_erb___3434423800856894872_70264478014960'
+
+
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (11.5ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.2ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (91.5ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (72.7ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (163.0ms)
+
+
+Started GET "/teams" for ::1 at 2016-08-25 10:40:38 -0500
+Processing by TeamsController#index as HTML
+  [1m[35mTeam Load (0.3ms)[0m  SELECT "teams".* FROM "teams"
+  Rendered teams/index.html.erb within layouts/application (3.6ms)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.3ms)
+
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"teams", :id=>nil} missing required keys: [:id]):
+    1: <ul>
+    2:   <% @teams.each do |team| %>
+    3:     <li><%= link_to team.name, show_team_path(@team) %></li>
+    4:   <% end %>
+    5: </ul>
+  app/views/teams/index.html.erb:3:in `block in _app_views_teams_index_html_erb___3434423800856894872_70264493648700'
+  app/views/teams/index.html.erb:2:in `_app_views_teams_index_html_erb___3434423800856894872_70264493648700'
+
+
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (9.9ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.8ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (85.3ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (70.7ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (167.2ms)
+
+
+Started GET "/teams" for ::1 at 2016-08-25 10:41:34 -0500
+Processing by TeamsController#index as HTML
+  [1m[36mTeam Load (0.4ms)[0m  [1mSELECT "teams".* FROM "teams"[0m
+  Rendered teams/index.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 20ms (Views: 19.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-08-25 10:41:34 -0500
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for ::1 at 2016-08-25 10:41:34 -0500
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2016-08-25 10:41:34 -0500
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2016-08-25 10:41:34 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-08-25 10:41:34 -0500
+
+
+Started GET "/teams" for ::1 at 2016-08-25 10:41:36 -0500
+Processing by TeamsController#index as HTML
+  [1m[35mTeam Load (0.4ms)[0m  SELECT "teams".* FROM "teams"
+  Rendered teams/index.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 31ms (Views: 29.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/teams" for ::1 at 2016-08-25 10:41:38 -0500
+Processing by TeamsController#index as HTML
+  [1m[36mTeam Load (0.4ms)[0m  [1mSELECT "teams".* FROM "teams"[0m
+  Rendered teams/index.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 28ms (Views: 26.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/teams" for ::1 at 2016-08-25 11:04:27 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by TeamsController#index as HTML
+  [1m[35mTeam Load (0.5ms)[0m  SELECT "teams".* FROM "teams"
+  Rendered teams/index.html.erb within layouts/application (13.5ms)
+Completed 500 Internal Server Error in 35ms (ActiveRecord: 3.3ms)
+
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"teams"} missing required keys: [:id]):
+    1: <ul>
+    2:   <% @teams.each do |team| %>
+    3:     <li><%= link_to team.name, show_team_path%></li>
+    4:   <% end %>
+    5: </ul>
+  app/views/teams/index.html.erb:3:in `block in _app_views_teams_index_html_erb___2789251047843092207_70350377844560'
+  app/views/teams/index.html.erb:2:in `_app_views_teams_index_html_erb___2789251047843092207_70350377844560'
+
+
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (12.1ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.1ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (97.9ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (590.3ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (693.3ms)
+
+
+Started GET "/teams" for ::1 at 2016-08-25 11:04:49 -0500
+Processing by TeamsController#index as HTML
+  [1m[36mTeam Load (0.3ms)[0m  [1mSELECT "teams".* FROM "teams"[0m
+  Rendered teams/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 225ms (Views: 223.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-08-25 11:04:49 -0500
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2016-08-25 11:04:49 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-08-25 11:04:49 -0500
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2016-08-25 11:04:49 -0500
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for ::1 at 2016-08-25 11:04:49 -0500
+
+
+Started GET "/teams" for ::1 at 2016-08-25 11:05:04 -0500
+Processing by TeamsController#index as HTML
+  [1m[35mTeam Load (0.3ms)[0m  SELECT "teams".* FROM "teams"
+  Rendered teams/index.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 17ms (Views: 16.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2016-08-25 11:05:04 -0500
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-08-25 11:05:04 -0500
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2016-08-25 11:05:04 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-08-25 11:05:04 -0500
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for ::1 at 2016-08-25 11:05:04 -0500
+
+
+Started GET "/teams" for ::1 at 2016-08-25 11:05:38 -0500
+Processing by TeamsController#index as HTML
+  [1m[36mTeam Load (0.3ms)[0m  [1mSELECT "teams".* FROM "teams"[0m
+  Rendered teams/index.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 16ms (Views: 15.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-08-25 11:05:38 -0500
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2016-08-25 11:05:38 -0500
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for ::1 at 2016-08-25 11:05:38 -0500
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2016-08-25 11:05:38 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-08-25 11:05:38 -0500
+
+
+Started GET "/" for ::1 at 2016-08-25 11:05:47 -0500
+Processing by IndexController#index as HTML
+  Rendered index/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 44ms (Views: 42.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for ::1 at 2016-08-25 11:05:55 -0500
+Processing by UsersController#new as HTML
+  Rendered _errors.html.erb (0.9ms)
+  Rendered users/new.html.erb within layouts/application (26.7ms)
+Completed 200 OK in 61ms (Views: 42.2ms | ActiveRecord: 1.6ms)
+
+
+Started POST "/users" for ::1 at 2016-08-25 11:06:39 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Zxdl8ZXwlYJY+vIDLBS/snK7dQsdkpiJqGhLTBJ8S1nWLOqqPBp5byJH8+vY+fNjDvbquBCft+PrnPtTUj6v3w==", "user"=>{"first_name"=>"heroku", "last_name"=>"hates", "email"=>"me@fornoreason.com", "phone"=>"2305672213", "phone_approval"=>"0", "password"=>"[FILTERED]"}, "commit"=>"Create User"}
+Unpermitted parameter: phone_approval
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "users" ("first_name", "last_name", "email", "phone", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["first_name", "heroku"], ["last_name", "hates"], ["email", "me@fornoreason.com"], ["phone", "2305672213"], ["password_digest", "$2a$10$92Au9DIcBTsdW/Rr3fC7d.uw3Fq42u4hPeyZ4Bb4SfQH.lxI4DSAu"], ["created_at", "2016-08-25 16:06:39.161358"], ["updated_at", "2016-08-25 16:06:39.161358"]]
+  [1m[35m (0.5ms)[0m  COMMIT
+Redirected to http://localhost:3000/
+Completed 302 Found in 82ms (ActiveRecord: 1.3ms)
+
+
+Started GET "/" for ::1 at 2016-08-25 11:06:39 -0500
+Processing by IndexController#index as HTML
+  Rendered index/index.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 16ms (Views: 15.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for ::1 at 2016-08-25 11:06:42 -0500
+Processing by SessionsController#new as HTML
+  Rendered _errors.html.erb (0.1ms)
+  Rendered sessions/new.html.erb within layouts/application (5.5ms)
+Completed 200 OK in 31ms (Views: 28.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login?aciton=post" for ::1 at 2016-08-25 11:06:55 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"75vENtaoMiPWjikIoAbIAczvOObiqn/ewmAYq9BMigReoEttf0LezqwzKOBU64TQsKKnVe+nULSBlKi0kA5ugg==", "user"=>{"email"=>"me@fornoreason.com", "password"=>"[FILTERED]"}, "commit"=>"login", "aciton"=>"post"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT 1[0m  [["email", "me@fornoreason.com"]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 91ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2016-08-25 11:06:55 -0500
+Processing by IndexController#index as HTML
+  Rendered index/index.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 19ms (Views: 18.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-25 11:07:01 -0500
+Processing by IndexController#index as HTML
+  Rendered index/index.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 26ms (Views: 25.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/teams" for ::1 at 2016-08-25 11:07:05 -0500
+Processing by TeamsController#index as HTML
+  [1m[35mTeam Load (0.3ms)[0m  SELECT "teams".* FROM "teams"
+  Rendered teams/index.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 23ms (Views: 21.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/teams" for ::1 at 2016-08-25 11:07:15 -0500
+Processing by TeamsController#index as HTML
+  [1m[36mTeam Load (0.5ms)[0m  [1mSELECT "teams".* FROM "teams"[0m
+  Rendered teams/index.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 29ms (Views: 28.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/teams" for ::1 at 2016-08-25 11:07:50 -0500
+Processing by TeamsController#index as HTML
+  [1m[35mTeam Load (0.3ms)[0m  SELECT "teams".* FROM "teams"
+  Rendered teams/index.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 36ms (Views: 34.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/teams" for ::1 at 2016-08-25 11:07:51 -0500
+Processing by TeamsController#index as HTML
+  [1m[36mTeam Load (0.4ms)[0m  [1mSELECT "teams".* FROM "teams"[0m
+  Rendered teams/index.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 29ms (Views: 27.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/teams" for ::1 at 2016-08-25 11:08:27 -0500
+Processing by TeamsController#index as HTML
+  [1m[35mTeam Load (0.3ms)[0m  SELECT "teams".* FROM "teams"
+  Rendered teams/index.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 24ms (Views: 22.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/teams" for ::1 at 2016-08-25 11:08:29 -0500
+Processing by TeamsController#index as HTML
+  [1m[36mTeam Load (0.4ms)[0m  [1mSELECT "teams".* FROM "teams"[0m
+  Rendered teams/index.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 32ms (Views: 30.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/teams" for ::1 at 2016-08-25 11:08:30 -0500
+Processing by TeamsController#index as HTML
+  [1m[35mTeam Load (0.3ms)[0m  SELECT "teams".* FROM "teams"
+  Rendered teams/index.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 23ms (Views: 21.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/teams" for ::1 at 2016-08-25 11:08:31 -0500
+Processing by TeamsController#index as HTML
+  [1m[36mTeam Load (0.4ms)[0m  [1mSELECT "teams".* FROM "teams"[0m
+  Rendered teams/index.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 25ms (Views: 24.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/teams" for ::1 at 2016-08-25 11:08:31 -0500
+Processing by TeamsController#index as HTML
+  [1m[35mTeam Load (0.3ms)[0m  SELECT "teams".* FROM "teams"
+  Rendered teams/index.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 23ms (Views: 21.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/teams" for ::1 at 2016-08-25 11:18:27 -0500
+Processing by TeamsController#index as HTML
+  [1m[36mTeam Load (0.3ms)[0m  [1mSELECT "teams".* FROM "teams"[0m
+  Rendered teams/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 21ms (Views: 20.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2016-08-25 11:26:57 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by IndexController#index as HTML
+  Rendered index/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 391ms (Views: 379.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/teams" for ::1 at 2016-08-25 11:27:01 -0500
+Processing by TeamsController#index as HTML
+  [1m[35mTeam Load (0.5ms)[0m  SELECT "teams".* FROM "teams"
+  Rendered teams/index.html.erb within layouts/application (7.8ms)
+Completed 200 OK in 22ms (Views: 17.1ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/teams" for ::1 at 2016-08-25 11:27:02 -0500
+Processing by TeamsController#index as HTML
+  [1m[36mTeam Load (0.4ms)[0m  [1mSELECT "teams".* FROM "teams"[0m
+  Rendered teams/index.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 23ms (Views: 22.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/teams" for ::1 at 2016-08-25 11:27:14 -0500
+Processing by TeamsController#index as HTML
+  [1m[35mTeam Load (0.3ms)[0m  SELECT "teams".* FROM "teams"
+  Rendered teams/index.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 24ms (Views: 22.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/teams" for ::1 at 2016-08-25 11:27:17 -0500
+Processing by TeamsController#index as HTML
+  [1m[36mTeam Load (0.4ms)[0m  [1mSELECT "teams".* FROM "teams"[0m
+  Rendered teams/index.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 25ms (Views: 23.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/teams" for ::1 at 2016-08-25 11:27:35 -0500
+Processing by TeamsController#index as HTML
+  [1m[35mTeam Load (0.3ms)[0m  SELECT "teams".* FROM "teams"
+  Rendered teams/index.html.erb within layouts/application (6.0ms)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.3ms)
+
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"teams"} missing required keys: [:id]):
+    1: <ul>
+    2:   <% @teams.each do |team| %>
+    3:     <li><%= link_to team.name, show_team_path %></li>
+    4:   <% end %>
+    5: </ul>
+  app/views/teams/index.html.erb:3:in `block in _app_views_teams_index_html_erb__1035738089258576809_70131269091760'
+  app/views/teams/index.html.erb:2:in `_app_views_teams_index_html_erb__1035738089258576809_70131269091760'
+
+
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (11.2ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.0ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (87.7ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (572.3ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.9ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (666.9ms)

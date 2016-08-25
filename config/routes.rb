@@ -19,6 +19,7 @@ Rails.application.routes.draw do
   #   get 'products/:id' => 'catalog#view'
   # resources :teams
   get '/teams' => 'teams#index', as: :team
+  get '/teams/:id' => 'teams#show', as: :show_team
 
   resources :sports
 
