@@ -391,3 +391,47 @@ Completed 200 OK in 281ms (Views: 268.5ms | ActiveRecord: 0.3ms)
   [1m[36m (0.5ms)[0m  [1mROLLBACK[0m
   [1m[35m (0.2ms)[0m  BEGIN
   [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (2.0ms)[0m  INSERT INTO "teams" ("name") VALUES ($1) RETURNING "id"  [["name", "name"]]
+  [1m[36m (0.8ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by TeamsController#index as HTML
+  Rendered teams/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 19ms (Views: 19.0ms | ActiveRecord: 0.0ms)
+  [1m[35mTeam Load (0.9ms)[0m  SELECT "teams".* FROM "teams"
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "teams" ("name") VALUES ($1) RETURNING "id"  [["name", "Huskies"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/teams" for 127.0.0.1 at 2016-08-25 08:13:56 -0500
+Processing by TeamsController#index as HTML
+  [1m[35mTeam Load (0.3ms)[0m  SELECT "teams".* FROM "teams"
+  Rendered teams/index.html.erb within layouts/application (24.5ms)
+Completed 500 Internal Server Error in 40ms (ActiveRecord: 0.3ms)
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (1.3ms)[0m  INSERT INTO "teams" ("name") VALUES ($1) RETURNING "id"  [["name", "name"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by TeamsController#index as HTML
+  Rendered teams/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 24ms (Views: 23.8ms | ActiveRecord: 0.0ms)
+  [1m[35mTeam Load (0.4ms)[0m  SELECT "teams".* FROM "teams"
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "teams" ("name") VALUES ($1) RETURNING "id"  [["name", "Huskies"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/teams" for 127.0.0.1 at 2016-08-25 08:14:31 -0500
+Processing by TeamsController#index as HTML
+  [1m[35mTeam Load (0.4ms)[0m  SELECT "teams".* FROM "teams"
+  Rendered teams/index.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 298ms (Views: 283.6ms | ActiveRecord: 0.4ms)
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
