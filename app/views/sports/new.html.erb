@@ -1,0 +1,22 @@
+<h1>Create a New Sport</h1>
+
+<%= form_for :sports, url: sports_path do |f| %>
+	<p>
+		<%= f.label :name %>
+		<%= f.text_field :name %>
+	</p>
+
+	<p>
+		<%= f.label :max_players %>
+		<%= f.number_field :max_players %>
+	</p>
+
+	<p>
+		<%= f.label :min_players %>
+		<%= f.number_field :min_players %>
+	</p>
+
+	<p>
+		<%= f.submit %>
+	</p>
+<% end %>

@@ -1,0 +1,14 @@
+<h1>
+	<%= @sport.name %>
+</h1>
+
+<p>
+	Created: <%= time_ago_in_words(@sport.created_at) %>
+</p>
+
+<p>
+	Max Players: <%= @sport.max_players %>
+</p>
+<p>
+	Min Players: <%= @sport.min_players %>
+</p>

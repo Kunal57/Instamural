@@ -1,0 +1,6 @@
+<h1>All Sports</h1>
+
+<% @sports.each do |sport| %>
+	<h2><%= link_to sport.name, sport %></h2>
+	<p><%= sport.created_at.strftime("%B, %d, %Y") %></p>
+<% end %>
