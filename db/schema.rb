@@ -11,10 +11,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160825143949) do
+ActiveRecord::Schema.define(version: 20160825192427) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "games", force: :cascade do |t|
+    t.integer  "home_team_id"
+    t.integer  "away_team_id"
+    t.integer  "home_team_score"
+    t.integer  "away_team_score"
+    t.datetime "schedule"
+    t.string   "location"
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
+  end
 
   create_table "sports", force: :cascade do |t|
     t.string   "name"
@@ -25,13 +36,7 @@ ActiveRecord::Schema.define(version: 20160825143949) do
   end
 
   create_table "teams", force: :cascade do |t|
-    t.string   "name",        null: false
-    t.integer  "captain_id",  null: false
-    t.integer  "sport_id",    null: false
-    t.string   "mascot_name"
-    t.string   "mascot_url"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.string "name"
   end
 
   create_table "users", force: :cascade do |t|
@@ -39,10 +44,8 @@ ActiveRecord::Schema.define(version: 20160825143949) do
     t.string   "last_name"
     t.string   "email"
     t.string   "phone"
-    t.boolean  "phone_approvel",  default: false
-    t.string   "password_digest"
-    t.datetime "created_at",                      null: false
-    t.datetime "updated_at",                      null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
 end
