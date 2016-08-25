@@ -9,4 +9,8 @@ describe TeamsController do
       expect(assigns(:teams).length).to eq (1)
     end
   end
+
+  describe "TEAMS#create" do
+    
+  end
 end
