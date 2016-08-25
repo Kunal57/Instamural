@@ -5,21 +5,22 @@
         <div id="teams_info">
           <% @user.teams.each do |team| %>
             <h3 id="team_name"><%= team.name %></h3>
-              <% if team.games.length > 0 %>
-                <h4>Upcoming games:</h4>
-                  <div id="captian_new_game">
-                    <% if @user.id == team.captain %>
-                      <%= link_to 'schedule a game', new_game_path %>
-                    <% end %>
-                  </div>
-                      <ul>
-                      <% team.games.each do |game| %>
-                      <li><%= game.datetime %> <%= game.away_team %> vs <%= game.home_team %></li>
-                      <p>at <%= game.location %></p>
-                    </ul>
-              <% else %>
-                <h4>No games scheduled for <%= team.name %> at this time.</h4>
-              <% end %>
+              <p><%= team.record %></p>
+                <% if team.games.length > 0 %>
+                  <h4>Upcoming games:</h4>
+                    <div id="captian_new_game">
+                      <% if @user.id == team.captain_id %>
+                        <%= link_to 'schedule a game', new_game_path %>
+                      <% end %>
+                    </div>
+                        <ul>
+                        <% team.games.each do |game| %>
+                        <li><%= game.datetime %> <%= game.away_team %> vs <%= game.home_team %></li>
+                        <p>at <%= game.location %></p>
+                      </ul>
+                <% else %>
+                  <h4>No games scheduled for <%= team.name %> at this time.</h4>
+                <% end %>
           <% end %>
         </div>
       <% else %>
@@ -30,4 +31,6 @@
 
 <%= button_to "join a team", teams_path, form_class: "button" %>
 <%= button_to "create a team", new_team_path, form_class: "button" %>
+
+<h2>In all of the games you have played you have won <%= @user.wins</h2>
 
