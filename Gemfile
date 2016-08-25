@@ -40,7 +40,7 @@ gem 'bcrypt', '~> 3.1.7'
 
 group :development, :test do
   gem 'rspec-rails', '~> 3.5'
-  gem 'capybara'
+  gem 'capybara', '~> 2.8.0'
   gem 'launchy'
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
