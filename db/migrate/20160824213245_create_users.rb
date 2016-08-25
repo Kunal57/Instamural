@@ -5,6 +5,8 @@ class CreateUsers < ActiveRecord::Migration
       t.string  :last_name
       t.string  :email
       t.string  :phone
+      t.boolean :phone_approvel, default: false
+      t.string  :password_digest
 
       t.timestamps null: false
     end

@@ -1,0 +1,21 @@
+<h1>Get ready to play!</h1>
+
+<div class="errors"> <%= render '/errors' %> </div>
+
+<%= form_for @user, url: { action: "create" } do |f| %>
+  <%= f.label :first_name %>
+  <%= f.text_field :first_name %>
+  <%= f.label :last_name %>
+  <%= f.text_field :last_name %>
+  <%= f.label :email %>
+  <%= f.email_field :email %>
+  <%= f.label :phone %>
+  <%= f.text_field :phone %>
+  <%= f.label :SMS? %>
+  <%= f.check_box :phone_approvel %>
+  <%= f.label :password %>
+  <%= f.password_field :password %>
+  <%= f.submit %>
+<% end %>
+
+
