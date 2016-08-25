@@ -1,0 +1,23 @@
+<%= form_for @game do |f| %>
+	<% if @game.errors.any? %>
+		<h2><%= pluralize(@game.errors.count, "error") %> prevented this post from saving.</h2>
+		<ul>
+			<% @game.errors.full_messages.each do |message| %>
+				<li><%= message %></li>
+			<% end %>
+		</ul>
+	<% end %>
+	<p>
+		<%= f.label :location %>
+		<%= f.text_field :location %>
+	</p>
+
+	<p>
+		<%= f.label :datetime %>
+		<%= f.text_field :schedule %>
+	</p>
+
+	<p>
+		<%= f.submit %>
+	</p>
+<% end %>
