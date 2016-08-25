@@ -12,7 +12,7 @@
       <ul>
         <% if logged_in? %>
           <li><%= link_to 'logout', logout_path, method: 'delete' %></li>
-          <li><%= link_to(session[:user_id].first_name, user_path(user)) %></li>
+          <li><%= link_to(current_user.first_name, user_path(current_user)) %></li>
         <% else %>
           <li><%= link_to 'create account', new_user_path %></li>
           <li><%= link_to 'login', login_path %></li>
