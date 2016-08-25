@@ -1,3 +1,4 @@
+<<<<<<< HEAD
   [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
   [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
   [1m[36m (2.3ms)[0m  [1mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
@@ -24183,3 +24184,5 @@ Processing by GamesController#index as HTML
   Rendered games/index.html.erb within layouts/application (1.3ms)
   [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
 Completed 200 OK in 29ms (Views: 26.9ms | ActiveRecord: 0.7ms)
+=======
+>>>>>>> master

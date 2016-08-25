@@ -1,7 +1,7 @@
 require "rails_helper"
 
 describe User do
-  let(:user) {User.new(first_name: 'john', last_name: 'doe', email: 'john@john.com', phone: '555-555-5555', phone_approvel: true, password: 'helloworld')}
+  let(:user) {User.new(first_name: 'john', last_name: 'doe', email: 'john@john.com', phone: '555-555-5555', phone_approval: true, password: 'helloworld')}
   describe "create a new user" do
     it 'has a first_name' do
       expect(user.first_name).to eq('john')
