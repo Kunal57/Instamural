@@ -38,9 +38,11 @@ GEM
       tzinfo (~> 1.1)
     addressable (2.4.0)
     arel (6.0.3)
+    bcrypt (3.1.11)
     binding_of_caller (0.7.2)
       debug_inspector (>= 0.0.1)
     builder (3.2.2)
+    byebug (9.0.5)
     capybara (2.8.0)
       addressable
       mime-types (>= 1.16)
@@ -198,10 +200,18 @@ GEM
       nokogiri (~> 1.3)
 
 PLATFORMS
+  coffee-unknown
+  jquery-unknown
+  rspec-unknown
   ruby
+  sass-unknown
+  unknown
+  web-unknown
 
 DEPENDENCIES
-  capybara
+  bcrypt (~> 3.1.7)
+  byebug
+  capybara (~> 2.8.0)
   coffee-rails (~> 4.1.0)
   faker
   heroku (~> 3.43, >= 3.43.9)
