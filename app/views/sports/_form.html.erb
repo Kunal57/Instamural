@@ -1,0 +1,28 @@
+<%= form_for @sport do |f| %>
+	<% if @sport.errors.any? %>
+		<h2><%= pluralize(@sport.errors.count, "error") %> prevented this post from saving.</h2>
+		<ul>
+			<% @sport.errors.full_messages.each do |message| %>
+				<li><%= message %></li>
+			<% end %>
+		</ul>
+	<% end %>
+	<p>
+		<%= f.label :name %>
+		<%= f.text_field :name %>
+	</p>
+
+	<p>
+		<%= f.label :max_players %>
+		<%= f.number_field :max_players %>
+	</p>
+
+	<p>
+		<%= f.label :min_players %>
+		<%= f.number_field :min_players %>
+	</p>
+
+	<p>
+		<%= f.submit %>
+	</p>
+<% end %>
