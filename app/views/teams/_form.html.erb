@@ -1,7 +1,36 @@
 <%= form_for @team do |f| %>
-  <%= f.label :name %>:
-  <%= f.text_field :name %>
+	<% if @team.errors.any? %>
+		<h2><%= pluralize(@team.errors.count, "error") %> prevented this post from saving.</h2>
+		<ul>
+			<% @team.errors.full_messages.each do |message| %>
+				<li><%= message %></li>
+			<% end %>
+		</ul>
+	<% end %>
+  <p>
+    <%= f.label :sport %>
+    <%= f.collection_select(:sport_id, Sport.all, :id, :name, :prompt => 'Select') %>
+    <%= link_to 'add a sport', new_sport_path  %>
+  </p>
+	<p>
+		<%= f.label :name %>
+		<%= f.text_field :name %>
+	</p>
+
+	<p>
+		<%= f.label :mascot_name %>
+		<%= f.text_field :mascot_name %>
+	</p>
 
 
-  <%= f.submit %>
+
+  </p>
+  <p>
+		<%= f.label :mascot_url %>
+		<%= f.text_field :mascot_url %>
+	</p>
+
+	<p>
+		<%= f.submit %>
+	</p>
 <% end %>

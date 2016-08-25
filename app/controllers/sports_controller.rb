@@ -11,7 +11,7 @@ class SportsController < ApplicationController
 		@sport = Sport.new(post_params)
 
 		if @sport.save
-			redirect_to @sport
+			redirect_to new_team_path
 		else
 			render 'new'
 		end
