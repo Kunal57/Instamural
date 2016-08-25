@@ -25,7 +25,7 @@ ActiveRecord::Schema.define(version: 20160825020129) do
     t.string   "last_name"
     t.string   "email"
     t.string   "phone"
-    t.boolean  "phone_approvel",  default: false
+    t.boolean  "phone_approval",  default: false
     t.string   "password_digest"
     t.datetime "created_at",                      null: false
     t.datetime "updated_at",                      null: false
