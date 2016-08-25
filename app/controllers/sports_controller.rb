@@ -46,7 +46,7 @@ class SportsController < ApplicationController
 	private
 
 		def post_params
-			params.require(:sports).permit(:name, :max_players, :min_players)
+			params.require(:sport).permit(:name, :max_players, :min_players)
 		end
 
 end
