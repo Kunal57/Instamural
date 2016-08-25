@@ -15,8 +15,9 @@
                     </div>
                         <ul>
                         <% team.games.each do |game| %>
-                        <li><%= game.datetime %> <%= game.away_team %> vs <%= game.home_team %></li>
-                        <p>at <%= game.location %></p>
+                          <li><%= game.datetime %> <%= game.away_team %> vs <%= game.home_team %></li>
+                          <p>at <%= game.location %></p>
+                        <% end %>
                       </ul>
                 <% else %>
                   <h4>No games scheduled for <%= team.name %> at this time.</h4>
