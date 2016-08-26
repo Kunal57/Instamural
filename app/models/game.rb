@@ -1,12 +1,8 @@
 class Game < ActiveRecord::Base
-	has_many :attendance
-	belongs_to :home_team, class_name: Team
-	belongs_to :away_team, class_name: Team
-
-
+	belongs_to :home_team, class_name: :Team
+	belongs_to :away_team, class_name: :Team
+	has_many :players, class_name: :User, foreign_key: :player_id
 	has_one :sport, through: :home_team
-
-	has_many :players, through: :attendance
 
 	validates :location, presence: true
 	validates :schedule, presence: true
