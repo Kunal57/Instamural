@@ -23,5 +23,15 @@ class User < ActiveRecord::Base
     games
   end
 
+  def player_games_played
+    games_played = []
+    self.games.each do |game|
+      if game.played?
+        games_played << game
+      end
+    end
+    return games_played
+  end
+
 
 end
