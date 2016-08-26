@@ -1,10 +1,41 @@
 <div>
   <span><%= @team.name %>: <%= @team.sport.name %></span>
-  <ul>
-    <%# @team.games.each do |game| %>
-      <li>
-        <span><%#= %></span>
-      </li>
+  <!-- Need Game model done to calculate -->
+  <span>Games Won: <%#=  %></span>
+  <div>
+    <!-- Need Roster done to calculate -->
+    <%# if @team.full? %>
+      <span>This Team is Full</span>
+    <%# else %>
+      <span><a href="">Apply For the Team!</a></span>
     <%# end %>
+  </div>
+
+  <p>Upcoming Games:</p>
+  <!-- Need Game model finished up to calculate -->
+  <ul>
+    <% @games.each do |game| %>
+      <li>
+        <% home = Team.find_by(id: game.home_team_id) %>
+        <% away = Team.find_by(id: game.away_team_id) %>
+        <span>-<%= home.name %> vs <%= away.name %></span>
+        <span>-at: <%= game.location %></span>
+        <span>-when: <%= game.schedule %></span>
+      </li>
+    <% end %>
+  </ul>
+
+  <p>Games Played:</p>
+  <!-- Need Game model finished up to calculate -->
+  <ul>
+    <% @games.each do |game| %>
+      <li>
+        <% home = Team.find_by(id: game.home_team_id) %>
+        <% away = Team.find_by(id: game.away_team_id) %>
+        <span>-<%= home.name %> vs <%= away.name %></span>
+        <span>-at: <%= game.location %></span>
+        <span>-when: <%= game.schedule %></span>
+      </li>
+    <% end %>
   </ul>
 </div>
