@@ -1,3 +1,1620 @@
+<<<<<<< HEAD
+
+
+Started GET "/games/new" for ::1 at 2016-08-26 13:26:54 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by GamesController#new as HTML
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered games/_header.html.erb (43.2ms)
+  [1m[36mTeam Load (2.5ms)[0m  [1mSELECT "teams".* FROM "teams"[0m
+  Rendered games/_form.html.erb (47.0ms)
+  Rendered _nav_secondary.html.erb (1.0ms)
+  Rendered games/new.html.erb within layouts/application (112.1ms)
+Completed 200 OK in 877ms (Views: 785.9ms | ActiveRecord: 18.1ms)
+
+
+Started GET "/assets/application.self-66996597171ad2c972472e1232057eebe0bc1b4a5a65851fc3f71b9f3280950a.css?body=1" for ::1 at 2016-08-26 13:26:55 -0500
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2016-08-26 13:26:55 -0500
+
+
+Started GET "/assets/carousel.css" for ::1 at 2016-08-26 13:26:55 -0500
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2016-08-26 13:26:55 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-08-26 13:26:55 -0500
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for ::1 at 2016-08-26 13:26:55 -0500
+
+
+Started GET "/assets/teams" for ::1 at 2016-08-26 13:26:56 -0500
+
+
+Started GET "/assets/games" for ::1 at 2016-08-26 13:26:56 -0500
+
+
+Started GET "/assets/sports" for ::1 at 2016-08-26 13:26:56 -0500
+
+
+Started GET "/games/new" for ::1 at 2016-08-26 13:29:18 -0500
+Processing by GamesController#new as HTML
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered games/_header.html.erb (1.3ms)
+  [1m[36mTeam Load (0.4ms)[0m  [1mSELECT "teams".* FROM "teams"[0m
+  Rendered games/_form.html.erb (3.7ms)
+  Rendered _nav_secondary.html.erb (0.2ms)
+  Rendered games/new.html.erb within layouts/application (12.2ms)
+Completed 200 OK in 41ms (Views: 39.4ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/application.self-66996597171ad2c972472e1232057eebe0bc1b4a5a65851fc3f71b9f3280950a.css?body=1" for ::1 at 2016-08-26 13:29:18 -0500
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2016-08-26 13:29:18 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-08-26 13:29:18 -0500
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2016-08-26 13:29:18 -0500
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for ::1 at 2016-08-26 13:29:18 -0500
+
+
+Started GET "/assets/carousel.css" for ::1 at 2016-08-26 13:29:18 -0500
+
+
+Started GET "/assets/teams" for ::1 at 2016-08-26 13:29:18 -0500
+
+
+Started GET "/assets/games" for ::1 at 2016-08-26 13:29:18 -0500
+
+
+Started GET "/assets/sports" for ::1 at 2016-08-26 13:29:18 -0500
+
+
+Started GET "/games/new" for ::1 at 2016-08-26 13:29:57 -0500
+Processing by GamesController#new as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered games/_header.html.erb (1.0ms)
+  [1m[36mTeam Load (0.3ms)[0m  [1mSELECT "teams".* FROM "teams"[0m
+  Rendered games/_form.html.erb (3.5ms)
+  Rendered _nav_secondary.html.erb (0.2ms)
+  Rendered games/new.html.erb within layouts/application (10.7ms)
+Completed 200 OK in 34ms (Views: 32.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/application.self-66996597171ad2c972472e1232057eebe0bc1b4a5a65851fc3f71b9f3280950a.css?body=1" for ::1 at 2016-08-26 13:29:58 -0500
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2016-08-26 13:29:58 -0500
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2016-08-26 13:29:58 -0500
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for ::1 at 2016-08-26 13:29:58 -0500
+
+
+Started GET "/assets/carousel.css" for ::1 at 2016-08-26 13:29:58 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-08-26 13:29:58 -0500
+
+
+Started GET "/assets/teams" for ::1 at 2016-08-26 13:29:58 -0500
+
+
+Started GET "/assets/games" for ::1 at 2016-08-26 13:29:58 -0500
+
+
+Started GET "/assets/sports" for ::1 at 2016-08-26 13:29:58 -0500
+
+
+Started GET "/games/new" for ::1 at 2016-08-26 13:30:03 -0500
+Processing by GamesController#new as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered games/_header.html.erb (1.1ms)
+  [1m[36mTeam Load (0.5ms)[0m  [1mSELECT "teams".* FROM "teams"[0m
+  Rendered games/_form.html.erb (4.0ms)
+  Rendered _nav_secondary.html.erb (0.2ms)
+  Rendered games/new.html.erb within layouts/application (11.2ms)
+Completed 200 OK in 30ms (Views: 28.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/application.self-66996597171ad2c972472e1232057eebe0bc1b4a5a65851fc3f71b9f3280950a.css?body=1" for ::1 at 2016-08-26 13:30:03 -0500
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2016-08-26 13:30:03 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-08-26 13:30:03 -0500
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2016-08-26 13:30:03 -0500
+
+
+Started GET "/assets/carousel.css" for ::1 at 2016-08-26 13:30:03 -0500
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for ::1 at 2016-08-26 13:30:03 -0500
+
+
+Started GET "/assets/teams" for ::1 at 2016-08-26 13:30:03 -0500
+
+
+Started GET "/assets/games" for ::1 at 2016-08-26 13:30:03 -0500
+
+
+Started GET "/assets/sports" for ::1 at 2016-08-26 13:30:03 -0500
+
+
+Started GET "/games/new" for ::1 at 2016-08-26 13:30:49 -0500
+Processing by GamesController#new as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered games/_header.html.erb (1.1ms)
+  [1m[36mTeam Load (0.4ms)[0m  [1mSELECT "teams".* FROM "teams"[0m
+  Rendered games/_form.html.erb (4.3ms)
+  Rendered _nav_secondary.html.erb (0.1ms)
+  Rendered games/new.html.erb within layouts/application (11.3ms)
+Completed 200 OK in 38ms (Views: 36.4ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/application.self-66996597171ad2c972472e1232057eebe0bc1b4a5a65851fc3f71b9f3280950a.css?body=1" for ::1 at 2016-08-26 13:30:49 -0500
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2016-08-26 13:30:49 -0500
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2016-08-26 13:30:49 -0500
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for ::1 at 2016-08-26 13:30:49 -0500
+
+
+Started GET "/assets/carousel.css" for ::1 at 2016-08-26 13:30:49 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-08-26 13:30:49 -0500
+
+
+Started GET "/assets/teams" for ::1 at 2016-08-26 13:30:49 -0500
+
+
+Started GET "/assets/games" for ::1 at 2016-08-26 13:30:49 -0500
+
+
+Started GET "/assets/sports" for ::1 at 2016-08-26 13:30:49 -0500
+
+
+Started GET "/games/new" for ::1 at 2016-08-26 13:31:24 -0500
+Processing by GamesController#new as HTML
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered games/_header.html.erb (1.1ms)
+  [1m[36mTeam Load (0.5ms)[0m  [1mSELECT "teams".* FROM "teams"[0m
+  Rendered games/_form.html.erb (4.2ms)
+  Rendered _nav_secondary.html.erb (0.4ms)
+  Rendered games/new.html.erb within layouts/application (11.8ms)
+Completed 200 OK in 34ms (Views: 32.5ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/application.self-66996597171ad2c972472e1232057eebe0bc1b4a5a65851fc3f71b9f3280950a.css?body=1" for ::1 at 2016-08-26 13:31:24 -0500
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2016-08-26 13:31:24 -0500
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2016-08-26 13:31:24 -0500
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for ::1 at 2016-08-26 13:31:24 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-08-26 13:31:24 -0500
+
+
+Started GET "/assets/carousel.css" for ::1 at 2016-08-26 13:31:24 -0500
+
+
+Started GET "/assets/teams" for ::1 at 2016-08-26 13:31:25 -0500
+
+
+Started GET "/assets/games" for ::1 at 2016-08-26 13:31:25 -0500
+
+
+Started GET "/assets/sports" for ::1 at 2016-08-26 13:31:25 -0500
+
+
+Started POST "/games" for ::1 at 2016-08-26 13:31:36 -0500
+Processing by GamesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"26W2aHF7ykBYbDh4x3nqBXDQ3MVUfy5tDCX/BX2pLgGiHdKQT2362xPlN9rJ0fHOD2xovJj3KlQEj88Ls8Tf8g==", "game"=>{"home_team_id"=>"1", "location"=>"DBC"}, "schedule"=>"08/31/2016", "commit"=>"Submit"}
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered games/_header.html.erb (0.9ms)
+  [1m[36mTeam Load (0.4ms)[0m  [1mSELECT "teams".* FROM "teams"[0m
+  Rendered games/_form.html.erb (3.0ms)
+  Rendered _nav_secondary.html.erb (0.2ms)
+  Rendered games/new.html.erb within layouts/application (9.0ms)
+Completed 200 OK in 467ms (Views: 24.5ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/carousel.css" for ::1 at 2016-08-26 13:31:37 -0500
+
+
+Started GET "/assets/teams" for ::1 at 2016-08-26 13:31:37 -0500
+
+
+Started GET "/assets/games" for ::1 at 2016-08-26 13:31:37 -0500
+
+
+Started GET "/assets/sports" for ::1 at 2016-08-26 13:31:37 -0500
+
+
+Started GET "/games" for ::1 at 2016-08-26 13:41:30 -0500
+Processing by GamesController#index as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered games/_header.html.erb (1.1ms)
+  [1m[36mGame Load (1.3ms)[0m  [1mSELECT "games".* FROM "games"  ORDER BY created_at ASC[0m
+  [1m[35mSport Load (0.7ms)[0m  SELECT  "sports".* FROM "sports" INNER JOIN "teams" ON "sports"."id" = "teams"."sport_id" WHERE "teams"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mTeam Load (0.3ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mTeam Load (3.4ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT 1  [["id", 2]]
+  Rendered games/index.html.erb within layouts/application (109.6ms)
+Completed 500 Internal Server Error in 116ms (ActiveRecord: 8.0ms)
+
+ActionView::Template::Error (undefined local variable or method `away_team' for #<#<Class:0x007ffa81d4a0c0>:0x007ffa84d48038>):
+    11: 			<%= link_to game.home_team.name, game.home_team %>
+    12: 			vs.
+    13: 			<% if game.away_team != nil %>
+    14: 				<%= link_to game.away_team.name, away_team %>
+    15: 			<% else %>
+    16: 				TBD
+    17: 			<% end %>
+  app/views/games/index.html.erb:14:in `block in _app_views_games_index_html_erb__2018961174470221588_70356947555360'
+  app/views/games/index.html.erb:9:in `_app_views_games_index_html_erb__2018961174470221588_70356947555360'
+
+
+  Rendered /Users/amyplant/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (17.0ms)
+  Rendered /Users/amyplant/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.6ms)
+  Rendered /Users/amyplant/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /Users/amyplant/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (75.5ms)
+  Rendered /Users/amyplant/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Users/amyplant/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/amyplant/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/amyplant/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.7ms)
+  Rendered /Users/amyplant/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (88.8ms)
+  Rendered /Users/amyplant/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/amyplant/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/amyplant/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (164.3ms)
+
+
+Started GET "/games/new" for ::1 at 2016-08-26 13:41:38 -0500
+Processing by GamesController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered games/_header.html.erb (0.9ms)
+  [1m[35mTeam Load (0.4ms)[0m  SELECT "teams".* FROM "teams"
+  Rendered games/_form.html.erb (25.2ms)
+  Rendered games/new.html.erb within layouts/application (30.4ms)
+Completed 500 Internal Server Error in 40ms (ActiveRecord: 0.6ms)
+
+ActionView::Template::Error (undefined method `input' for #<ActionView::Helpers::FormBuilder:0x007ffa85dbc810>):
+    29: 		<div class="col-md-4">
+    30: 			<input class="form-control" id="date" name="schedule" placeholder="MM/DD/YYY" type="text"/>
+    31: 
+    32: 			<%= f.input :schedule, :input_html => { :value => "Email", :class => "form-control", placeholder: "MM/DD/YYYY" } %>
+    33: 
+    34: 		</div>
+    35: 	</div>
+  app/views/games/_form.html.erb:32:in `block in _app_views_games__form_html_erb__2303526605632639355_70356982208340'
+  app/views/games/_form.html.erb:1:in `_app_views_games__form_html_erb__2303526605632639355_70356982208340'
+  app/views/games/new.html.erb:6:in `_app_views_games_new_html_erb___16024016900066514_70356950872140'
+
+
+  Rendered /Users/amyplant/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (14.7ms)
+  Rendered /Users/amyplant/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.1ms)
+  Rendered /Users/amyplant/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/amyplant/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (70.3ms)
+  Rendered /Users/amyplant/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.8ms)
+  Rendered /Users/amyplant/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/amyplant/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/amyplant/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/amyplant/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (56.2ms)
+  Rendered /Users/amyplant/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/amyplant/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/amyplant/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (114.9ms)
+
+
+Started GET "/games/new" for ::1 at 2016-08-26 13:41:44 -0500
+Processing by GamesController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered games/_header.html.erb (1.3ms)
+  [1m[35mTeam Load (0.5ms)[0m  SELECT "teams".* FROM "teams"
+  Rendered games/_form.html.erb (23.2ms)
+  Rendered games/new.html.erb within layouts/application (28.0ms)
+Completed 500 Internal Server Error in 34ms (ActiveRecord: 0.7ms)
+
+ActionView::Template::Error (undefined method `input' for #<ActionView::Helpers::FormBuilder:0x007ffa8495c3e8>):
+    29: 		<div class="col-md-4">
+    30: 			<input class="form-control" id="date" name="schedule" placeholder="MM/DD/YYY" type="text"/>
+    31: 
+    32: 			<%= f.input :schedule, :input_html => { :value => "Email", :class => "form-control", placeholder: "MM/DD/YYYY" } %>
+    33: 
+    34: 		</div>
+    35: 	</div>
+  app/views/games/_form.html.erb:32:in `block in _app_views_games__form_html_erb__2303526605632639355_70356982208340'
+  app/views/games/_form.html.erb:1:in `_app_views_games__form_html_erb__2303526605632639355_70356982208340'
+  app/views/games/new.html.erb:6:in `_app_views_games_new_html_erb___16024016900066514_70356950872140'
+
+
+  Rendered /Users/amyplant/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.3ms)
+  Rendered /Users/amyplant/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.1ms)
+  Rendered /Users/amyplant/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/amyplant/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (59.6ms)
+  Rendered /Users/amyplant/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/amyplant/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/amyplant/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/amyplant/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/amyplant/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (47.5ms)
+  Rendered /Users/amyplant/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/amyplant/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.7ms)
+  Rendered /Users/amyplant/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (102.6ms)
+
+
+Started GET "/games/new" for ::1 at 2016-08-26 13:42:01 -0500
+Processing by GamesController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered games/_header.html.erb (0.8ms)
+  [1m[35mTeam Load (0.4ms)[0m  SELECT "teams".* FROM "teams"
+  Rendered games/_form.html.erb (2.9ms)
+  Rendered _nav_secondary.html.erb (0.2ms)
+  Rendered games/new.html.erb within layouts/application (11.7ms)
+Completed 200 OK in 35ms (Views: 33.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/application.self-66996597171ad2c972472e1232057eebe0bc1b4a5a65851fc3f71b9f3280950a.css?body=1" for ::1 at 2016-08-26 13:42:01 -0500
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2016-08-26 13:42:01 -0500
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for ::1 at 2016-08-26 13:42:01 -0500
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2016-08-26 13:42:01 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-08-26 13:42:01 -0500
+
+
+Started GET "/assets/carousel.css" for ::1 at 2016-08-26 13:42:01 -0500
+
+
+Started GET "/assets/teams" for ::1 at 2016-08-26 13:42:01 -0500
+
+
+Started GET "/assets/games" for ::1 at 2016-08-26 13:42:01 -0500
+
+
+Started GET "/assets/sports" for ::1 at 2016-08-26 13:42:01 -0500
+
+
+Started GET "/games/new" for ::1 at 2016-08-26 13:42:24 -0500
+Processing by GamesController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered games/_header.html.erb (1.1ms)
+  [1m[35mTeam Load (0.4ms)[0m  SELECT "teams".* FROM "teams"
+  Rendered games/_form.html.erb (3.3ms)
+  Rendered _nav_secondary.html.erb (0.2ms)
+  Rendered games/new.html.erb within layouts/application (10.1ms)
+Completed 200 OK in 26ms (Views: 24.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/application.self-66996597171ad2c972472e1232057eebe0bc1b4a5a65851fc3f71b9f3280950a.css?body=1" for ::1 at 2016-08-26 13:42:24 -0500
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2016-08-26 13:42:24 -0500
+
+
+Started GET "/assets/carousel.css" for ::1 at 2016-08-26 13:42:24 -0500
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for ::1 at 2016-08-26 13:42:24 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-08-26 13:42:24 -0500
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2016-08-26 13:42:24 -0500
+
+
+Started GET "/assets/teams" for ::1 at 2016-08-26 13:42:24 -0500
+
+
+Started GET "/assets/games" for ::1 at 2016-08-26 13:42:24 -0500
+
+
+Started GET "/assets/sports" for ::1 at 2016-08-26 13:42:24 -0500
+
+
+Started GET "/games/new" for ::1 at 2016-08-26 13:44:18 -0500
+Processing by GamesController#new as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered games/_header.html.erb (1.2ms)
+  [1m[35mTeam Load (0.5ms)[0m  SELECT "teams".* FROM "teams"
+  Rendered games/_form.html.erb (3.0ms)
+  Rendered _nav_secondary.html.erb (0.2ms)
+  Rendered games/new.html.erb within layouts/application (11.5ms)
+Completed 200 OK in 33ms (Views: 31.7ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/application.self-66996597171ad2c972472e1232057eebe0bc1b4a5a65851fc3f71b9f3280950a.css?body=1" for ::1 at 2016-08-26 13:44:18 -0500
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2016-08-26 13:44:18 -0500
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2016-08-26 13:44:18 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-08-26 13:44:18 -0500
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for ::1 at 2016-08-26 13:44:18 -0500
+
+
+Started GET "/assets/carousel.css" for ::1 at 2016-08-26 13:44:18 -0500
+
+
+Started GET "/assets/teams" for ::1 at 2016-08-26 13:44:18 -0500
+
+
+Started GET "/assets/games" for ::1 at 2016-08-26 13:44:18 -0500
+
+
+Started GET "/assets/sports" for ::1 at 2016-08-26 13:44:18 -0500
+
+
+Started POST "/games" for ::1 at 2016-08-26 13:44:27 -0500
+Processing by GamesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"SHz3qW9gfL38+rYkp8GsHHwGDMLuWw0oBp6rTRJ+gkExxJNRUXZMJrdzuYapabfXA7q4uyLTCREONJtD3BNzsg==", "game"=>{"home_team_id"=>"1", "location"=>"DBC"}, "schedule"=>"08/31/2016", "commit"=>"Submit"}
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered games/_header.html.erb (1.1ms)
+  [1m[35mTeam Load (0.4ms)[0m  SELECT "teams".* FROM "teams"
+  Rendered games/_form.html.erb (3.0ms)
+  Rendered _nav_secondary.html.erb (0.1ms)
+  Rendered games/new.html.erb within layouts/application (10.6ms)
+Completed 200 OK in 33ms (Views: 29.3ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/carousel.css" for ::1 at 2016-08-26 13:44:27 -0500
+
+
+Started GET "/assets/teams" for ::1 at 2016-08-26 13:44:27 -0500
+
+
+Started GET "/assets/games" for ::1 at 2016-08-26 13:44:27 -0500
+
+
+Started GET "/assets/sports" for ::1 at 2016-08-26 13:44:27 -0500
+
+
+Started POST "/games" for ::1 at 2016-08-26 13:44:58 -0500
+Processing by GamesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"CaAyrqdTg6h7KhaNBQSbGkC2ZyoyBburWNB6CR7LE0RwGFZWmUWzMzCjGS8LrIDRPwrTU/6Nv5JQekoH0Kbitw==", "game"=>{"home_team_id"=>"1", "location"=>"DBC"}, "schedule"=>"08/30/2016", "commit"=>"Submit"}
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered games/_header.html.erb (15.2ms)
+  [1m[35mTeam Load (0.4ms)[0m  SELECT "teams".* FROM "teams"
+  Rendered games/_form.html.erb (8.7ms)
+  Rendered _nav_secondary.html.erb (0.1ms)
+  Rendered games/new.html.erb within layouts/application (30.2ms)
+Completed 200 OK in 71ms (Views: 46.0ms | ActiveRecord: 7.0ms)
+
+
+Started GET "/assets/carousel.css" for ::1 at 2016-08-26 13:44:59 -0500
+
+
+Started GET "/assets/teams" for ::1 at 2016-08-26 13:44:59 -0500
+
+
+Started GET "/assets/games" for ::1 at 2016-08-26 13:44:59 -0500
+
+
+Started GET "/assets/sports" for ::1 at 2016-08-26 13:44:59 -0500
+
+
+Started GET "/games/new" for ::1 at 2016-08-26 13:46:11 -0500
+Processing by GamesController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered games/_header.html.erb (0.8ms)
+  [1m[35mTeam Load (0.3ms)[0m  SELECT "teams".* FROM "teams"
+  Rendered games/_form.html.erb (2.9ms)
+  Rendered _nav_secondary.html.erb (0.2ms)
+  Rendered games/new.html.erb within layouts/application (9.7ms)
+Completed 200 OK in 35ms (Views: 33.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/carousel.css" for ::1 at 2016-08-26 13:46:11 -0500
+
+
+Started GET "/assets/teams" for ::1 at 2016-08-26 13:46:11 -0500
+
+
+Started GET "/assets/games" for ::1 at 2016-08-26 13:46:11 -0500
+
+
+Started GET "/assets/sports" for ::1 at 2016-08-26 13:46:11 -0500
+
+
+Started POST "/games" for ::1 at 2016-08-26 13:46:17 -0500
+Processing by GamesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"YnvYaJghsaLeU5IDot0UvvCeDJAh/wa42l+dFaHfmFUbw7yQpjeBOZXanaGsdQ91jyK46e13AoHS9a0bb7Jppg==", "game"=>{"home_team_id"=>"2", "location"=>"DBC", "schedule"=>"08/31/2016"}, "commit"=>"Submit"}
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered games/_header.html.erb (0.8ms)
+  [1m[35mTeam Load (0.4ms)[0m  SELECT "teams".* FROM "teams"
+  Rendered games/_form.html.erb (2.6ms)
+  Rendered _nav_secondary.html.erb (0.1ms)
+  Rendered games/new.html.erb within layouts/application (8.9ms)
+Completed 200 OK in 30ms (Views: 25.4ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/carousel.css" for ::1 at 2016-08-26 13:46:18 -0500
+
+
+Started GET "/assets/teams" for ::1 at 2016-08-26 13:46:18 -0500
+
+
+Started GET "/assets/games" for ::1 at 2016-08-26 13:46:18 -0500
+
+
+Started GET "/assets/sports" for ::1 at 2016-08-26 13:46:18 -0500
+
+
+Started GET "/games/new" for ::1 at 2016-08-26 13:47:26 -0500
+Processing by GamesController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered games/_header.html.erb (15.7ms)
+  [1m[35mTeam Load (0.4ms)[0m  SELECT "teams".* FROM "teams"
+  Rendered games/_form.html.erb (7.7ms)
+  Rendered _nav_secondary.html.erb (0.1ms)
+  Rendered games/new.html.erb within layouts/application (28.8ms)
+Completed 200 OK in 64ms (Views: 40.5ms | ActiveRecord: 7.1ms)
+
+
+Started GET "/assets/carousel.css" for ::1 at 2016-08-26 13:47:26 -0500
+
+
+Started GET "/assets/teams" for ::1 at 2016-08-26 13:47:26 -0500
+
+
+Started GET "/assets/games" for ::1 at 2016-08-26 13:47:26 -0500
+
+
+Started GET "/assets/sports" for ::1 at 2016-08-26 13:47:26 -0500
+
+
+Started POST "/games" for ::1 at 2016-08-26 13:47:32 -0500
+Processing by GamesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Uzx9zM4C/WItv3g88wE7x/r4WP9/FBF7zdqdWtsfvioqhBk08BTN+WY2d579qSAMhUTshrOcFULFcK1UFXJP2Q==", "game"=>{"home_team_id"=>"1", "location"=>"DBC", "schedule"=>"08/31/2016"}, "commit"=>"Submit"}
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered games/_header.html.erb (1.2ms)
+  [1m[35mTeam Load (0.4ms)[0m  SELECT "teams".* FROM "teams"
+  Rendered games/_form.html.erb (3.0ms)
+  Rendered _nav_secondary.html.erb (0.3ms)
+  Rendered games/new.html.erb within layouts/application (10.5ms)
+Completed 200 OK in 33ms (Views: 28.3ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/carousel.css" for ::1 at 2016-08-26 13:47:32 -0500
+
+
+Started GET "/assets/teams" for ::1 at 2016-08-26 13:47:32 -0500
+
+
+Started GET "/assets/games" for ::1 at 2016-08-26 13:47:32 -0500
+
+
+Started GET "/assets/sports" for ::1 at 2016-08-26 13:47:32 -0500
+
+
+Started GET "/games" for ::1 at 2016-08-26 13:54:31 -0500
+Processing by GamesController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered games/_header.html.erb (0.8ms)
+  [1m[35mGame Load (0.4ms)[0m  SELECT "games".* FROM "games"  ORDER BY created_at ASC
+  [1m[36mSport Load (0.4ms)[0m  [1mSELECT  "sports".* FROM "sports" INNER JOIN "teams" ON "sports"."id" = "teams"."sport_id" WHERE "teams"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mTeam Load (0.5ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mTeam Load (0.3ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  Rendered games/index.html.erb within layouts/application (66.9ms)
+Completed 500 Internal Server Error in 74ms (ActiveRecord: 3.6ms)
+
+ActionView::Template::Error (undefined local variable or method `away_team' for #<#<Class:0x007ffa821efdc8>:0x007ffa7cdb2968>):
+    11: 			<%= link_to game.home_team.name, game.home_team %>
+    12: 			vs.
+    13: 			<% if game.away_team != nil %>
+    14: 				<%= link_to game.away_team.name, away_team %>
+    15: 			<% else %>
+    16: 				TBD
+    17: 			<% end %>
+  app/views/games/index.html.erb:14:in `block in _app_views_games_index_html_erb__2018961174470221588_70356947555360'
+  app/views/games/index.html.erb:9:in `_app_views_games_index_html_erb__2018961174470221588_70356947555360'
+
+
+  Rendered /Users/amyplant/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.3ms)
+  Rendered /Users/amyplant/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (15.2ms)
+  Rendered /Users/amyplant/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Users/amyplant/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (80.1ms)
+  Rendered /Users/amyplant/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/amyplant/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/amyplant/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/amyplant/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/amyplant/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (53.4ms)
+  Rendered /Users/amyplant/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/amyplant/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/amyplant/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (117.3ms)
+
+
+Started GET "/games/new" for ::1 at 2016-08-26 13:54:40 -0500
+Processing by GamesController#new as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered games/_header.html.erb (1.1ms)
+  [1m[36mTeam Load (0.4ms)[0m  [1mSELECT "teams".* FROM "teams"[0m
+  Rendered games/_form.html.erb (3.0ms)
+  Rendered _nav_secondary.html.erb (0.2ms)
+  Rendered games/new.html.erb within layouts/application (11.1ms)
+Completed 200 OK in 36ms (Views: 35.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/carousel.css" for ::1 at 2016-08-26 13:54:40 -0500
+
+
+Started GET "/assets/teams" for ::1 at 2016-08-26 13:54:40 -0500
+
+
+Started GET "/assets/games" for ::1 at 2016-08-26 13:54:40 -0500
+
+
+Started GET "/assets/sports" for ::1 at 2016-08-26 13:54:40 -0500
+
+
+Started GET "/games/new" for ::1 at 2016-08-26 14:00:55 -0500
+Processing by GamesController#new as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered games/_header.html.erb (0.8ms)
+  [1m[36mTeam Load (0.3ms)[0m  [1mSELECT "teams".* FROM "teams"[0m
+  Rendered games/_form.html.erb (3.2ms)
+  Rendered _nav_secondary.html.erb (0.2ms)
+  Rendered games/new.html.erb within layouts/application (10.5ms)
+Completed 200 OK in 33ms (Views: 31.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/application.self-66996597171ad2c972472e1232057eebe0bc1b4a5a65851fc3f71b9f3280950a.css?body=1" for ::1 at 2016-08-26 14:00:55 -0500
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2016-08-26 14:00:55 -0500
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2016-08-26 14:00:55 -0500
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for ::1 at 2016-08-26 14:00:55 -0500
+
+
+Started GET "/assets/carousel.css" for ::1 at 2016-08-26 14:00:55 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-08-26 14:00:55 -0500
+
+
+Started GET "/assets/teams" for ::1 at 2016-08-26 14:00:55 -0500
+
+
+Started GET "/assets/games" for ::1 at 2016-08-26 14:00:55 -0500
+
+
+Started GET "/assets/sports" for ::1 at 2016-08-26 14:00:55 -0500
+
+
+Started GET "/games/new" for ::1 at 2016-08-26 14:01:12 -0500
+Processing by GamesController#new as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered games/_header.html.erb (1.2ms)
+  [1m[36mTeam Load (0.4ms)[0m  [1mSELECT "teams".* FROM "teams"[0m
+  Rendered games/_form.html.erb (2.9ms)
+  Rendered _nav_secondary.html.erb (0.4ms)
+  Rendered games/new.html.erb within layouts/application (11.4ms)
+Completed 200 OK in 31ms (Views: 29.4ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/application.self-66996597171ad2c972472e1232057eebe0bc1b4a5a65851fc3f71b9f3280950a.css?body=1" for ::1 at 2016-08-26 14:01:12 -0500
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2016-08-26 14:01:12 -0500
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2016-08-26 14:01:12 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-08-26 14:01:12 -0500
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for ::1 at 2016-08-26 14:01:12 -0500
+
+
+Started GET "/assets/carousel.css" for ::1 at 2016-08-26 14:01:12 -0500
+
+
+Started GET "/assets/teams" for ::1 at 2016-08-26 14:01:12 -0500
+
+
+Started GET "/assets/games" for ::1 at 2016-08-26 14:01:12 -0500
+
+
+Started GET "/assets/sports" for ::1 at 2016-08-26 14:01:12 -0500
+
+
+Started GET "/games/new" for ::1 at 2016-08-26 14:01:15 -0500
+Processing by GamesController#new as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered games/_header.html.erb (0.8ms)
+  [1m[36mTeam Load (0.4ms)[0m  [1mSELECT "teams".* FROM "teams"[0m
+  Rendered games/_form.html.erb (2.0ms)
+  Rendered _nav_secondary.html.erb (0.1ms)
+  Rendered games/new.html.erb within layouts/application (8.7ms)
+Completed 200 OK in 26ms (Views: 25.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/application.self-66996597171ad2c972472e1232057eebe0bc1b4a5a65851fc3f71b9f3280950a.css?body=1" for ::1 at 2016-08-26 14:01:15 -0500
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2016-08-26 14:01:15 -0500
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2016-08-26 14:01:15 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-08-26 14:01:15 -0500
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for ::1 at 2016-08-26 14:01:15 -0500
+
+
+Started GET "/assets/carousel.css" for ::1 at 2016-08-26 14:01:15 -0500
+
+
+Started GET "/assets/teams" for ::1 at 2016-08-26 14:01:15 -0500
+
+
+Started GET "/assets/games" for ::1 at 2016-08-26 14:01:15 -0500
+
+
+Started GET "/assets/sports" for ::1 at 2016-08-26 14:01:15 -0500
+
+
+Started GET "/games/new" for ::1 at 2016-08-26 14:01:25 -0500
+Processing by GamesController#new as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered games/_header.html.erb (0.8ms)
+  [1m[36mTeam Load (0.3ms)[0m  [1mSELECT "teams".* FROM "teams"[0m
+  Rendered games/_form.html.erb (1.9ms)
+  Rendered _nav_secondary.html.erb (0.1ms)
+  Rendered games/new.html.erb within layouts/application (7.8ms)
+Completed 200 OK in 26ms (Views: 24.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/application.self-66996597171ad2c972472e1232057eebe0bc1b4a5a65851fc3f71b9f3280950a.css?body=1" for ::1 at 2016-08-26 14:01:25 -0500
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2016-08-26 14:01:25 -0500
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2016-08-26 14:01:25 -0500
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for ::1 at 2016-08-26 14:01:25 -0500
+
+
+Started GET "/assets/carousel.css" for ::1 at 2016-08-26 14:01:25 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-08-26 14:01:25 -0500
+
+
+Started GET "/assets/teams" for ::1 at 2016-08-26 14:01:25 -0500
+
+
+Started GET "/assets/games" for ::1 at 2016-08-26 14:01:25 -0500
+
+
+Started GET "/assets/sports" for ::1 at 2016-08-26 14:01:25 -0500
+
+
+Started GET "/games/new" for ::1 at 2016-08-26 14:01:29 -0500
+Processing by GamesController#new as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered games/_header.html.erb (1.0ms)
+  [1m[36mTeam Load (0.4ms)[0m  [1mSELECT "teams".* FROM "teams"[0m
+  Rendered games/_form.html.erb (2.1ms)
+  Rendered _nav_secondary.html.erb (0.1ms)
+  Rendered games/new.html.erb within layouts/application (9.1ms)
+Completed 200 OK in 27ms (Views: 25.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/application.self-66996597171ad2c972472e1232057eebe0bc1b4a5a65851fc3f71b9f3280950a.css?body=1" for ::1 at 2016-08-26 14:01:29 -0500
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2016-08-26 14:01:29 -0500
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2016-08-26 14:01:29 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-08-26 14:01:29 -0500
+
+
+Started GET "/assets/carousel.css" for ::1 at 2016-08-26 14:01:29 -0500
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for ::1 at 2016-08-26 14:01:29 -0500
+
+
+Started GET "/assets/teams" for ::1 at 2016-08-26 14:01:29 -0500
+
+
+Started GET "/assets/games" for ::1 at 2016-08-26 14:01:29 -0500
+
+
+Started GET "/assets/sports" for ::1 at 2016-08-26 14:01:29 -0500
+
+
+Started GET "/games/new" for ::1 at 2016-08-26 14:01:40 -0500
+Processing by GamesController#new as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered games/_header.html.erb (0.7ms)
+  [1m[36mTeam Load (0.5ms)[0m  [1mSELECT "teams".* FROM "teams"[0m
+  Rendered games/_form.html.erb (2.9ms)
+  Rendered _nav_secondary.html.erb (0.1ms)
+  Rendered games/new.html.erb within layouts/application (8.6ms)
+Completed 200 OK in 27ms (Views: 25.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/application.self-66996597171ad2c972472e1232057eebe0bc1b4a5a65851fc3f71b9f3280950a.css?body=1" for ::1 at 2016-08-26 14:01:40 -0500
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2016-08-26 14:01:40 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-08-26 14:01:40 -0500
+
+
+Started GET "/assets/carousel.css" for ::1 at 2016-08-26 14:01:40 -0500
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for ::1 at 2016-08-26 14:01:40 -0500
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2016-08-26 14:01:40 -0500
+
+
+Started GET "/assets/teams" for ::1 at 2016-08-26 14:01:40 -0500
+
+
+Started GET "/assets/games" for ::1 at 2016-08-26 14:01:40 -0500
+
+
+Started GET "/assets/sports" for ::1 at 2016-08-26 14:01:40 -0500
+
+
+Started GET "/games/new" for ::1 at 2016-08-26 14:01:43 -0500
+Processing by GamesController#new as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered games/_header.html.erb (1.0ms)
+  [1m[36mTeam Load (0.4ms)[0m  [1mSELECT "teams".* FROM "teams"[0m
+  Rendered games/_form.html.erb (2.4ms)
+  Rendered _nav_secondary.html.erb (0.2ms)
+  Rendered games/new.html.erb within layouts/application (9.2ms)
+Completed 200 OK in 26ms (Views: 24.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/application.self-66996597171ad2c972472e1232057eebe0bc1b4a5a65851fc3f71b9f3280950a.css?body=1" for ::1 at 2016-08-26 14:01:43 -0500
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2016-08-26 14:01:43 -0500
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for ::1 at 2016-08-26 14:01:43 -0500
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2016-08-26 14:01:43 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-08-26 14:01:43 -0500
+
+
+Started GET "/assets/carousel.css" for ::1 at 2016-08-26 14:01:43 -0500
+
+
+Started GET "/assets/teams" for ::1 at 2016-08-26 14:01:43 -0500
+
+
+Started GET "/assets/games" for ::1 at 2016-08-26 14:01:43 -0500
+
+
+Started GET "/assets/sports" for ::1 at 2016-08-26 14:01:43 -0500
+
+
+Started GET "/games/new" for ::1 at 2016-08-26 14:01:55 -0500
+Processing by GamesController#new as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered games/_header.html.erb (0.9ms)
+  [1m[36mTeam Load (0.6ms)[0m  [1mSELECT "teams".* FROM "teams"[0m
+  Rendered games/_form.html.erb (3.9ms)
+  Rendered _nav_secondary.html.erb (0.2ms)
+  Rendered games/new.html.erb within layouts/application (11.1ms)
+Completed 200 OK in 31ms (Views: 29.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/application.self-66996597171ad2c972472e1232057eebe0bc1b4a5a65851fc3f71b9f3280950a.css?body=1" for ::1 at 2016-08-26 14:01:56 -0500
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2016-08-26 14:01:56 -0500
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2016-08-26 14:01:56 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-08-26 14:01:56 -0500
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for ::1 at 2016-08-26 14:01:56 -0500
+
+
+Started GET "/assets/carousel.css" for ::1 at 2016-08-26 14:01:56 -0500
+
+
+Started GET "/assets/teams" for ::1 at 2016-08-26 14:01:56 -0500
+
+
+Started GET "/assets/games" for ::1 at 2016-08-26 14:01:56 -0500
+
+
+Started GET "/assets/sports" for ::1 at 2016-08-26 14:01:56 -0500
+
+
+Started GET "/games/new" for ::1 at 2016-08-26 14:02:14 -0500
+Processing by GamesController#new as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered games/_header.html.erb (0.8ms)
+  [1m[36mTeam Load (0.4ms)[0m  [1mSELECT "teams".* FROM "teams"[0m
+  Rendered games/_form.html.erb (3.0ms)
+  Rendered _nav_secondary.html.erb (0.1ms)
+  Rendered games/new.html.erb within layouts/application (9.2ms)
+Completed 200 OK in 24ms (Views: 22.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/application.self-66996597171ad2c972472e1232057eebe0bc1b4a5a65851fc3f71b9f3280950a.css?body=1" for ::1 at 2016-08-26 14:02:14 -0500
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2016-08-26 14:02:14 -0500
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2016-08-26 14:02:14 -0500
+
+
+Started GET "/assets/carousel.css" for ::1 at 2016-08-26 14:02:14 -0500
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for ::1 at 2016-08-26 14:02:14 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-08-26 14:02:14 -0500
+
+
+Started GET "/assets/teams" for ::1 at 2016-08-26 14:02:14 -0500
+
+
+Started GET "/assets/games" for ::1 at 2016-08-26 14:02:14 -0500
+
+
+Started GET "/assets/sports" for ::1 at 2016-08-26 14:02:14 -0500
+
+
+Started GET "/games/new" for ::1 at 2016-08-26 14:02:47 -0500
+Processing by GamesController#new as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered games/_header.html.erb (0.9ms)
+  [1m[36mTeam Load (0.5ms)[0m  [1mSELECT "teams".* FROM "teams"[0m
+  Rendered games/_form.html.erb (3.3ms)
+  Rendered _nav_secondary.html.erb (0.2ms)
+  Rendered games/new.html.erb within layouts/application (12.4ms)
+Completed 200 OK in 39ms (Views: 37.7ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/application.self-66996597171ad2c972472e1232057eebe0bc1b4a5a65851fc3f71b9f3280950a.css?body=1" for ::1 at 2016-08-26 14:02:47 -0500
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2016-08-26 14:02:47 -0500
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for ::1 at 2016-08-26 14:02:47 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-08-26 14:02:47 -0500
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2016-08-26 14:02:47 -0500
+
+
+Started GET "/assets/carousel.css" for ::1 at 2016-08-26 14:02:47 -0500
+
+
+Started GET "/assets/teams" for ::1 at 2016-08-26 14:02:47 -0500
+
+
+Started GET "/assets/games" for ::1 at 2016-08-26 14:02:47 -0500
+
+
+Started GET "/assets/sports" for ::1 at 2016-08-26 14:02:47 -0500
+
+
+Started GET "/games/new" for ::1 at 2016-08-26 14:04:37 -0500
+Processing by GamesController#new as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered games/_header.html.erb (1.0ms)
+  [1m[36mTeam Load (0.4ms)[0m  [1mSELECT "teams".* FROM "teams"[0m
+  Rendered games/_form.html.erb (3.1ms)
+  Rendered _nav_secondary.html.erb (0.2ms)
+  Rendered games/new.html.erb within layouts/application (10.9ms)
+Completed 200 OK in 34ms (Views: 32.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/application.self-66996597171ad2c972472e1232057eebe0bc1b4a5a65851fc3f71b9f3280950a.css?body=1" for ::1 at 2016-08-26 14:04:37 -0500
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2016-08-26 14:04:37 -0500
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for ::1 at 2016-08-26 14:04:37 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-08-26 14:04:37 -0500
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2016-08-26 14:04:37 -0500
+
+
+Started GET "/assets/carousel.css" for ::1 at 2016-08-26 14:04:37 -0500
+
+
+Started GET "/assets/teams" for ::1 at 2016-08-26 14:04:37 -0500
+
+
+Started GET "/assets/games" for ::1 at 2016-08-26 14:04:37 -0500
+
+
+Started GET "/assets/sports" for ::1 at 2016-08-26 14:04:37 -0500
+
+
+Started GET "/games/new" for ::1 at 2016-08-26 14:05:21 -0500
+Processing by GamesController#new as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered games/_header.html.erb (1.0ms)
+  [1m[36mTeam Load (0.5ms)[0m  [1mSELECT "teams".* FROM "teams"[0m
+  Rendered games/_form.html.erb (4.0ms)
+  Rendered _nav_secondary.html.erb (0.2ms)
+  Rendered games/new.html.erb within layouts/application (11.6ms)
+Completed 200 OK in 30ms (Views: 28.7ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/application.self-66996597171ad2c972472e1232057eebe0bc1b4a5a65851fc3f71b9f3280950a.css?body=1" for ::1 at 2016-08-26 14:05:21 -0500
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2016-08-26 14:05:21 -0500
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2016-08-26 14:05:21 -0500
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for ::1 at 2016-08-26 14:05:21 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-08-26 14:05:21 -0500
+
+
+Started GET "/assets/carousel.css" for ::1 at 2016-08-26 14:05:21 -0500
+
+
+Started GET "/assets/teams" for ::1 at 2016-08-26 14:05:21 -0500
+
+
+Started GET "/assets/games" for ::1 at 2016-08-26 14:05:21 -0500
+
+
+Started GET "/assets/sports" for ::1 at 2016-08-26 14:05:21 -0500
+
+
+Started GET "/games/new" for ::1 at 2016-08-26 14:06:35 -0500
+Processing by GamesController#new as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered games/_header.html.erb (0.9ms)
+  [1m[36mTeam Load (0.4ms)[0m  [1mSELECT "teams".* FROM "teams"[0m
+  Rendered games/_form.html.erb (3.2ms)
+  Rendered _nav_secondary.html.erb (0.1ms)
+  Rendered games/new.html.erb within layouts/application (10.6ms)
+Completed 200 OK in 35ms (Views: 33.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/application.self-66996597171ad2c972472e1232057eebe0bc1b4a5a65851fc3f71b9f3280950a.css?body=1" for ::1 at 2016-08-26 14:06:35 -0500
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2016-08-26 14:06:35 -0500
+
+
+Started GET "/assets/carousel.css" for ::1 at 2016-08-26 14:06:35 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-08-26 14:06:35 -0500
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for ::1 at 2016-08-26 14:06:35 -0500
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2016-08-26 14:06:35 -0500
+
+
+Started GET "/assets/teams" for ::1 at 2016-08-26 14:06:35 -0500
+
+
+Started GET "/assets/games" for ::1 at 2016-08-26 14:06:35 -0500
+
+
+Started GET "/assets/sports" for ::1 at 2016-08-26 14:06:35 -0500
+
+
+Started GET "/games/new" for ::1 at 2016-08-26 14:06:43 -0500
+Processing by GamesController#new as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered games/_header.html.erb (0.9ms)
+  [1m[36mTeam Load (0.3ms)[0m  [1mSELECT "teams".* FROM "teams"[0m
+  Rendered games/_form.html.erb (3.0ms)
+  Rendered _nav_secondary.html.erb (0.1ms)
+  Rendered games/new.html.erb within layouts/application (10.1ms)
+Completed 200 OK in 31ms (Views: 29.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/application.self-66996597171ad2c972472e1232057eebe0bc1b4a5a65851fc3f71b9f3280950a.css?body=1" for ::1 at 2016-08-26 14:06:43 -0500
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2016-08-26 14:06:43 -0500
+
+
+Started GET "/assets/carousel.css" for ::1 at 2016-08-26 14:06:43 -0500
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for ::1 at 2016-08-26 14:06:43 -0500
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2016-08-26 14:06:43 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-08-26 14:06:43 -0500
+
+
+Started GET "/assets/teams" for ::1 at 2016-08-26 14:06:43 -0500
+
+
+Started GET "/assets/games" for ::1 at 2016-08-26 14:06:43 -0500
+
+
+Started GET "/assets/sports" for ::1 at 2016-08-26 14:06:43 -0500
+
+
+Started GET "/games/new" for ::1 at 2016-08-26 14:08:00 -0500
+Processing by GamesController#new as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered games/_header.html.erb (1.1ms)
+  [1m[36mTeam Load (0.4ms)[0m  [1mSELECT "teams".* FROM "teams"[0m
+  Rendered games/_form.html.erb (3.0ms)
+  Rendered _nav_secondary.html.erb (0.2ms)
+  Rendered games/new.html.erb within layouts/application (10.2ms)
+Completed 200 OK in 29ms (Views: 27.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/application.self-66996597171ad2c972472e1232057eebe0bc1b4a5a65851fc3f71b9f3280950a.css?body=1" for ::1 at 2016-08-26 14:08:00 -0500
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2016-08-26 14:08:00 -0500
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for ::1 at 2016-08-26 14:08:00 -0500
+
+
+Started GET "/assets/carousel.css" for ::1 at 2016-08-26 14:08:00 -0500
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2016-08-26 14:08:00 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-08-26 14:08:00 -0500
+
+
+Started GET "/assets/teams" for ::1 at 2016-08-26 14:08:01 -0500
+
+
+Started GET "/assets/games" for ::1 at 2016-08-26 14:08:01 -0500
+
+
+Started GET "/assets/sports" for ::1 at 2016-08-26 14:08:01 -0500
+
+
+Started GET "/games/new" for ::1 at 2016-08-26 14:11:48 -0500
+Processing by GamesController#new as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered games/_header.html.erb (1.0ms)
+  [1m[36mTeam Load (0.4ms)[0m  [1mSELECT "teams".* FROM "teams"[0m
+  Rendered games/_form.html.erb (4.3ms)
+  Rendered _nav_secondary.html.erb (0.2ms)
+  Rendered games/new.html.erb within layouts/application (11.8ms)
+Completed 200 OK in 33ms (Views: 31.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/application.self-66996597171ad2c972472e1232057eebe0bc1b4a5a65851fc3f71b9f3280950a.css?body=1" for ::1 at 2016-08-26 14:11:48 -0500
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2016-08-26 14:11:48 -0500
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2016-08-26 14:11:48 -0500
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for ::1 at 2016-08-26 14:11:48 -0500
+
+
+Started GET "/assets/carousel.css" for ::1 at 2016-08-26 14:11:48 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-08-26 14:11:48 -0500
+
+
+Started GET "/assets/teams" for ::1 at 2016-08-26 14:11:48 -0500
+
+
+Started GET "/assets/games" for ::1 at 2016-08-26 14:11:48 -0500
+
+
+Started GET "/assets/sports" for ::1 at 2016-08-26 14:11:48 -0500
+
+
+Started GET "/games/new" for ::1 at 2016-08-26 14:13:00 -0500
+Processing by GamesController#new as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered games/_header.html.erb (0.8ms)
+  Rendered games/_form.html.erb (2.1ms)
+  Rendered games/new.html.erb within layouts/application (6.1ms)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.2ms)
+
+SyntaxError (/Users/amyplant/Library/Mobile Documents/com~apple~CloudDocs/DBC/phase3/week7/Instamural/app/views/games/_form.html.erb:28: syntax error, unexpected ',', expecting &. or :: or '[' or '.'
+...ffer.append=( f.label, "Date:", class: "col-md-2 control-lab...
+...                               ^):
+  app/views/games/_form.html.erb:28: syntax error, unexpected ',', expecting &. or :: or '[' or '.'
+  app/views/games/new.html.erb:6:in `_app_views_games_new_html_erb___16024016900066514_70356950872140'
+
+
+  Rendered /Users/amyplant/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (9.5ms)
+  Rendered /Users/amyplant/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.7ms)
+  Rendered /Users/amyplant/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/amyplant/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (67.6ms)
+  Rendered /Users/amyplant/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Users/amyplant/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/amyplant/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/amyplant/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/amyplant/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (48.7ms)
+  Rendered /Users/amyplant/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.7ms)
+  Rendered /Users/amyplant/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.8ms)
+  Rendered /Users/amyplant/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (118.3ms)
+
+
+Started GET "/games/new" for ::1 at 2016-08-26 14:13:06 -0500
+Processing by GamesController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered games/_header.html.erb (0.9ms)
+  [1m[35mTeam Load (0.5ms)[0m  SELECT "teams".* FROM "teams"
+  Rendered games/_form.html.erb (3.3ms)
+  Rendered _nav_secondary.html.erb (0.2ms)
+  Rendered games/new.html.erb within layouts/application (9.9ms)
+Completed 200 OK in 29ms (Views: 27.4ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/application.self-66996597171ad2c972472e1232057eebe0bc1b4a5a65851fc3f71b9f3280950a.css?body=1" for ::1 at 2016-08-26 14:13:06 -0500
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2016-08-26 14:13:06 -0500
+
+
+Started GET "/assets/carousel.css" for ::1 at 2016-08-26 14:13:06 -0500
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2016-08-26 14:13:06 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-08-26 14:13:06 -0500
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for ::1 at 2016-08-26 14:13:06 -0500
+
+
+Started GET "/assets/teams" for ::1 at 2016-08-26 14:13:06 -0500
+
+
+Started GET "/assets/games" for ::1 at 2016-08-26 14:13:06 -0500
+
+
+Started GET "/assets/sports" for ::1 at 2016-08-26 14:13:06 -0500
+
+
+Started GET "/games/new" for ::1 at 2016-08-26 14:13:37 -0500
+Processing by GamesController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered games/_header.html.erb (1.0ms)
+  [1m[35mTeam Load (0.4ms)[0m  SELECT "teams".* FROM "teams"
+  Rendered games/_form.html.erb (13.1ms)
+  Rendered games/new.html.erb within layouts/application (18.6ms)
+Completed 500 Internal Server Error in 28ms (ActiveRecord: 0.6ms)
+
+ActionView::Template::Error (undefined method `time' for #<Game:0x007ffa85b54d98>):
+    34: 	<div class="form-group">
+    35: 		<%= f.label :time, "Time:", class: "col-md-2 control-label" %>
+    36: 		<div class="col-md-4">
+    37: 			<%= f.text_field :time, class: "form-control" %>
+    38: 		</div>
+    39: 	</div>
+    40: 
+  app/views/games/_form.html.erb:37:in `block in _app_views_games__form_html_erb__2303526605632639355_70356980879220'
+  app/views/games/_form.html.erb:1:in `_app_views_games__form_html_erb__2303526605632639355_70356980879220'
+  app/views/games/new.html.erb:6:in `_app_views_games_new_html_erb___16024016900066514_70356950872140'
+
+
+  Rendered /Users/amyplant/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.9ms)
+  Rendered /Users/amyplant/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.1ms)
+  Rendered /Users/amyplant/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/amyplant/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (62.0ms)
+  Rendered /Users/amyplant/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Users/amyplant/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/amyplant/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/amyplant/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/amyplant/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (50.0ms)
+  Rendered /Users/amyplant/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/amyplant/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/amyplant/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (110.6ms)
+
+
+Started GET "/games/new" for ::1 at 2016-08-26 14:14:15 -0500
+Processing by GamesController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered games/_header.html.erb (0.9ms)
+  [1m[35mTeam Load (0.5ms)[0m  SELECT "teams".* FROM "teams"
+  Rendered games/_form.html.erb (3.3ms)
+  Rendered _nav_secondary.html.erb (0.1ms)
+  Rendered games/new.html.erb within layouts/application (9.7ms)
+Completed 200 OK in 26ms (Views: 24.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/application.self-66996597171ad2c972472e1232057eebe0bc1b4a5a65851fc3f71b9f3280950a.css?body=1" for ::1 at 2016-08-26 14:14:15 -0500
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2016-08-26 14:14:15 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-08-26 14:14:15 -0500
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2016-08-26 14:14:15 -0500
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for ::1 at 2016-08-26 14:14:15 -0500
+
+
+Started GET "/assets/carousel.css" for ::1 at 2016-08-26 14:14:15 -0500
+
+
+Started GET "/assets/teams" for ::1 at 2016-08-26 14:14:15 -0500
+
+
+Started GET "/assets/games" for ::1 at 2016-08-26 14:14:15 -0500
+
+
+Started GET "/assets/sports" for ::1 at 2016-08-26 14:14:15 -0500
+
+
+Started GET "/games/new" for ::1 at 2016-08-26 14:14:25 -0500
+Processing by GamesController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered games/_header.html.erb (0.9ms)
+  [1m[35mTeam Load (0.4ms)[0m  SELECT "teams".* FROM "teams"
+  Rendered games/_form.html.erb (3.1ms)
+  Rendered _nav_secondary.html.erb (0.1ms)
+  Rendered games/new.html.erb within layouts/application (10.3ms)
+Completed 200 OK in 29ms (Views: 27.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/application.self-66996597171ad2c972472e1232057eebe0bc1b4a5a65851fc3f71b9f3280950a.css?body=1" for ::1 at 2016-08-26 14:14:25 -0500
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2016-08-26 14:14:25 -0500
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2016-08-26 14:14:25 -0500
+
+
+Started GET "/assets/carousel.css" for ::1 at 2016-08-26 14:14:25 -0500
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for ::1 at 2016-08-26 14:14:25 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-08-26 14:14:25 -0500
+
+
+Started GET "/assets/teams" for ::1 at 2016-08-26 14:14:25 -0500
+
+
+Started GET "/assets/games" for ::1 at 2016-08-26 14:14:25 -0500
+
+
+Started GET "/assets/sports" for ::1 at 2016-08-26 14:14:25 -0500
+
+
+Started GET "/games/new" for ::1 at 2016-08-26 14:14:29 -0500
+Processing by GamesController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered games/_header.html.erb (0.9ms)
+  [1m[35mTeam Load (0.4ms)[0m  SELECT "teams".* FROM "teams"
+  Rendered games/_form.html.erb (2.9ms)
+  Rendered _nav_secondary.html.erb (0.2ms)
+  Rendered games/new.html.erb within layouts/application (9.4ms)
+Completed 200 OK in 26ms (Views: 24.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/application.self-66996597171ad2c972472e1232057eebe0bc1b4a5a65851fc3f71b9f3280950a.css?body=1" for ::1 at 2016-08-26 14:14:29 -0500
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2016-08-26 14:14:29 -0500
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2016-08-26 14:14:29 -0500
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for ::1 at 2016-08-26 14:14:29 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-08-26 14:14:29 -0500
+
+
+Started GET "/assets/carousel.css" for ::1 at 2016-08-26 14:14:29 -0500
+
+
+Started GET "/assets/teams" for ::1 at 2016-08-26 14:14:29 -0500
+
+
+Started GET "/assets/games" for ::1 at 2016-08-26 14:14:29 -0500
+
+
+Started GET "/assets/sports" for ::1 at 2016-08-26 14:14:29 -0500
+
+
+Started GET "/games/new" for ::1 at 2016-08-26 14:14:35 -0500
+Processing by GamesController#new as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered games/_header.html.erb (1.2ms)
+  [1m[35mTeam Load (0.4ms)[0m  SELECT "teams".* FROM "teams"
+  Rendered games/_form.html.erb (11.1ms)
+  Rendered games/new.html.erb within layouts/application (17.1ms)
+Completed 500 Internal Server Error in 23ms (ActiveRecord: 0.9ms)
+
+ActionView::Template::Error (undefined method `time' for #<Game:0x007ffa85a0ab68>):
+    34: 	<div class="form-group">
+    35: 		<%= f.label :time, "Time:", class: "col-md-2 control-label" %>
+    36: 		<div class="col-md-4">
+    37: 			<%= f.text_field :time, class: "form-control" %>
+    38: 		</div>
+    39: 	</div>
+    40: 
+  app/views/games/_form.html.erb:37:in `block in _app_views_games__form_html_erb__2303526605632639355_70356910949180'
+  app/views/games/_form.html.erb:1:in `_app_views_games__form_html_erb__2303526605632639355_70356910949180'
+  app/views/games/new.html.erb:6:in `_app_views_games_new_html_erb___16024016900066514_70356950872140'
+
+
+  Rendered /Users/amyplant/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.9ms)
+  Rendered /Users/amyplant/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.8ms)
+  Rendered /Users/amyplant/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/amyplant/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (69.2ms)
+  Rendered /Users/amyplant/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Users/amyplant/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/amyplant/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/amyplant/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/amyplant/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (54.6ms)
+  Rendered /Users/amyplant/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/amyplant/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/amyplant/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (112.2ms)
+
+
+Started GET "/games/new" for ::1 at 2016-08-26 14:15:19 -0500
+Processing by GamesController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered games/_header.html.erb (0.9ms)
+  [1m[35mTeam Load (0.4ms)[0m  SELECT "teams".* FROM "teams"
+  Rendered games/_form.html.erb (9.4ms)
+  Rendered games/new.html.erb within layouts/application (14.2ms)
+Completed 500 Internal Server Error in 21ms (ActiveRecord: 0.6ms)
+
+ActionView::Template::Error (undefined method `time' for #<Game:0x007ffa83af12b8>):
+    34: 	<div class="form-group">
+    35: 		<%= f.label :time, "Time:", class: "col-md-2 control-label" %>
+    36: 		<div class="col-md-4">
+    37: 			<%= f.text_field :time, class: "form-control" %>
+    38: 		</div>
+    39: 	</div>
+    40: 
+  app/views/games/_form.html.erb:37:in `block in _app_views_games__form_html_erb__2303526605632639355_70356910949180'
+  app/views/games/_form.html.erb:1:in `_app_views_games__form_html_erb__2303526605632639355_70356910949180'
+  app/views/games/new.html.erb:6:in `_app_views_games_new_html_erb___16024016900066514_70356950872140'
+
+
+  Rendered /Users/amyplant/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (8.4ms)
+  Rendered /Users/amyplant/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.4ms)
+  Rendered /Users/amyplant/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/amyplant/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (57.2ms)
+  Rendered /Users/amyplant/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/amyplant/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/amyplant/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/amyplant/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/amyplant/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (50.6ms)
+  Rendered /Users/amyplant/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/amyplant/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/amyplant/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (113.9ms)
+  [1m[36m (4.7ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL) [0m
+  [1m[35m (1.9ms)[0m  CREATE UNIQUE INDEX  "unique_schema_migrations" ON "schema_migrations"  ("version")
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateUsers (20160824213245)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (5.4ms)[0m  [1mCREATE TABLE "users" ("id" serial primary key, "first_name" character varying, "last_name" character varying, "email" character varying, "phone" character varying, "phone_approval" boolean DEFAULT 'f', "password_digest" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20160824213245"]]
+  [1m[36m (0.6ms)[0m  [1mCOMMIT[0m
+Migrating to CreateTeams (20160825020129)
+  [1m[35m (0.4ms)[0m  BEGIN
+  [1m[36m (4.3ms)[0m  [1mCREATE TABLE "teams" ("id" serial primary key, "name" character varying NOT NULL, "captain_id" integer NOT NULL, "sport_id" integer NOT NULL, "mascot_name" character varying, "mascot_url" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20160825020129"]]
+  [1m[36m (0.6ms)[0m  [1mCOMMIT[0m
+Migrating to CreateSports (20160825143949)
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (4.5ms)[0m  [1mCREATE TABLE "sports" ("id" serial primary key, "name" character varying, "max_players" integer, "min_players" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20160825143949"]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+Migrating to CreateGames (20160825192427)
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (7.5ms)[0m  [1mCREATE TABLE "games" ("id" serial primary key, "home_team_id" integer, "away_team_id" integer, "home_team_score" integer, "away_team_score" integer, "schedule" date, "time" character varying, "location" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20160825192427"]]
+  [1m[36m (1.1ms)[0m  [1mCOMMIT[0m
+Migrating to CreateRosters (20160826021852)
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (4.1ms)[0m  [1mCREATE TABLE "rosters" ("id" serial primary key, "player_id" integer, "team_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20160826021852"]]
+  [1m[36m (0.6ms)[0m  [1mCOMMIT[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.3ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (5.5ms)[0m  [1mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+=======
   [1m[36m (33.7ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL) [0m
   [1m[35m (1.6ms)[0m  CREATE UNIQUE INDEX  "unique_schema_migrations" ON "schema_migrations"  ("version")
   [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
@@ -1881,6 +3498,7 @@ Migrating to CreateRosters (20160826021852)
   [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
   [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
   [1m[36m (1.8ms)[0m  [1mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+>>>>>>> master
 FROM pg_constraint c
 JOIN pg_class t1 ON c.conrelid = t1.oid
 JOIN pg_class t2 ON c.confrelid = t2.oid
@@ -1892,7 +3510,11 @@ WHERE c.contype = 'f'
   AND t3.nspname = ANY (current_schemas(false))
 ORDER BY c.conname
 [0m
+<<<<<<< HEAD
+  [1m[35m (6.4ms)[0m  SELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+=======
   [1m[35m (1.3ms)[0m  SELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+>>>>>>> master
 FROM pg_constraint c
 JOIN pg_class t1 ON c.conrelid = t1.oid
 JOIN pg_class t2 ON c.confrelid = t2.oid
@@ -1904,7 +3526,11 @@ WHERE c.contype = 'f'
   AND t3.nspname = ANY (current_schemas(false))
 ORDER BY c.conname
 
+<<<<<<< HEAD
+  [1m[36m (3.6ms)[0m  [1mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+=======
   [1m[36m (1.3ms)[0m  [1mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+>>>>>>> master
 FROM pg_constraint c
 JOIN pg_class t1 ON c.conrelid = t1.oid
 JOIN pg_class t2 ON c.confrelid = t2.oid
@@ -1916,7 +3542,11 @@ WHERE c.contype = 'f'
   AND t3.nspname = ANY (current_schemas(false))
 ORDER BY c.conname
 [0m
+<<<<<<< HEAD
+  [1m[35m (3.5ms)[0m  SELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+=======
   [1m[35m (1.4ms)[0m  SELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+>>>>>>> master
 FROM pg_constraint c
 JOIN pg_class t1 ON c.conrelid = t1.oid
 JOIN pg_class t2 ON c.confrelid = t2.oid
@@ -1928,7 +3558,11 @@ WHERE c.contype = 'f'
   AND t3.nspname = ANY (current_schemas(false))
 ORDER BY c.conname
 
+<<<<<<< HEAD
+  [1m[36m (3.7ms)[0m  [1mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+=======
   [1m[36m (1.3ms)[0m  [1mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+>>>>>>> master
 FROM pg_constraint c
 JOIN pg_class t1 ON c.conrelid = t1.oid
 JOIN pg_class t2 ON c.confrelid = t2.oid
@@ -1940,6 +3574,193 @@ WHERE c.contype = 'f'
   AND t3.nspname = ANY (current_schemas(false))
 ORDER BY c.conname
 [0m
+<<<<<<< HEAD
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "users" ("first_name", "last_name", "email", "phone", "password_digest", "phone_approval", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["first_name", "Kunal"], ["last_name", "Patel"], ["email", "kunal@gmail.com"], ["phone", "123-456-7890"], ["password_digest", "password"], ["phone_approval", "t"], ["created_at", "2016-08-26 19:16:57.711368"], ["updated_at", "2016-08-26 19:16:57.711368"]]
+  [1m[35m (1.1ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("first_name", "last_name", "email", "phone", "password_digest", "phone_approval", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"  [["first_name", "Amy"], ["last_name", "Plant"], ["email", "amy@gmail.com"], ["phone", "123-456-7890"], ["password_digest", "password"], ["phone_approval", "t"], ["created_at", "2016-08-26 19:16:57.718089"], ["updated_at", "2016-08-26 19:16:57.718089"]]
+  [1m[36m (0.6ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "users" ("first_name", "last_name", "email", "phone", "password_digest", "phone_approval", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["first_name", "Craig"], ["last_name", "Waterman"], ["email", "craig@gmail.com"], ["phone", "123-456-7890"], ["password_digest", "password"], ["phone_approval", "t"], ["created_at", "2016-08-26 19:16:57.720689"], ["updated_at", "2016-08-26 19:16:57.720689"]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("first_name", "last_name", "email", "phone", "password_digest", "phone_approval", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"  [["first_name", "John"], ["last_name", "Linder"], ["email", "john@gmail.com"], ["phone", "123-456-7890"], ["password_digest", "password"], ["phone_approval", "t"], ["created_at", "2016-08-26 19:16:57.723065"], ["updated_at", "2016-08-26 19:16:57.723065"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "users" ("first_name", "last_name", "email", "phone", "password_digest", "phone_approval", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["first_name", "Matt"], ["last_name", "Baker"], ["email", "matt@gmail.com"], ["phone", "123-456-7890"], ["password_digest", "password"], ["phone_approval", "t"], ["created_at", "2016-08-26 19:16:57.725334"], ["updated_at", "2016-08-26 19:16:57.725334"]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "users" ("first_name", "last_name", "email", "phone", "password_digest", "phone_approval", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"  [["first_name", "Duke"], ["last_name", "Greene"], ["email", "duke@gmail.com"], ["phone", "123-456-7890"], ["password_digest", "password"], ["phone_approval", "t"], ["created_at", "2016-08-26 19:16:57.727619"], ["updated_at", "2016-08-26 19:16:57.727619"]]
+  [1m[36m (0.6ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "users" ("first_name", "last_name", "email", "phone", "password_digest", "phone_approval", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["first_name", "Ellie"], ["last_name", "Poley"], ["email", "ellie@gmail.com"], ["phone", "123-456-7890"], ["password_digest", "password"], ["phone_approval", "t"], ["created_at", "2016-08-26 19:16:57.730050"], ["updated_at", "2016-08-26 19:16:57.730050"]]
+  [1m[35m (0.7ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("first_name", "last_name", "email", "phone", "password_digest", "phone_approval", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"  [["first_name", "Avner"], ["last_name", "Shanan"], ["email", "avner@gmail.com"], ["phone", "123-456-7890"], ["password_digest", "password"], ["phone_approval", "t"], ["created_at", "2016-08-26 19:16:57.732909"], ["updated_at", "2016-08-26 19:16:57.732909"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "users" ("first_name", "last_name", "email", "phone", "password_digest", "phone_approval", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["first_name", "Alyssa"], ["last_name", "Diaz"], ["email", "alyssa@gmail.com"], ["phone", "123-456-7890"], ["password_digest", "password"], ["phone_approval", "t"], ["created_at", "2016-08-26 19:16:57.735082"], ["updated_at", "2016-08-26 19:16:57.735082"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("first_name", "last_name", "email", "phone", "password_digest", "phone_approval", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"  [["first_name", "Pete"], ["last_name", "Macaluso"], ["email", "pete@gmail.com"], ["phone", "123-456-7890"], ["password_digest", "password"], ["phone_approval", "t"], ["created_at", "2016-08-26 19:16:57.737253"], ["updated_at", "2016-08-26 19:16:57.737253"]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "teams" ("name", "captain_id", "sport_id", "mascot_name", "mascot_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Red Pandas"], ["captain_id", 1], ["sport_id", 1], ["mascot_name", "Panda"], ["mascot_url", "http://seveninchesofyourtime.com/wp-content/uploads/2014/05/Yawning-Red-Panda.jpg"], ["created_at", "2016-08-26 19:16:57.750730"], ["updated_at", "2016-08-26 19:16:57.750730"]]
+  [1m[35m (0.6ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "teams" ("name", "captain_id", "sport_id", "mascot_name", "mascot_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["name", "Salamanders"], ["captain_id", 2], ["sport_id", 1], ["mascot_name", "Salamanders"], ["mascot_url", "https://upload.wikimedia.org/wikipedia/commons/4/41/Salamander_head.png"], ["created_at", "2016-08-26 19:16:57.754022"], ["updated_at", "2016-08-26 19:16:57.754022"]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "teams" ("name", "captain_id", "sport_id", "mascot_name", "mascot_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Wolves"], ["captain_id", 3], ["sport_id", 2], ["mascot_name", "Wolves"], ["mascot_url", "http://subtlemix.com/wp-content/uploads/Wolf-un-dominated-wolves-19664762-1600-1200.jpg"], ["created_at", "2016-08-26 19:16:57.756423"], ["updated_at", "2016-08-26 19:16:57.756423"]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "sports" ("name", "min_players", "max_players", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["name", "Basketball"], ["min_players", 3], ["max_players", 5], ["created_at", "2016-08-26 19:16:57.766533"], ["updated_at", "2016-08-26 19:16:57.766533"]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "sports" ("name", "min_players", "max_players", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Soccer"], ["min_players", 7], ["max_players", 11], ["created_at", "2016-08-26 19:16:57.769320"], ["updated_at", "2016-08-26 19:16:57.769320"]]
+  [1m[35m (0.6ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "rosters" ("player_id", "team_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["player_id", 1], ["team_id", 1], ["created_at", "2016-08-26 19:16:57.778339"], ["updated_at", "2016-08-26 19:16:57.778339"]]
+  [1m[36m (0.6ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "rosters" ("player_id", "team_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["player_id", 2], ["team_id", 2], ["created_at", "2016-08-26 19:16:57.781317"], ["updated_at", "2016-08-26 19:16:57.781317"]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "rosters" ("player_id", "team_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["player_id", 3], ["team_id", 3], ["created_at", "2016-08-26 19:16:57.783346"], ["updated_at", "2016-08-26 19:16:57.783346"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "rosters" ("player_id", "team_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["player_id", 4], ["team_id", 1], ["created_at", "2016-08-26 19:16:57.785168"], ["updated_at", "2016-08-26 19:16:57.785168"]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "rosters" ("player_id", "team_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["player_id", 5], ["team_id", 2], ["created_at", "2016-08-26 19:16:57.787300"], ["updated_at", "2016-08-26 19:16:57.787300"]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "rosters" ("player_id", "team_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["player_id", 6], ["team_id", 3], ["created_at", "2016-08-26 19:16:57.789185"], ["updated_at", "2016-08-26 19:16:57.789185"]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "rosters" ("player_id", "team_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["player_id", 7], ["team_id", 1], ["created_at", "2016-08-26 19:16:57.791238"], ["updated_at", "2016-08-26 19:16:57.791238"]]
+  [1m[36m (0.7ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "rosters" ("player_id", "team_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["player_id", 8], ["team_id", 2], ["created_at", "2016-08-26 19:16:57.794284"], ["updated_at", "2016-08-26 19:16:57.794284"]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "rosters" ("player_id", "team_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["player_id", 9], ["team_id", 3], ["created_at", "2016-08-26 19:16:57.797199"], ["updated_at", "2016-08-26 19:16:57.797199"]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "rosters" ("player_id", "team_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["player_id", 10], ["team_id", 1], ["created_at", "2016-08-26 19:16:57.800269"], ["updated_at", "2016-08-26 19:16:57.800269"]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (1.4ms)[0m  INSERT INTO "games" ("schedule", "time", "location", "home_team_id", "away_team_id", "home_team_score", "away_team_score", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"  [["schedule", "2016-08-26"], ["time", "01:00:00"], ["location", "Grand Park"], ["home_team_id", 1], ["away_team_id", 2], ["home_team_score", 100], ["away_team_score", 99], ["created_at", "2016-08-26 19:16:57.819499"], ["updated_at", "2016-08-26 19:16:57.819499"]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "games" ("schedule", "time", "location", "home_team_id", "away_team_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["schedule", "2016-08-27"], ["time", "01:00:00"], ["location", "DBC"], ["home_team_id", 3], ["away_team_id", 1], ["created_at", "2016-08-26 19:16:57.826823"], ["updated_at", "2016-08-26 19:16:57.826823"]]
+  [1m[35m (0.6ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "games" ("schedule", "time", "location", "home_team_id", "away_team_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["schedule", "2016-08-28"], ["time", "01:00:00"], ["location", "The River"], ["home_team_id", 2], ["away_team_id", 3], ["created_at", "2016-08-26 19:16:57.829944"], ["updated_at", "2016-08-26 19:16:57.829944"]]
+  [1m[36m (0.6ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "games" ("schedule", "time", "location", "home_team_id", "away_team_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["schedule", "2016-08-26"], ["time", "01:00:00"], ["location", "Grand Park"], ["home_team_id", 1], ["away_team_id", 3], ["created_at", "2016-08-26 19:16:57.832367"], ["updated_at", "2016-08-26 19:16:57.832367"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+
+
+Started GET "/games/new" for ::1 at 2016-08-26 14:17:08 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by GamesController#new as HTML
+  [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered games/_header.html.erb (26.8ms)
+  [1m[36mTeam Load (0.6ms)[0m  [1mSELECT "teams".* FROM "teams"[0m
+  Rendered games/_form.html.erb (22.9ms)
+  Rendered _nav_secondary.html.erb (0.9ms)
+  Rendered games/new.html.erb within layouts/application (61.0ms)
+Completed 200 OK in 396ms (Views: 333.8ms | ActiveRecord: 10.9ms)
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2016-08-26 14:17:09 -0500
+
+
+Started GET "/assets/application.self-66996597171ad2c972472e1232057eebe0bc1b4a5a65851fc3f71b9f3280950a.css?body=1" for ::1 at 2016-08-26 14:17:09 -0500
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2016-08-26 14:17:09 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-08-26 14:17:09 -0500
+
+
+Started GET "/assets/carousel.css" for ::1 at 2016-08-26 14:17:09 -0500
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for ::1 at 2016-08-26 14:17:09 -0500
+
+
+Started GET "/assets/teams" for ::1 at 2016-08-26 14:17:09 -0500
+
+
+Started GET "/assets/games" for ::1 at 2016-08-26 14:17:09 -0500
+
+
+Started GET "/assets/sports" for ::1 at 2016-08-26 14:17:09 -0500
+
+
+Started POST "/games" for ::1 at 2016-08-26 14:17:21 -0500
+Processing by GamesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"sjTOl2OtVKb/uz4sKN3rAbBzj/MQDm/pxACzj6qaLKLLjKpvXbtkPbQyMY4mdfDKz887ityGa9DMqoOBZPfdUQ==", "game"=>{"home_team_id"=>"1", "location"=>"DBC", "schedule"=>"08/31/2016", "time"=>"3:30"}, "commit"=>"Submit"}
+Unpermitted parameter: time
+Unpermitted parameter: time
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered games/_header.html.erb (1.2ms)
+  [1m[36mTeam Load (0.4ms)[0m  [1mSELECT "teams".* FROM "teams"[0m
+  Rendered games/_form.html.erb (2.8ms)
+  Rendered _nav_secondary.html.erb (0.1ms)
+  Rendered games/new.html.erb within layouts/application (9.2ms)
+Completed 200 OK in 556ms (Views: 24.4ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/carousel.css" for ::1 at 2016-08-26 14:17:21 -0500
+
+
+Started GET "/assets/teams" for ::1 at 2016-08-26 14:17:21 -0500
+
+
+Started GET "/assets/games" for ::1 at 2016-08-26 14:17:21 -0500
+
+
+Started GET "/assets/sports" for ::1 at 2016-08-26 14:17:21 -0500
+  [1m[36m (4.2ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL) [0m
+  [1m[35m (1.9ms)[0m  CREATE UNIQUE INDEX  "unique_schema_migrations" ON "schema_migrations"  ("version")
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateUsers (20160824213245)
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (4.9ms)[0m  [1mCREATE TABLE "users" ("id" serial primary key, "first_name" character varying, "last_name" character varying, "email" character varying, "phone" character varying, "phone_approval" boolean DEFAULT 'f', "password_digest" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20160824213245"]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+Migrating to CreateTeams (20160825020129)
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (7.8ms)[0m  [1mCREATE TABLE "teams" ("id" serial primary key, "name" character varying NOT NULL, "captain_id" integer NOT NULL, "sport_id" integer NOT NULL, "mascot_name" character varying, "mascot_url" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20160825020129"]]
+  [1m[36m (0.7ms)[0m  [1mCOMMIT[0m
+Migrating to CreateSports (20160825143949)
+  [1m[35m (0.4ms)[0m  BEGIN
+  [1m[36m (8.8ms)[0m  [1mCREATE TABLE "sports" ("id" serial primary key, "name" character varying, "max_players" integer, "min_players" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20160825143949"]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+Migrating to CreateGames (20160825192427)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (5.7ms)[0m  [1mCREATE TABLE "games" ("id" serial primary key, "home_team_id" integer, "away_team_id" integer, "home_team_score" integer, "away_team_score" integer, "schedule" character varying, "time" character varying, "location" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20160825192427"]]
+  [1m[36m (0.7ms)[0m  [1mCOMMIT[0m
+Migrating to CreateRosters (20160826021852)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (2.9ms)[0m  [1mCREATE TABLE "rosters" ("id" serial primary key, "player_id" integer, "team_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20160826021852"]]
+  [1m[36m (0.6ms)[0m  [1mCOMMIT[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.3ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (4.2ms)[0m  [1mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+=======
   [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
   [1m[35m (0.5ms)[0m  BEGIN
   [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "users" ("first_name", "last_name", "email", "phone", "password_digest", "phone_approval", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["first_name", "Kunal"], ["last_name", "Patel"], ["email", "kunal@gmail.com"], ["phone", "123-456-7890"], ["password_digest", "password"], ["phone_approval", "t"], ["created_at", "2016-08-26 16:18:48.165941"], ["updated_at", "2016-08-26 16:18:48.165941"]]
@@ -2153,6 +3974,7 @@ Migrating to CreateRosters (20160826021852)
   [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
   [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
   [1m[36m (3.1ms)[0m  [1mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+>>>>>>> master
 FROM pg_constraint c
 JOIN pg_class t1 ON c.conrelid = t1.oid
 JOIN pg_class t2 ON c.confrelid = t2.oid
@@ -2164,7 +3986,11 @@ WHERE c.contype = 'f'
   AND t3.nspname = ANY (current_schemas(false))
 ORDER BY c.conname
 [0m
+<<<<<<< HEAD
+  [1m[35m (3.7ms)[0m  SELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+=======
   [1m[35m (1.5ms)[0m  SELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+>>>>>>> master
 FROM pg_constraint c
 JOIN pg_class t1 ON c.conrelid = t1.oid
 JOIN pg_class t2 ON c.confrelid = t2.oid
@@ -2176,7 +4002,11 @@ WHERE c.contype = 'f'
   AND t3.nspname = ANY (current_schemas(false))
 ORDER BY c.conname
 
+<<<<<<< HEAD
+  [1m[36m (3.4ms)[0m  [1mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+=======
   [1m[36m (1.5ms)[0m  [1mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+>>>>>>> master
 FROM pg_constraint c
 JOIN pg_class t1 ON c.conrelid = t1.oid
 JOIN pg_class t2 ON c.confrelid = t2.oid
@@ -2188,7 +4018,11 @@ WHERE c.contype = 'f'
   AND t3.nspname = ANY (current_schemas(false))
 ORDER BY c.conname
 [0m
+<<<<<<< HEAD
+  [1m[35m (5.4ms)[0m  SELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+=======
   [1m[35m (1.5ms)[0m  SELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+>>>>>>> master
 FROM pg_constraint c
 JOIN pg_class t1 ON c.conrelid = t1.oid
 JOIN pg_class t2 ON c.confrelid = t2.oid
@@ -2200,7 +4034,11 @@ WHERE c.contype = 'f'
   AND t3.nspname = ANY (current_schemas(false))
 ORDER BY c.conname
 
+<<<<<<< HEAD
+  [1m[36m (5.4ms)[0m  [1mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+=======
   [1m[36m (1.4ms)[0m  [1mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+>>>>>>> master
 FROM pg_constraint c
 JOIN pg_class t1 ON c.conrelid = t1.oid
 JOIN pg_class t2 ON c.confrelid = t2.oid
@@ -2212,6 +4050,233 @@ WHERE c.contype = 'f'
   AND t3.nspname = ANY (current_schemas(false))
 ORDER BY c.conname
 [0m
+<<<<<<< HEAD
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.8ms)[0m  [1mINSERT INTO "users" ("first_name", "last_name", "email", "phone", "password_digest", "phone_approval", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["first_name", "Kunal"], ["last_name", "Patel"], ["email", "kunal@gmail.com"], ["phone", "123-456-7890"], ["password_digest", "password"], ["phone_approval", "t"], ["created_at", "2016-08-26 19:18:39.760009"], ["updated_at", "2016-08-26 19:18:39.760009"]]
+  [1m[35m (1.1ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("first_name", "last_name", "email", "phone", "password_digest", "phone_approval", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"  [["first_name", "Amy"], ["last_name", "Plant"], ["email", "amy@gmail.com"], ["phone", "123-456-7890"], ["password_digest", "password"], ["phone_approval", "t"], ["created_at", "2016-08-26 19:18:39.766882"], ["updated_at", "2016-08-26 19:18:39.766882"]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "users" ("first_name", "last_name", "email", "phone", "password_digest", "phone_approval", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["first_name", "Craig"], ["last_name", "Waterman"], ["email", "craig@gmail.com"], ["phone", "123-456-7890"], ["password_digest", "password"], ["phone_approval", "t"], ["created_at", "2016-08-26 19:18:39.769579"], ["updated_at", "2016-08-26 19:18:39.769579"]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("first_name", "last_name", "email", "phone", "password_digest", "phone_approval", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"  [["first_name", "John"], ["last_name", "Linder"], ["email", "john@gmail.com"], ["phone", "123-456-7890"], ["password_digest", "password"], ["phone_approval", "t"], ["created_at", "2016-08-26 19:18:39.771899"], ["updated_at", "2016-08-26 19:18:39.771899"]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "users" ("first_name", "last_name", "email", "phone", "password_digest", "phone_approval", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["first_name", "Matt"], ["last_name", "Baker"], ["email", "matt@gmail.com"], ["phone", "123-456-7890"], ["password_digest", "password"], ["phone_approval", "t"], ["created_at", "2016-08-26 19:18:39.774179"], ["updated_at", "2016-08-26 19:18:39.774179"]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("first_name", "last_name", "email", "phone", "password_digest", "phone_approval", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"  [["first_name", "Duke"], ["last_name", "Greene"], ["email", "duke@gmail.com"], ["phone", "123-456-7890"], ["password_digest", "password"], ["phone_approval", "t"], ["created_at", "2016-08-26 19:18:39.776539"], ["updated_at", "2016-08-26 19:18:39.776539"]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "users" ("first_name", "last_name", "email", "phone", "password_digest", "phone_approval", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["first_name", "Ellie"], ["last_name", "Poley"], ["email", "ellie@gmail.com"], ["phone", "123-456-7890"], ["password_digest", "password"], ["phone_approval", "t"], ["created_at", "2016-08-26 19:18:39.778853"], ["updated_at", "2016-08-26 19:18:39.778853"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("first_name", "last_name", "email", "phone", "password_digest", "phone_approval", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"  [["first_name", "Avner"], ["last_name", "Shanan"], ["email", "avner@gmail.com"], ["phone", "123-456-7890"], ["password_digest", "password"], ["phone_approval", "t"], ["created_at", "2016-08-26 19:18:39.781440"], ["updated_at", "2016-08-26 19:18:39.781440"]]
+  [1m[36m (0.6ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "users" ("first_name", "last_name", "email", "phone", "password_digest", "phone_approval", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["first_name", "Alyssa"], ["last_name", "Diaz"], ["email", "alyssa@gmail.com"], ["phone", "123-456-7890"], ["password_digest", "password"], ["phone_approval", "t"], ["created_at", "2016-08-26 19:18:39.783873"], ["updated_at", "2016-08-26 19:18:39.783873"]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("first_name", "last_name", "email", "phone", "password_digest", "phone_approval", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"  [["first_name", "Pete"], ["last_name", "Macaluso"], ["email", "pete@gmail.com"], ["phone", "123-456-7890"], ["password_digest", "password"], ["phone_approval", "t"], ["created_at", "2016-08-26 19:18:39.786170"], ["updated_at", "2016-08-26 19:18:39.786170"]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "teams" ("name", "captain_id", "sport_id", "mascot_name", "mascot_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Red Pandas"], ["captain_id", 1], ["sport_id", 1], ["mascot_name", "Panda"], ["mascot_url", "http://seveninchesofyourtime.com/wp-content/uploads/2014/05/Yawning-Red-Panda.jpg"], ["created_at", "2016-08-26 19:18:39.800014"], ["updated_at", "2016-08-26 19:18:39.800014"]]
+  [1m[35m (0.6ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "teams" ("name", "captain_id", "sport_id", "mascot_name", "mascot_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["name", "Salamanders"], ["captain_id", 2], ["sport_id", 1], ["mascot_name", "Salamanders"], ["mascot_url", "https://upload.wikimedia.org/wikipedia/commons/4/41/Salamander_head.png"], ["created_at", "2016-08-26 19:18:39.803282"], ["updated_at", "2016-08-26 19:18:39.803282"]]
+  [1m[36m (0.6ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "teams" ("name", "captain_id", "sport_id", "mascot_name", "mascot_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Wolves"], ["captain_id", 3], ["sport_id", 2], ["mascot_name", "Wolves"], ["mascot_url", "http://subtlemix.com/wp-content/uploads/Wolf-un-dominated-wolves-19664762-1600-1200.jpg"], ["created_at", "2016-08-26 19:18:39.805927"], ["updated_at", "2016-08-26 19:18:39.805927"]]
+  [1m[35m (0.6ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "sports" ("name", "min_players", "max_players", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["name", "Basketball"], ["min_players", 3], ["max_players", 5], ["created_at", "2016-08-26 19:18:39.815687"], ["updated_at", "2016-08-26 19:18:39.815687"]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "sports" ("name", "min_players", "max_players", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Soccer"], ["min_players", 7], ["max_players", 11], ["created_at", "2016-08-26 19:18:39.818449"], ["updated_at", "2016-08-26 19:18:39.818449"]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "rosters" ("player_id", "team_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["player_id", 1], ["team_id", 1], ["created_at", "2016-08-26 19:18:39.826681"], ["updated_at", "2016-08-26 19:18:39.826681"]]
+  [1m[36m (0.6ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "rosters" ("player_id", "team_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["player_id", 2], ["team_id", 2], ["created_at", "2016-08-26 19:18:39.829780"], ["updated_at", "2016-08-26 19:18:39.829780"]]
+  [1m[35m (0.6ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "rosters" ("player_id", "team_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["player_id", 3], ["team_id", 3], ["created_at", "2016-08-26 19:18:39.832392"], ["updated_at", "2016-08-26 19:18:39.832392"]]
+  [1m[36m (0.6ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "rosters" ("player_id", "team_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["player_id", 4], ["team_id", 1], ["created_at", "2016-08-26 19:18:39.834624"], ["updated_at", "2016-08-26 19:18:39.834624"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "rosters" ("player_id", "team_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["player_id", 5], ["team_id", 2], ["created_at", "2016-08-26 19:18:39.836583"], ["updated_at", "2016-08-26 19:18:39.836583"]]
+  [1m[36m (0.6ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "rosters" ("player_id", "team_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["player_id", 6], ["team_id", 3], ["created_at", "2016-08-26 19:18:39.838625"], ["updated_at", "2016-08-26 19:18:39.838625"]]
+  [1m[35m (0.6ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "rosters" ("player_id", "team_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["player_id", 7], ["team_id", 1], ["created_at", "2016-08-26 19:18:39.840802"], ["updated_at", "2016-08-26 19:18:39.840802"]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "rosters" ("player_id", "team_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["player_id", 8], ["team_id", 2], ["created_at", "2016-08-26 19:18:39.842697"], ["updated_at", "2016-08-26 19:18:39.842697"]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "rosters" ("player_id", "team_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["player_id", 9], ["team_id", 3], ["created_at", "2016-08-26 19:18:39.844575"], ["updated_at", "2016-08-26 19:18:39.844575"]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "rosters" ("player_id", "team_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["player_id", 10], ["team_id", 1], ["created_at", "2016-08-26 19:18:39.846401"], ["updated_at", "2016-08-26 19:18:39.846401"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "games" ("schedule", "time", "location", "home_team_id", "away_team_id", "home_team_score", "away_team_score", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"  [["schedule", "2016-08-26"], ["time", "01:00:00"], ["location", "Grand Park"], ["home_team_id", 1], ["away_team_id", 2], ["home_team_score", 100], ["away_team_score", 99], ["created_at", "2016-08-26 19:18:39.860673"], ["updated_at", "2016-08-26 19:18:39.860673"]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "games" ("schedule", "time", "location", "home_team_id", "away_team_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["schedule", "2016-08-27"], ["time", "01:00:00"], ["location", "DBC"], ["home_team_id", 3], ["away_team_id", 1], ["created_at", "2016-08-26 19:18:39.863684"], ["updated_at", "2016-08-26 19:18:39.863684"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "games" ("schedule", "time", "location", "home_team_id", "away_team_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["schedule", "2016-08-28"], ["time", "01:00:00"], ["location", "The River"], ["home_team_id", 2], ["away_team_id", 3], ["created_at", "2016-08-26 19:18:39.866485"], ["updated_at", "2016-08-26 19:18:39.866485"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "games" ("schedule", "time", "location", "home_team_id", "away_team_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["schedule", "2016-08-26"], ["time", "01:00:00"], ["location", "Grand Park"], ["home_team_id", 1], ["away_team_id", 3], ["created_at", "2016-08-26 19:18:39.869028"], ["updated_at", "2016-08-26 19:18:39.869028"]]
+  [1m[35m (0.5ms)[0m  COMMIT
+
+
+Started GET "/games/new" for ::1 at 2016-08-26 14:18:55 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by GamesController#new as HTML
+  [1m[35mUser Load (0.9ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered games/_header.html.erb (24.7ms)
+  [1m[36mTeam Load (0.8ms)[0m  [1mSELECT "teams".* FROM "teams"[0m
+  Rendered games/_form.html.erb (20.4ms)
+  Rendered _nav_secondary.html.erb (0.7ms)
+  Rendered games/new.html.erb within layouts/application (58.2ms)
+Completed 200 OK in 353ms (Views: 303.6ms | ActiveRecord: 11.2ms)
+
+
+Started GET "/assets/application.self-66996597171ad2c972472e1232057eebe0bc1b4a5a65851fc3f71b9f3280950a.css?body=1" for ::1 at 2016-08-26 14:18:56 -0500
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2016-08-26 14:18:56 -0500
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2016-08-26 14:18:56 -0500
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for ::1 at 2016-08-26 14:18:56 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-08-26 14:18:56 -0500
+
+
+Started GET "/assets/carousel.css" for ::1 at 2016-08-26 14:18:56 -0500
+
+
+Started GET "/assets/teams" for ::1 at 2016-08-26 14:18:56 -0500
+
+
+Started GET "/assets/games" for ::1 at 2016-08-26 14:18:56 -0500
+
+
+Started GET "/assets/sports" for ::1 at 2016-08-26 14:18:56 -0500
+
+
+Started POST "/games" for ::1 at 2016-08-26 14:19:06 -0500
+Processing by GamesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ieV9nfpiFwhAVPZVf4JSotAe7ENcNVAlp10EKZMmCU3wXRllxHQnkwvd+fdxKklpr6JYOpC9VByv9zQnXUv4vg==", "game"=>{"home_team_id"=>"1", "location"=>"DBC", "schedule"=>"08/29/2016", "time"=>"3:00"}, "commit"=>"Submit"}
+Unpermitted parameter: time
+Unpermitted parameter: time
+  [1m[35m (0.7ms)[0m  BEGIN
+  [1m[36mSQL (0.9ms)[0m  [1mINSERT INTO "games" ("location", "schedule", "home_team_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["location", "DBC"], ["schedule", "08/29/2016"], ["home_team_id", 1], ["created_at", "2016-08-26 19:19:06.534682"], ["updated_at", "2016-08-26 19:19:06.534682"]]
+  [1m[35m (0.9ms)[0m  COMMIT
+Redirected to http://localhost:3000/games/5
+Completed 302 Found in 10ms (ActiveRecord: 2.5ms)
+
+
+Started GET "/games/5" for ::1 at 2016-08-26 14:19:06 -0500
+Processing by GamesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mGame Load (0.5ms)[0m  [1mSELECT  "games".* FROM "games" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  [1m[35mTeam Load (0.3ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mSport Load (1.0ms)[0m  [1mSELECT  "sports".* FROM "sports" WHERE "sports"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered games/_header.html.erb (1.4ms)
+  Rendered _nav_secondary.html.erb (0.1ms)
+  Rendered games/show.html.erb within layouts/application (534.6ms)
+Completed 200 OK in 575ms (Views: 551.6ms | ActiveRecord: 6.9ms)
+
+
+Started GET "/assets/carousel.css" for ::1 at 2016-08-26 14:19:07 -0500
+
+
+Started GET "/assets/teams" for ::1 at 2016-08-26 14:19:07 -0500
+
+
+Started GET "/assets/games" for ::1 at 2016-08-26 14:19:07 -0500
+
+
+Started GET "/assets/sports" for ::1 at 2016-08-26 14:19:07 -0500
+
+
+Started GET "/games/new" for ::1 at 2016-08-26 14:19:41 -0500
+Processing by GamesController#new as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered games/_header.html.erb (1.0ms)
+  [1m[35mTeam Load (0.6ms)[0m  SELECT "teams".* FROM "teams"
+  Rendered games/_form.html.erb (3.2ms)
+  Rendered _nav_secondary.html.erb (0.1ms)
+  Rendered games/new.html.erb within layouts/application (9.3ms)
+Completed 200 OK in 28ms (Views: 26.0ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/carousel.css" for ::1 at 2016-08-26 14:19:41 -0500
+
+
+Started GET "/assets/teams" for ::1 at 2016-08-26 14:19:41 -0500
+
+
+Started GET "/assets/games" for ::1 at 2016-08-26 14:19:41 -0500
+
+
+Started GET "/assets/sports" for ::1 at 2016-08-26 14:19:41 -0500
+
+
+Started GET "/games/new" for ::1 at 2016-08-26 14:19:46 -0500
+Processing by GamesController#new as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered games/_header.html.erb (1.6ms)
+  [1m[35mTeam Load (0.4ms)[0m  SELECT "teams".* FROM "teams"
+  Rendered games/_form.html.erb (3.7ms)
+  Rendered _nav_secondary.html.erb (0.2ms)
+  Rendered games/new.html.erb within layouts/application (12.3ms)
+Completed 200 OK in 28ms (Views: 26.3ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/application.self-66996597171ad2c972472e1232057eebe0bc1b4a5a65851fc3f71b9f3280950a.css?body=1" for ::1 at 2016-08-26 14:19:46 -0500
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2016-08-26 14:19:46 -0500
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2016-08-26 14:19:46 -0500
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for ::1 at 2016-08-26 14:19:46 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-08-26 14:19:46 -0500
+
+
+Started GET "/assets/carousel.css" for ::1 at 2016-08-26 14:19:46 -0500
+
+
+Started GET "/assets/teams" for ::1 at 2016-08-26 14:19:46 -0500
+
+
+Started GET "/assets/games" for ::1 at 2016-08-26 14:19:46 -0500
+
+
+Started GET "/assets/sports" for ::1 at 2016-08-26 14:19:46 -0500
+=======
   [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
   [1m[35m (0.1ms)[0m  BEGIN
   [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "users" ("first_name", "last_name", "email", "phone", "password_digest", "phone_approval", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["first_name", "Kunal"], ["last_name", "Patel"], ["email", "kunal@gmail.com"], ["phone", "123-456-7890"], ["password_digest", "password"], ["phone_approval", "t"], ["created_at", "2016-08-26 19:31:51.092305"], ["updated_at", "2016-08-26 19:31:51.092305"]]
@@ -2288,3 +4353,4 @@ ORDER BY c.conname
   [1m[35m (0.1ms)[0m  BEGIN
   [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "rosters" ("player_id", "team_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["player_id", 10], ["team_id", 1], ["created_at", "2016-08-26 19:31:51.189213"], ["updated_at", "2016-08-26 19:31:51.189213"]]
   [1m[35m (0.3ms)[0m  COMMIT
+>>>>>>> master

@@ -9,6 +9,7 @@ class GamesController < ApplicationController
 	end
 
 	def create
+		p post_params
 		@game = Game.new(post_params)
 
 		if @game.save

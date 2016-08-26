@@ -21,7 +21,8 @@ ActiveRecord::Schema.define(version: 20160826021852) do
     t.integer  "away_team_id"
     t.integer  "home_team_score"
     t.integer  "away_team_score"
-    t.datetime "schedule"
+    t.string   "schedule"
+    t.string   "time"
     t.string   "location"
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
