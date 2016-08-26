@@ -4,11 +4,12 @@ class Team < ActiveRecord::Base
   validates :sport_id, presence: true
 
   belongs_to :sport
-  belongs_to :roster
-  has_many :players, through: :roster
 
-  # has_many :games, foreign_key: :away_team_id
-  # has_many :games, foreign_key: :home_team_id
+  has_many :rosters
+  has_many :players, through: :rosters
+  has_many :attendance
+  has_many :away_games, class_name: Game, foreign_key: :away_team_id
+  has_many :home_games, class_name: Game, foreign_key: :home_team_id
 
   def games
     games = []
@@ -28,10 +29,11 @@ class Team < ActiveRecord::Base
   def games_played
     games_played = []
     self.games.each do |game|
-      if game.played?
+      if game.played? == true
         games_played << game
       end
     end
+    games_played
   end
 
   def upcoming_games
@@ -43,26 +45,14 @@ class Team < ActiveRecord::Base
     end
   end
 
-  def wins
+  def games_won
     games_won = []
     self.games_played.each do |game|
       if game.winner == self
         games_won << game
       end
     end
+    games_won
   end
 
 end
-
-
-
-
-
-
-
-
-
-
-
-
-
