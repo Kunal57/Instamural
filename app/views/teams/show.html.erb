@@ -1,4 +1,7 @@
-<div>
+
+<%= render 'header' %>
+
+<div class="container">
   <span><%= @team.name %>: <%= @team.sport.name %></span>
   <!-- Need Game model done to calculate -->
   <span>Games Won: <%#=  %></span>
@@ -39,3 +42,5 @@
     <% end %>
   </ul>
 </div>
+
+<%= render '/nav_secondary' %>

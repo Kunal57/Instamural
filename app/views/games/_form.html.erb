@@ -1,4 +1,4 @@
-<%= form_for @game do |f| %>
+<%= form_for @game, :html => {:class => "form-horizontal"} do |f| %>
 	<% if @game.errors.any? %>
 		<h2><%= pluralize(@game.errors.count, "error") %> prevented this post from saving.</h2>
 		<ul>
@@ -7,22 +7,33 @@
 			<% end %>
 		</ul>
 	<% end %>
-  <p>
-    <%= f.label :team %>
-    <%= f.collection_select(:home_team_id, Team.all, :id, :name, :prompt => 'Select') %>
-  </p>
 
-	<p>
-		<%= f.label :location %>
-		<%= f.text_field :location %>
-	</p>
+	<div class="form-group">
+	  <label class="col-md-2 control-label" for="selectbasic">Team:</label>
+	  <div class="col-md-4">
 
-	<p>
-		<%= f.label :datetime %>
-		<%= f.text_field :schedule %>
-	</p>
+	    <%= f.collection_select :home_team_id, Team.all, :id, :name, {:include_blank => true}, {class: "form-control"} %>
+	  </div>
+	</div>
 
-	<p>
-		<%= f.submit %>
-	</p>
+	<div class="form-group">
+		<%= f.label :location, "Location:", class: "col-md-2 control-label" %>
+		<div class="col-md-4">
+			<%= f.text_field :location, class: "form-control" %>
+		</div>
+	</div>
+
+	<div class="form-group">
+		<%= f.label :datetime, "Date:", class: "col-md-2 control-label" %>
+		<div class="col-md-4">
+			<%= f.text_field :schedule, class: "form-control", placeholder: "Format as YYYY-MM-DD" %>
+		</div>
+	</div>
+
+	<div class="form-group">
+		<label class="col-md-2 control-label" for=""></label>
+		<div class="col-md-6">
+			<%= f.submit "Submit", class: "col-md-2 btn btn-primary" %>
+		</div>
+	</div>
 <% end %>
