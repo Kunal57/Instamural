@@ -12,5 +12,5 @@
 #     name: Faker::Team.name
 #   )
 # end
-
+Team.create(name: "Bulls", captain_id: 1, sport_id: 1)
 
