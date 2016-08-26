@@ -1851,3 +1851,234 @@ Started GET "/assets/stats" for ::1 at 2016-08-26 10:43:05 -0500
 
 Started GET "/assets/teams" for ::1 at 2016-08-26 10:43:05 -0500
   [1m[36mRoster Load (0.6ms)[0m  [1mSELECT "rosters".* FROM "rosters"[0m
+  [1m[36m (14.5ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL) [0m
+  [1m[35m (1.1ms)[0m  CREATE UNIQUE INDEX  "unique_schema_migrations" ON "schema_migrations"  ("version")
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateUsers (20160824213245)
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (3.8ms)[0m  [1mCREATE TABLE "users" ("id" serial primary key, "first_name" character varying, "last_name" character varying, "email" character varying, "phone" character varying, "phone_approval" boolean DEFAULT 'f', "password_digest" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20160824213245"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+Migrating to CreateTeams (20160825020129)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (2.9ms)[0m  [1mCREATE TABLE "teams" ("id" serial primary key, "name" character varying NOT NULL, "captain_id" integer NOT NULL, "sport_id" integer NOT NULL, "mascot_name" character varying, "mascot_url" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20160825020129"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+Migrating to CreateSports (20160825143949)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (3.2ms)[0m  [1mCREATE TABLE "sports" ("id" serial primary key, "name" character varying, "max_players" integer, "min_players" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20160825143949"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+Migrating to CreateGames (20160825192427)
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (3.7ms)[0m  [1mCREATE TABLE "games" ("id" serial primary key, "home_team_id" integer, "away_team_id" integer, "home_team_score" integer, "away_team_score" integer, "schedule" timestamp, "location" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20160825192427"]]
+  [1m[36m (0.6ms)[0m  [1mCOMMIT[0m
+Migrating to CreateRosters (20160826021852)
+  [1m[35m (0.7ms)[0m  BEGIN
+  [1m[36m (2.7ms)[0m  [1mCREATE TABLE "rosters" ("id" serial primary key, "player_id" integer, "team_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20160826021852"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (1.8ms)[0m  [1mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'games'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (1.3ms)[0m  SELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'rosters'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+
+  [1m[36m (1.3ms)[0m  [1mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'sports'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (1.4ms)[0m  SELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'teams'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+
+  [1m[36m (1.3ms)[0m  [1mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'users'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.5ms)[0m  BEGIN
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "users" ("first_name", "last_name", "email", "phone", "password_digest", "phone_approval", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["first_name", "Kunal"], ["last_name", "Patel"], ["email", "kunal@gmail.com"], ["phone", "123-456-7890"], ["password_digest", "password"], ["phone_approval", "t"], ["created_at", "2016-08-26 16:18:48.165941"], ["updated_at", "2016-08-26 16:18:48.165941"]]
+  [1m[35m (1.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("first_name", "last_name", "email", "phone", "password_digest", "phone_approval", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"  [["first_name", "Amy"], ["last_name", "Plant"], ["email", "amy@gmail.com"], ["phone", "123-456-7890"], ["password_digest", "password"], ["phone_approval", "t"], ["created_at", "2016-08-26 16:18:48.180563"], ["updated_at", "2016-08-26 16:18:48.180563"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "users" ("first_name", "last_name", "email", "phone", "password_digest", "phone_approval", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["first_name", "Craig"], ["last_name", "Waterman"], ["email", "craig@gmail.com"], ["phone", "123-456-7890"], ["password_digest", "password"], ["phone_approval", "t"], ["created_at", "2016-08-26 16:18:48.183246"], ["updated_at", "2016-08-26 16:18:48.183246"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "users" ("first_name", "last_name", "email", "phone", "password_digest", "phone_approval", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"  [["first_name", "John"], ["last_name", "Linder"], ["email", "john@gmail.com"], ["phone", "123-456-7890"], ["password_digest", "password"], ["phone_approval", "t"], ["created_at", "2016-08-26 16:18:48.190132"], ["updated_at", "2016-08-26 16:18:48.190132"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "users" ("first_name", "last_name", "email", "phone", "password_digest", "phone_approval", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["first_name", "Matt"], ["last_name", "Baker"], ["email", "matt@gmail.com"], ["phone", "123-456-7890"], ["password_digest", "password"], ["phone_approval", "t"], ["created_at", "2016-08-26 16:18:48.193597"], ["updated_at", "2016-08-26 16:18:48.193597"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("first_name", "last_name", "email", "phone", "password_digest", "phone_approval", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"  [["first_name", "Duke"], ["last_name", "Greene"], ["email", "duke@gmail.com"], ["phone", "123-456-7890"], ["password_digest", "password"], ["phone_approval", "t"], ["created_at", "2016-08-26 16:18:48.196348"], ["updated_at", "2016-08-26 16:18:48.196348"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "users" ("first_name", "last_name", "email", "phone", "password_digest", "phone_approval", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["first_name", "Ellie"], ["last_name", "Poley"], ["email", "ellie@gmail.com"], ["phone", "123-456-7890"], ["password_digest", "password"], ["phone_approval", "t"], ["created_at", "2016-08-26 16:18:48.208323"], ["updated_at", "2016-08-26 16:18:48.208323"]]
+  [1m[35m (1.7ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "users" ("first_name", "last_name", "email", "phone", "password_digest", "phone_approval", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"  [["first_name", "Avner"], ["last_name", "Shanan"], ["email", "avner@gmail.com"], ["phone", "123-456-7890"], ["password_digest", "password"], ["phone_approval", "t"], ["created_at", "2016-08-26 16:18:48.212962"], ["updated_at", "2016-08-26 16:18:48.212962"]]
+  [1m[36m (0.7ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "users" ("first_name", "last_name", "email", "phone", "password_digest", "phone_approval", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["first_name", "Alyssa"], ["last_name", "Diaz"], ["email", "alyssa@gmail.com"], ["phone", "123-456-7890"], ["password_digest", "password"], ["phone_approval", "t"], ["created_at", "2016-08-26 16:18:48.218658"], ["updated_at", "2016-08-26 16:18:48.218658"]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("first_name", "last_name", "email", "phone", "password_digest", "phone_approval", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"  [["first_name", "Pete"], ["last_name", "Macaluso"], ["email", "pete@gmail.com"], ["phone", "123-456-7890"], ["password_digest", "password"], ["phone_approval", "t"], ["created_at", "2016-08-26 16:18:48.223965"], ["updated_at", "2016-08-26 16:18:48.223965"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "teams" ("name", "captain_id", "sport_id", "mascot_name", "mascot_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Red Pandas"], ["captain_id", 1], ["sport_id", 1], ["mascot_name", "Panda"], ["mascot_url", "http://seveninchesofyourtime.com/wp-content/uploads/2014/05/Yawning-Red-Panda.jpg"], ["created_at", "2016-08-26 16:18:48.235542"], ["updated_at", "2016-08-26 16:18:48.235542"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "teams" ("name", "captain_id", "sport_id", "mascot_name", "mascot_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["name", "Salamanders"], ["captain_id", 2], ["sport_id", 1], ["mascot_name", "Salamanders"], ["mascot_url", "https://upload.wikimedia.org/wikipedia/commons/4/41/Salamander_head.png"], ["created_at", "2016-08-26 16:18:48.238710"], ["updated_at", "2016-08-26 16:18:48.238710"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "teams" ("name", "captain_id", "sport_id", "mascot_name", "mascot_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Wolves"], ["captain_id", 3], ["sport_id", 2], ["mascot_name", "Wolves"], ["mascot_url", "http://subtlemix.com/wp-content/uploads/Wolf-un-dominated-wolves-19664762-1600-1200.jpg"], ["created_at", "2016-08-26 16:18:48.241283"], ["updated_at", "2016-08-26 16:18:48.241283"]]
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "sports" ("name", "min_players", "max_players", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["name", "Basketball"], ["min_players", 3], ["max_players", 5], ["created_at", "2016-08-26 16:18:48.249872"], ["updated_at", "2016-08-26 16:18:48.249872"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "sports" ("name", "min_players", "max_players", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Soccer"], ["min_players", 7], ["max_players", 11], ["created_at", "2016-08-26 16:18:48.252256"], ["updated_at", "2016-08-26 16:18:48.252256"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "rosters" ("player_id", "team_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["player_id", 1], ["team_id", 1], ["created_at", "2016-08-26 16:18:48.259187"], ["updated_at", "2016-08-26 16:18:48.259187"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "rosters" ("player_id", "team_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["player_id", 2], ["team_id", 2], ["created_at", "2016-08-26 16:18:48.261708"], ["updated_at", "2016-08-26 16:18:48.261708"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "rosters" ("player_id", "team_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["player_id", 3], ["team_id", 3], ["created_at", "2016-08-26 16:18:48.264136"], ["updated_at", "2016-08-26 16:18:48.264136"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "rosters" ("player_id", "team_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["player_id", 4], ["team_id", 1], ["created_at", "2016-08-26 16:18:48.266181"], ["updated_at", "2016-08-26 16:18:48.266181"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "rosters" ("player_id", "team_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["player_id", 5], ["team_id", 2], ["created_at", "2016-08-26 16:18:48.267873"], ["updated_at", "2016-08-26 16:18:48.267873"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "rosters" ("player_id", "team_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["player_id", 6], ["team_id", 3], ["created_at", "2016-08-26 16:18:48.269888"], ["updated_at", "2016-08-26 16:18:48.269888"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "rosters" ("player_id", "team_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["player_id", 7], ["team_id", 1], ["created_at", "2016-08-26 16:18:48.271902"], ["updated_at", "2016-08-26 16:18:48.271902"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "rosters" ("player_id", "team_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["player_id", 8], ["team_id", 2], ["created_at", "2016-08-26 16:18:48.273668"], ["updated_at", "2016-08-26 16:18:48.273668"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "rosters" ("player_id", "team_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["player_id", 9], ["team_id", 3], ["created_at", "2016-08-26 16:18:48.275317"], ["updated_at", "2016-08-26 16:18:48.275317"]]
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "rosters" ("player_id", "team_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["player_id", 10], ["team_id", 1], ["created_at", "2016-08-26 16:18:48.276878"], ["updated_at", "2016-08-26 16:18:48.276878"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "games" ("schedule", "location", "home_team_id", "away_team_id", "home_team_score", "away_team_score", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"  [["schedule", "2016-08-26 01:00:00.000000"], ["location", "Grand Park"], ["home_team_id", 1], ["away_team_id", 2], ["home_team_score", 100], ["away_team_score", 99], ["created_at", "2016-08-26 16:18:48.288045"], ["updated_at", "2016-08-26 16:18:48.288045"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "games" ("schedule", "location", "home_team_id", "away_team_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["schedule", "2016-08-27 01:00:00.000000"], ["location", "DBC"], ["home_team_id", 3], ["away_team_id", 1], ["created_at", "2016-08-26 16:18:48.291967"], ["updated_at", "2016-08-26 16:18:48.291967"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "games" ("schedule", "location", "home_team_id", "away_team_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["schedule", "2016-08-28 01:00:00.000000"], ["location", "The River"], ["home_team_id", 2], ["away_team_id", 3], ["created_at", "2016-08-26 16:18:48.294245"], ["updated_at", "2016-08-26 16:18:48.294245"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "games" ("schedule", "location", "home_team_id", "away_team_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["schedule", "2016-08-26 01:00:00.000000"], ["location", "Grand Park"], ["home_team_id", 1], ["away_team_id", 3], ["created_at", "2016-08-26 16:18:48.296280"], ["updated_at", "2016-08-26 16:18:48.296280"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+
+
+Started GET "/games" for ::1 at 2016-08-26 11:18:59 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by GamesController#index as HTML
+  Rendered games/index.html.erb within layouts/application (1.2ms)
+Completed 500 Internal Server Error in 36ms (ActiveRecord: 0.0ms)
+
+SyntaxError (/Users/Kunal/Development/Dev-Bootcamp/phase-3/week-1/Instamural/app/views/games/index.html.erb:44: syntax error, unexpected keyword_ensure, expecting keyword_end
+/Users/Kunal/Development/Dev-Bootcamp/phase-3/week-1/Instamural/app/views/games/index.html.erb:46: syntax error, unexpected end-of-input, expecting keyword_end):
+  app/views/games/index.html.erb:44: syntax error, unexpected keyword_ensure, expecting keyword_end
+  app/views/games/index.html.erb:46: syntax error, unexpected end-of-input, expecting keyword_end
+
+
+  Rendered /Users/Kunal/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.1ms)
+  Rendered /Users/Kunal/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendered /Users/Kunal/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/Kunal/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (55.7ms)
+  Rendered /Users/Kunal/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /Users/Kunal/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/Kunal/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/Kunal/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/Kunal/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (325.7ms)
+  Rendered /Users/Kunal/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/Kunal/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/Kunal/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (389.4ms)
+
+
+Started GET "/teams" for ::1 at 2016-08-26 11:19:07 -0500
+Processing by TeamsController#index as HTML
+  [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered teams/_header.html.erb (23.4ms)
+  [1m[36mTeam Load (0.4ms)[0m  [1mSELECT "teams".* FROM "teams"[0m
+  [1m[35mSport Load (0.2ms)[0m  SELECT  "sports".* FROM "sports" WHERE "sports"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "sports".* FROM "sports" WHERE "sports"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mSport Load (0.2ms)[0m  SELECT  "sports".* FROM "sports" WHERE "sports"."id" = $1 LIMIT 1  [["id", 2]]
+  Rendered _nav_secondary.html.erb (0.4ms)
+  Rendered teams/index.html.erb within layouts/application (54.6ms)
+Completed 200 OK in 377ms (Views: 366.6ms | ActiveRecord: 5.7ms)
+
+
+Started GET "/assets/carousel.css" for ::1 at 2016-08-26 11:19:07 -0500
+
+
+Started GET "/assets/application.self-66996597171ad2c972472e1232057eebe0bc1b4a5a65851fc3f71b9f3280950a.css?body=1" for ::1 at 2016-08-26 11:19:07 -0500
+
+
+Started GET "/assets/teams" for ::1 at 2016-08-26 11:19:07 -0500
+
+
+Started GET "/assets/games" for ::1 at 2016-08-26 11:19:07 -0500
+
+
+Started GET "/assets/stats" for ::1 at 2016-08-26 11:19:07 -0500

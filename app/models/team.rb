@@ -6,7 +6,7 @@ class Team < ActiveRecord::Base
   belongs_to :sport
   belongs_to :roster
   has_many :players, through: :roster
-  has_many :attendance
+
   # has_many :games, foreign_key: :away_team_id
   # has_many :games, foreign_key: :home_team_id
 
