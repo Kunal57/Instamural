@@ -1,0 +1,2177 @@
+
+
+Started GET "/teams/1" for ::1 at 2016-08-25 17:32:23 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by TeamsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mTeam Load (0.5ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mSport Load (0.3ms)[0m  [1mSELECT  "sports".* FROM "sports" WHERE "sports"."id" = $1 LIMIT 1[0m  [["id", 1]]
+PG::UndefinedColumn: ERROR:  column games.away_team_type does not exist
+LINE 1: ...ROM "games" WHERE "games"."away_team_id" = $1 AND "games"."a...
+                                                             ^
+: SELECT "games".* FROM "games" WHERE "games"."away_team_id" = $1 AND "games"."away_team_type" = $2
+  Rendered teams/show.html.erb within layouts/application (89.2ms)
+Completed 500 Internal Server Error in 142ms (ActiveRecord: 5.5ms)
+
+ActionView::Template::Error (PG::UndefinedColumn: ERROR:  column games.away_team_type does not exist
+LINE 1: ...ROM "games" WHERE "games"."away_team_id" = $1 AND "games"."a...
+                                                             ^
+: SELECT "games".* FROM "games" WHERE "games"."away_team_id" = $1 AND "games"."away_team_type" = $2):
+    1: <div>
+    2:   <span><%= @team.name %>: <%= @team.sport.name %></span>
+    3:   <ul>
+    4:     <% @team.games.each do |game| %>
+    5:       <li>
+    6:         <span><%#= %></span>
+    7:       </li>
+  app/views/teams/show.html.erb:4:in `_app_views_teams_show_html_erb__4337049016655372047_70134271483060'
+
+
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (10.1ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.6ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.1ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (96.2ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (559.2ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (659.8ms)
+
+
+Started GET "/teams/1" for ::1 at 2016-08-25 17:35:33 -0500
+Processing by TeamsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mTeam Load (0.2ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mSport Load (0.2ms)[0m  [1mSELECT  "sports".* FROM "sports" WHERE "sports"."id" = $1 LIMIT 1[0m  [["id", 1]]
+PG::UndefinedColumn: ERROR:  column games.away_team_type does not exist
+LINE 1: ...ROM "games" WHERE "games"."away_team_id" = $1 AND "games"."a...
+                                                             ^
+: SELECT "games".* FROM "games" WHERE "games"."away_team_id" = $1 AND "games"."away_team_type" = $2
+  Rendered teams/show.html.erb within layouts/application (16.0ms)
+Completed 500 Internal Server Error in 32ms (ActiveRecord: 4.2ms)
+
+ActionView::Template::Error (PG::UndefinedColumn: ERROR:  column games.away_team_type does not exist
+LINE 1: ...ROM "games" WHERE "games"."away_team_id" = $1 AND "games"."a...
+                                                             ^
+: SELECT "games".* FROM "games" WHERE "games"."away_team_id" = $1 AND "games"."away_team_type" = $2):
+    1: <div>
+    2:   <span><%= @team.name %>: <%= @team.sport.name %></span>
+    3:   <ul>
+    4:     <% @team.games.each do |game| %>
+    5:       <li>
+    6:         <span><%#= %></span>
+    7:       </li>
+  app/views/teams/show.html.erb:4:in `_app_views_teams_show_html_erb__4337049016655372047_70134271483060'
+
+
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (11.9ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.3ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (86.7ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (71.9ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (153.4ms)
+
+
+Started GET "/teams/1" for ::1 at 2016-08-25 17:35:41 -0500
+Processing by TeamsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mTeam Load (0.2ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mSport Load (0.2ms)[0m  [1mSELECT  "sports".* FROM "sports" WHERE "sports"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered teams/show.html.erb within layouts/application (14.0ms)
+Completed 500 Internal Server Error in 33ms (ActiveRecord: 3.2ms)
+
+ActionView::Template::Error (undefined method `games' for #<Team:0x007f92d12bb450>):
+    1: <div>
+    2:   <span><%= @team.name %>: <%= @team.sport.name %></span>
+    3:   <ul>
+    4:     <% @team.games.each do |game| %>
+    5:       <li>
+    6:         <span><%#= %></span>
+    7:       </li>
+  app/views/teams/show.html.erb:4:in `_app_views_teams_show_html_erb__4337049016655372047_70134271483060'
+
+
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (9.5ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.6ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (88.7ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (81.4ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (174.2ms)
+
+
+Started GET "/teams/1" for ::1 at 2016-08-25 17:36:41 -0500
+Processing by TeamsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mTeam Load (0.3ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mSport Load (0.2ms)[0m  [1mSELECT  "sports".* FROM "sports" WHERE "sports"."id" = $1 LIMIT 1[0m  [["id", 1]]
+PG::UndefinedColumn: ERROR:  column games.team_id does not exist
+LINE 1: SELECT "games".* FROM "games" WHERE "games"."team_id" = $1
+                                            ^
+: SELECT "games".* FROM "games" WHERE "games"."team_id" = $1
+  Rendered teams/show.html.erb within layouts/application (16.6ms)
+Completed 500 Internal Server Error in 34ms (ActiveRecord: 4.0ms)
+
+ActionView::Template::Error (PG::UndefinedColumn: ERROR:  column games.team_id does not exist
+LINE 1: SELECT "games".* FROM "games" WHERE "games"."team_id" = $1
+                                            ^
+: SELECT "games".* FROM "games" WHERE "games"."team_id" = $1):
+    1: <div>
+    2:   <span><%= @team.name %>: <%= @team.sport.name %></span>
+    3:   <ul>
+    4:     <% @team.games.each do |game| %>
+    5:       <li>
+    6:         <span><%#= %></span>
+    7:       </li>
+  app/views/teams/show.html.erb:4:in `_app_views_teams_show_html_erb__4337049016655372047_70134271483060'
+
+
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (11.2ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.5ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (90.0ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (70.8ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (155.2ms)
+
+
+Started GET "/teams/1" for ::1 at 2016-08-25 17:42:07 -0500
+Processing by TeamsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mTeam Load (0.2ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mSport Load (0.2ms)[0m  [1mSELECT  "sports".* FROM "sports" WHERE "sports"."id" = $1 LIMIT 1[0m  [["id", 1]]
+PG::UndefinedColumn: ERROR:  column games.home_team_type does not exist
+LINE 1: ...ROM "games" WHERE "games"."home_team_id" = $1 AND "games"."h...
+                                                             ^
+: SELECT "games".* FROM "games" WHERE "games"."home_team_id" = $1 AND "games"."home_team_type" = $2
+  Rendered teams/show.html.erb within layouts/application (16.7ms)
+Completed 500 Internal Server Error in 33ms (ActiveRecord: 3.6ms)
+
+ActionView::Template::Error (PG::UndefinedColumn: ERROR:  column games.home_team_type does not exist
+LINE 1: ...ROM "games" WHERE "games"."home_team_id" = $1 AND "games"."h...
+                                                             ^
+: SELECT "games".* FROM "games" WHERE "games"."home_team_id" = $1 AND "games"."home_team_type" = $2):
+    1: <div>
+    2:   <span><%= @team.name %>: <%= @team.sport.name %></span>
+    3:   <ul>
+    4:     <% @team.games.each do |game| %>
+    5:       <li>
+    6:         <span><%#= %></span>
+    7:       </li>
+  app/views/teams/show.html.erb:4:in `_app_views_teams_show_html_erb__4337049016655372047_70134271483060'
+
+
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (8.5ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.7ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (81.5ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (68.1ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (148.6ms)
+
+
+Started GET "/teams/1" for ::1 at 2016-08-25 17:42:33 -0500
+Processing by TeamsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mTeam Load (0.2ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mSport Load (0.2ms)[0m  [1mSELECT  "sports".* FROM "sports" WHERE "sports"."id" = $1 LIMIT 1[0m  [["id", 1]]
+PG::UndefinedColumn: ERROR:  column games.home_team does not exist
+LINE 1: SELECT "games".* FROM "games" WHERE "games"."home_team" = $1
+                                            ^
+HINT:  Perhaps you meant to reference the column "games.home_team_id".
+: SELECT "games".* FROM "games" WHERE "games"."home_team" = $1
+  Rendered teams/show.html.erb within layouts/application (18.6ms)
+Completed 500 Internal Server Error in 36ms (ActiveRecord: 3.7ms)
+
+ActionView::Template::Error (PG::UndefinedColumn: ERROR:  column games.home_team does not exist
+LINE 1: SELECT "games".* FROM "games" WHERE "games"."home_team" = $1
+                                            ^
+HINT:  Perhaps you meant to reference the column "games.home_team_id".
+: SELECT "games".* FROM "games" WHERE "games"."home_team" = $1):
+    1: <div>
+    2:   <span><%= @team.name %>: <%= @team.sport.name %></span>
+    3:   <ul>
+    4:     <% @team.games.each do |game| %>
+    5:       <li>
+    6:         <span><%#= %></span>
+    7:       </li>
+  app/views/teams/show.html.erb:4:in `_app_views_teams_show_html_erb__4337049016655372047_70134271483060'
+
+
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (8.8ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.8ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (87.0ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.1ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (78.4ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (172.9ms)
+
+
+Started GET "/teams/1" for ::1 at 2016-08-25 17:42:44 -0500
+Processing by TeamsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mTeam Load (0.2ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mSport Load (0.2ms)[0m  [1mSELECT  "sports".* FROM "sports" WHERE "sports"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mGame Load (0.4ms)[0m  SELECT "games".* FROM "games" WHERE "games"."home_team_id" = $1  [["home_team_id", 1]]
+  Rendered teams/show.html.erb within layouts/application (18.5ms)
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 500ms (Views: 479.0ms | ActiveRecord: 7.4ms)
+
+
+Started GET "/assets/games.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-08-25 17:42:45 -0500
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-08-25 17:42:45 -0500
+
+
+Started GET "/assets/sports.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-08-25 17:42:45 -0500
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2016-08-25 17:42:45 -0500
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2016-08-25 17:42:45 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-08-25 17:42:45 -0500
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for ::1 at 2016-08-25 17:42:45 -0500
+
+
+Started GET "/teams/1" for ::1 at 2016-08-25 17:43:04 -0500
+Processing by TeamsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mTeam Load (0.4ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mSport Load (0.2ms)[0m  [1mSELECT  "sports".* FROM "sports" WHERE "sports"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mGame Load (0.3ms)[0m  SELECT "games".* FROM "games" WHERE "games"."away_team_id" = $1  [["away_team_id", 1]]
+  Rendered teams/show.html.erb within layouts/application (21.4ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 84ms (Views: 60.4ms | ActiveRecord: 7.2ms)
+
+
+Started GET "/assets/games.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-08-25 17:43:05 -0500
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-08-25 17:43:05 -0500
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2016-08-25 17:43:05 -0500
+
+
+Started GET "/assets/sports.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-08-25 17:43:05 -0500
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2016-08-25 17:43:05 -0500
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for ::1 at 2016-08-25 17:43:05 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-08-25 17:43:05 -0500
+
+
+Started GET "/teams/1" for ::1 at 2016-08-25 17:48:01 -0500
+Processing by TeamsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mTeam Load (0.2ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mSport Load (0.2ms)[0m  [1mSELECT  "sports".* FROM "sports" WHERE "sports"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mGame Load (0.4ms)[0m  SELECT "games".* FROM "games" WHERE "games"."away_team_id" = $1  [["away_team_id", 1]]
+  Rendered teams/show.html.erb within layouts/application (15.6ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 48ms (Views: 45.3ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/assets/games.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-08-25 17:48:01 -0500
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for ::1 at 2016-08-25 17:48:01 -0500
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2016-08-25 17:48:01 -0500
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-08-25 17:48:01 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-08-25 17:48:01 -0500
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2016-08-25 17:48:01 -0500
+
+
+Started GET "/assets/sports.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-08-25 17:48:01 -0500
+
+
+Started GET "/teams/1" for ::1 at 2016-08-25 17:48:21 -0500
+Processing by TeamsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mTeam Load (0.2ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mSport Load (0.3ms)[0m  [1mSELECT  "sports".* FROM "sports" WHERE "sports"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mGame Load (0.3ms)[0m  SELECT "games".* FROM "games" WHERE "games"."away_team_id" = $1  [["away_team_id", 1]]
+  Rendered teams/show.html.erb within layouts/application (3.4ms)
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 21ms (Views: 18.8ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/assets/games.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-08-25 17:48:21 -0500
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2016-08-25 17:48:21 -0500
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2016-08-25 17:48:21 -0500
+
+
+Started GET "/assets/sports.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-08-25 17:48:21 -0500
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-08-25 17:48:21 -0500
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for ::1 at 2016-08-25 17:48:21 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-08-25 17:48:21 -0500
+
+
+Started GET "/teams/1" for ::1 at 2016-08-25 17:48:40 -0500
+Processing by TeamsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mTeam Load (0.2ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mSport Load (0.3ms)[0m  [1mSELECT  "sports".* FROM "sports" WHERE "sports"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mGame Load (0.3ms)[0m  SELECT "games".* FROM "games" WHERE "games"."away_team_id" = $1  [["away_team_id", 1]]
+  Rendered teams/show.html.erb within layouts/application (3.1ms)
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 29ms (Views: 26.1ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/assets/games.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-08-25 17:48:40 -0500
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-08-25 17:48:40 -0500
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2016-08-25 17:48:40 -0500
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2016-08-25 17:48:40 -0500
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for ::1 at 2016-08-25 17:48:40 -0500
+
+
+Started GET "/assets/sports.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-08-25 17:48:40 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-08-25 17:48:40 -0500
+
+
+Started GET "/teams/1" for ::1 at 2016-08-25 17:50:06 -0500
+Processing by TeamsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mTeam Load (0.2ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mSport Load (0.3ms)[0m  [1mSELECT  "sports".* FROM "sports" WHERE "sports"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mGame Load (0.2ms)[0m  SELECT "games".* FROM "games" WHERE "games"."home_team_id" = $1  [["home_team_id", 1]]
+  Rendered teams/show.html.erb within layouts/application (21.3ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 68ms (Views: 47.7ms | ActiveRecord: 6.7ms)
+
+
+Started GET "/assets/games.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-08-25 17:50:06 -0500
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2016-08-25 17:50:06 -0500
+
+
+Started GET "/assets/sports.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-08-25 17:50:06 -0500
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-08-25 17:50:06 -0500
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2016-08-25 17:50:06 -0500
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for ::1 at 2016-08-25 17:50:06 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-08-25 17:50:06 -0500
+
+
+Started GET "/teams/1" for ::1 at 2016-08-25 18:01:50 -0500
+Processing by TeamsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mTeam Load (0.2ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mSport Load (0.2ms)[0m  [1mSELECT  "sports".* FROM "sports" WHERE "sports"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered teams/show.html.erb within layouts/application (13.7ms)
+Completed 500 Internal Server Error in 30ms (ActiveRecord: 3.2ms)
+
+ActionView::Template::Error (undefined method `games' for #<Team:0x007f92d376e8b0>):
+    1: <div>
+    2:   <span><%= @team.name %>: <%= @team.sport.name %></span>
+    3:   <ul>
+    4:     <% @team.games.each do |game| %>
+    5:       <li>
+    6:         <span><%= game.location %></span>
+    7:       </li>
+  app/views/teams/show.html.erb:4:in `_app_views_teams_show_html_erb__4337049016655372047_70134295717700'
+
+
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (8.1ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.0ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (83.2ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.8ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (73.0ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (165.0ms)
+
+
+Started GET "/teams/1" for ::1 at 2016-08-25 18:02:11 -0500
+Processing by TeamsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mTeam Load (0.2ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mSport Load (0.2ms)[0m  [1mSELECT  "sports".* FROM "sports" WHERE "sports"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered teams/show.html.erb within layouts/application (14.8ms)
+Completed 500 Internal Server Error in 30ms (ActiveRecord: 3.6ms)
+
+ActionView::Template::Error (undefined method `games' for #<Team:0x007f92d5aeed08>):
+    1: <div>
+    2:   <span><%= @team.name %>: <%= @team.sport.name %></span>
+    3:   <ul>
+    4:     <% @team.games.each do |game| %>
+    5:       <li>
+    6:         <span><%= game.location %></span>
+    7:       </li>
+  app/views/teams/show.html.erb:4:in `_app_views_teams_show_html_erb__4337049016655372047_70134295717700'
+
+
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.7ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.9ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (85.1ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (77.2ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (169.7ms)
+
+
+Started GET "/teams/1" for ::1 at 2016-08-25 18:02:56 -0500
+Processing by TeamsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mTeam Load (0.2ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT 1  [["id", 1]]
+Completed 500 Internal Server Error in 16ms (ActiveRecord: 1.9ms)
+
+NoMethodError (undefined method `games' for #<Team:0x007f92d5acc190>):
+  app/controllers/teams_controller.rb:8:in `show'
+
+
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.4ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.4ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (84.5ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.7ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (70.0ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (157.9ms)
+
+
+Started GET "/teams/1" for ::1 at 2016-08-25 18:03:35 -0500
+Processing by TeamsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTeam Load (0.2ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT 1[0m  [["id", 1]]
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 2.4ms)
+
+NoMethodError (undefined method `games' for #<Team:0x007f92d3534f18>):
+  app/controllers/teams_controller.rb:8:in `show'
+
+
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.7ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.2ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (87.4ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.8ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (70.0ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (155.8ms)
+
+
+Started GET "/teams/1" for ::1 at 2016-08-25 18:03:48 -0500
+Processing by TeamsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mTeam Load (0.3ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mGame Load (0.3ms)[0m  [1mSELECT "games".* FROM "games" WHERE "games"."home_team_id" = $1[0m  [["home_team_id", 1]]
+  [1m[35mGame Load (0.3ms)[0m  SELECT "games".* FROM "games" WHERE "games"."away_team_id" = $1  [["away_team_id", 1]]
+  [1m[36mSport Load (0.2ms)[0m  [1mSELECT  "sports".* FROM "sports" WHERE "sports"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered teams/show.html.erb within layouts/application (11.1ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+Completed 200 OK in 71ms (Views: 36.8ms | ActiveRecord: 7.8ms)
+
+
+Started GET "/assets/games.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-08-25 18:03:48 -0500
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2016-08-25 18:03:48 -0500
+
+
+Started GET "/assets/sports.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-08-25 18:03:48 -0500
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-08-25 18:03:48 -0500
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for ::1 at 2016-08-25 18:03:48 -0500
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2016-08-25 18:03:48 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-08-25 18:03:48 -0500
+
+
+Started GET "/teams/1" for ::1 at 2016-08-25 18:05:40 -0500
+Processing by TeamsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTeam Load (0.2ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mGame Load (0.3ms)[0m  SELECT "games".* FROM "games" WHERE "games"."home_team_id" = $1  [["home_team_id", 1]]
+  [1m[36mGame Load (0.3ms)[0m  [1mSELECT "games".* FROM "games" WHERE "games"."away_team_id" = $1[0m  [["away_team_id", 1]]
+  [1m[35mSport Load (0.2ms)[0m  SELECT  "sports".* FROM "sports" WHERE "sports"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered teams/show.html.erb within layouts/application (1.8ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 22ms (Views: 17.9ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/assets/games.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-08-25 18:05:40 -0500
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2016-08-25 18:05:40 -0500
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2016-08-25 18:05:40 -0500
+
+
+Started GET "/assets/sports.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-08-25 18:05:40 -0500
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-08-25 18:05:40 -0500
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for ::1 at 2016-08-25 18:05:40 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-08-25 18:05:40 -0500
+
+
+Started GET "/teams/1" for ::1 at 2016-08-25 18:14:11 -0500
+Processing by TeamsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mTeam Load (0.2ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mGame Load (0.2ms)[0m  [1mSELECT "games".* FROM "games" WHERE "games"."home_team_id" = $1[0m  [["home_team_id", 1]]
+  [1m[35mGame Load (0.2ms)[0m  SELECT "games".* FROM "games" WHERE "games"."away_team_id" = $1  [["away_team_id", 1]]
+  [1m[36mSport Load (0.2ms)[0m  [1mSELECT  "sports".* FROM "sports" WHERE "sports"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered teams/show.html.erb within layouts/application (2.0ms)
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+Completed 200 OK in 19ms (Views: 15.3ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/assets/games.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-08-25 18:14:11 -0500
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2016-08-25 18:14:11 -0500
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for ::1 at 2016-08-25 18:14:11 -0500
+
+
+Started GET "/assets/sports.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-08-25 18:14:11 -0500
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-08-25 18:14:11 -0500
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2016-08-25 18:14:11 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-08-25 18:14:11 -0500
+
+
+Started GET "/teams/1" for ::1 at 2016-08-25 18:14:24 -0500
+Processing by TeamsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTeam Load (0.2ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mGame Load (0.3ms)[0m  SELECT "games".* FROM "games" WHERE "games"."home_team_id" = $1  [["home_team_id", 1]]
+  [1m[36mGame Load (0.2ms)[0m  [1mSELECT "games".* FROM "games" WHERE "games"."away_team_id" = $1[0m  [["away_team_id", 1]]
+  [1m[35mSport Load (0.2ms)[0m  SELECT  "sports".* FROM "sports" WHERE "sports"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered teams/show.html.erb within layouts/application (1.8ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 22ms (Views: 17.8ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/assets/games.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-08-25 18:14:24 -0500
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-08-25 18:14:24 -0500
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2016-08-25 18:14:24 -0500
+
+
+Started GET "/assets/sports.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-08-25 18:14:24 -0500
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for ::1 at 2016-08-25 18:14:24 -0500
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2016-08-25 18:14:24 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-08-25 18:14:24 -0500
+
+
+Started GET "/teams/1" for ::1 at 2016-08-25 18:14:37 -0500
+Processing by TeamsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mTeam Load (0.3ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mGame Load (0.2ms)[0m  [1mSELECT "games".* FROM "games" WHERE "games"."home_team_id" = $1[0m  [["home_team_id", 1]]
+  [1m[35mGame Load (0.2ms)[0m  SELECT "games".* FROM "games" WHERE "games"."away_team_id" = $1  [["away_team_id", 1]]
+  [1m[36mSport Load (0.2ms)[0m  [1mSELECT  "sports".* FROM "sports" WHERE "sports"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered teams/show.html.erb within layouts/application (1.9ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+Completed 200 OK in 21ms (Views: 17.4ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/games.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-08-25 18:14:37 -0500
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-08-25 18:14:37 -0500
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2016-08-25 18:14:37 -0500
+
+
+Started GET "/assets/sports.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-08-25 18:14:37 -0500
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2016-08-25 18:14:37 -0500
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for ::1 at 2016-08-25 18:14:37 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-08-25 18:14:37 -0500
+
+
+Started GET "/teams/1" for ::1 at 2016-08-25 18:23:08 -0500
+Processing by TeamsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTeam Load (0.2ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mGame Load (0.2ms)[0m  SELECT "games".* FROM "games" WHERE "games"."home_team_id" = $1  [["home_team_id", 1]]
+  [1m[36mGame Load (0.2ms)[0m  [1mSELECT "games".* FROM "games" WHERE "games"."away_team_id" = $1[0m  [["away_team_id", 1]]
+  [1m[35mSport Load (0.2ms)[0m  SELECT  "sports".* FROM "sports" WHERE "sports"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mTeam Load (0.3ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."id" IS NULL LIMIT 1[0m
+  Rendered teams/show.html.erb within layouts/application (5.1ms)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 1.1ms)
+
+ActionView::Template::Error (undefined method `name' for nil:NilClass):
+    4:   <ul>
+    5:     <% @games.each do |game| %>
+    6:       <li>
+    7:         <span><%=Team.find_by(id: game.away_team_id).name %> vs Team.find_by(id: game.home_team_id).name</span>
+    8:         <span><%= game.location %></span>
+    9:         <span><%= game.schedule %></span>
+   10:       </li>
+  app/views/teams/show.html.erb:7:in `block in _app_views_teams_show_html_erb__4337049016655372047_70134293952360'
+  app/views/teams/show.html.erb:5:in `each'
+  app/views/teams/show.html.erb:5:in `_app_views_teams_show_html_erb__4337049016655372047_70134293952360'
+
+
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (9.5ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.1ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (85.2ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (76.1ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (164.1ms)
+
+
+Started GET "/teams/1" for ::1 at 2016-08-25 18:23:36 -0500
+Processing by TeamsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mTeam Load (0.2ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mGame Load (0.2ms)[0m  [1mSELECT "games".* FROM "games" WHERE "games"."home_team_id" = $1[0m  [["home_team_id", 1]]
+  [1m[35mGame Load (0.2ms)[0m  SELECT "games".* FROM "games" WHERE "games"."away_team_id" = $1  [["away_team_id", 1]]
+  [1m[36mSport Load (0.3ms)[0m  [1mSELECT  "sports".* FROM "sports" WHERE "sports"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mTeam Load (0.3ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."id" IS NULL LIMIT 1
+  Rendered teams/show.html.erb within layouts/application (5.5ms)
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 1.2ms)
+
+ActionView::Template::Error (undefined method `name' for nil:NilClass):
+    4:   <ul>
+    5:     <% @games.each do |game| %>
+    6:       <li>
+    7:         <span><%=Team.find_by(id: game.away_team_id).name %> vs </span>
+    8:         <span><%= game.location %></span>
+    9:         <span><%= game.schedule %></span>
+   10:       </li>
+  app/views/teams/show.html.erb:7:in `block in _app_views_teams_show_html_erb__4337049016655372047_70134297153740'
+  app/views/teams/show.html.erb:5:in `each'
+  app/views/teams/show.html.erb:5:in `_app_views_teams_show_html_erb__4337049016655372047_70134297153740'
+
+
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (9.0ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.1ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (82.7ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (76.7ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (160.1ms)
+
+
+Started GET "/teams/1" for ::1 at 2016-08-25 18:24:08 -0500
+Processing by TeamsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTeam Load (0.2ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mGame Load (0.2ms)[0m  SELECT "games".* FROM "games" WHERE "games"."home_team_id" = $1  [["home_team_id", 1]]
+  [1m[36mGame Load (0.2ms)[0m  [1mSELECT "games".* FROM "games" WHERE "games"."away_team_id" = $1[0m  [["away_team_id", 1]]
+  [1m[35mSport Load (0.2ms)[0m  SELECT  "sports".* FROM "sports" WHERE "sports"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mTeam Load (0.5ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."id" IS NULL LIMIT 1[0m
+  Rendered teams/show.html.erb within layouts/application (4.9ms)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 1.2ms)
+
+ActionView::Template::Error (undefined method `name' for nil:NilClass):
+    4:   <ul>
+    5:     <% @games.each do |game| %>
+    6:       <li>
+    7:         <span><%=Team.find_by(id: game.away_team_id).name %> vs <%= Team.find_by(id: game.home_team_id).name %></span>
+    8:         <span><%= game.location %></span>
+    9:         <span><%= game.schedule %></span>
+   10:       </li>
+  app/views/teams/show.html.erb:7:in `block in _app_views_teams_show_html_erb__4337049016655372047_70134312163440'
+  app/views/teams/show.html.erb:5:in `each'
+  app/views/teams/show.html.erb:5:in `_app_views_teams_show_html_erb__4337049016655372047_70134312163440'
+
+
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (8.3ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.2ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (82.8ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (78.2ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (165.9ms)
+
+
+Started GET "/teams/1" for ::1 at 2016-08-25 18:24:18 -0500
+Processing by TeamsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mTeam Load (0.2ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mGame Load (0.2ms)[0m  [1mSELECT "games".* FROM "games" WHERE "games"."home_team_id" = $1[0m  [["home_team_id", 1]]
+  [1m[35mGame Load (0.3ms)[0m  SELECT "games".* FROM "games" WHERE "games"."away_team_id" = $1  [["away_team_id", 1]]
+  [1m[36mSport Load (0.2ms)[0m  [1mSELECT  "sports".* FROM "sports" WHERE "sports"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mTeam Load (0.2ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mTeam Load (0.3ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."id" IS NULL LIMIT 1[0m
+  Rendered teams/show.html.erb within layouts/application (5.7ms)
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 1.5ms)
+
+ActionView::Template::Error (undefined method `name' for nil:NilClass):
+    4:   <ul>
+    5:     <% @games.each do |game| %>
+    6:       <li>
+    7:         <span> vs <%= Team.find_by(id: game.home_team_id).name %></span>
+    8:         <span><%= game.location %></span>
+    9:         <span><%= game.schedule %></span>
+   10:       </li>
+  app/views/teams/show.html.erb:7:in `block in _app_views_teams_show_html_erb__4337049016655372047_70134297173320'
+  app/views/teams/show.html.erb:5:in `each'
+  app/views/teams/show.html.erb:5:in `_app_views_teams_show_html_erb__4337049016655372047_70134297173320'
+
+
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (9.3ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.0ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (87.8ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (71.2ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (163.6ms)
+
+
+Started GET "/teams/1" for ::1 at 2016-08-25 18:24:41 -0500
+Processing by TeamsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mTeam Load (0.2ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mGame Load (0.2ms)[0m  [1mSELECT "games".* FROM "games" WHERE "games"."home_team_id" = $1[0m  [["home_team_id", 1]]
+  [1m[35mGame Load (0.2ms)[0m  SELECT "games".* FROM "games" WHERE "games"."away_team_id" = $1  [["away_team_id", 1]]
+  [1m[36mSport Load (0.2ms)[0m  [1mSELECT  "sports".* FROM "sports" WHERE "sports"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mTeam Load (0.5ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."id" IS NULL LIMIT 1
+  Rendered teams/show.html.erb within layouts/application (5.5ms)
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 1.2ms)
+
+ActionView::Template::Error (undefined method `name' for nil:NilClass):
+    4:   <ul>
+    5:     <% @games.each do |game| %>
+    6:       <li>
+    7:         <span><%=Team.find_by(id: game.away_team_id).name %> vs </span>
+    8:         <span><%= game.location %></span>
+    9:         <span><%= game.schedule %></span>
+   10:       </li>
+  app/views/teams/show.html.erb:7:in `block in _app_views_teams_show_html_erb__4337049016655372047_70134294620440'
+  app/views/teams/show.html.erb:5:in `each'
+  app/views/teams/show.html.erb:5:in `_app_views_teams_show_html_erb__4337049016655372047_70134294620440'
+
+
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (8.9ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.3ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (85.4ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (70.6ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (155.6ms)
+
+
+Started GET "/teams/1" for ::1 at 2016-08-25 18:25:04 -0500
+Processing by TeamsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTeam Load (0.3ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mGame Load (0.2ms)[0m  SELECT "games".* FROM "games" WHERE "games"."home_team_id" = $1  [["home_team_id", 1]]
+  [1m[36mGame Load (0.2ms)[0m  [1mSELECT "games".* FROM "games" WHERE "games"."away_team_id" = $1[0m  [["away_team_id", 1]]
+  [1m[35mSport Load (0.2ms)[0m  SELECT  "sports".* FROM "sports" WHERE "sports"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mTeam Load (0.4ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."id" IS NULL LIMIT 1[0m
+  [1m[35mTeam Load (0.2ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered teams/show.html.erb within layouts/application (4.4ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+Completed 200 OK in 29ms (Views: 23.5ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/assets/games.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-08-25 18:25:04 -0500
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for ::1 at 2016-08-25 18:25:04 -0500
+
+
+Started GET "/assets/sports.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-08-25 18:25:04 -0500
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2016-08-25 18:25:04 -0500
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-08-25 18:25:04 -0500
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2016-08-25 18:25:04 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-08-25 18:25:04 -0500
+
+
+Started GET "/teams/1" for ::1 at 2016-08-25 18:25:24 -0500
+Processing by TeamsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTeam Load (0.3ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mGame Load (0.4ms)[0m  SELECT "games".* FROM "games" WHERE "games"."home_team_id" = $1  [["home_team_id", 1]]
+  [1m[36mGame Load (0.5ms)[0m  [1mSELECT "games".* FROM "games" WHERE "games"."away_team_id" = $1[0m  [["away_team_id", 1]]
+  [1m[35mSport Load (0.2ms)[0m  SELECT  "sports".* FROM "sports" WHERE "sports"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mTeam Load (0.4ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."id" IS NULL LIMIT 1[0m
+  Rendered teams/show.html.erb within layouts/application (4.9ms)
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 1.8ms)
+
+ActionView::Template::Error (undefined method `name' for nil:NilClass):
+    4:   <ul>
+    5:     <% @games.each do |game| %>
+    6:       <li>
+    7:         <span><%= (Team.find_by(id: game.away_team_id)).name %> vs </span>
+    8:         <span><%= game.location %></span>
+    9:         <span><%= game.schedule %></span>
+   10:       </li>
+  app/views/teams/show.html.erb:7:in `block in _app_views_teams_show_html_erb__4337049016655372047_70134272941280'
+  app/views/teams/show.html.erb:5:in `each'
+  app/views/teams/show.html.erb:5:in `_app_views_teams_show_html_erb__4337049016655372047_70134272941280'
+
+
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.8ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.7ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (85.0ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (68.7ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (153.4ms)
+
+
+Started GET "/teams/1" for ::1 at 2016-08-25 18:25:30 -0500
+Processing by TeamsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mTeam Load (1.0ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mGame Load (0.3ms)[0m  [1mSELECT "games".* FROM "games" WHERE "games"."home_team_id" = $1[0m  [["home_team_id", 1]]
+  [1m[35mGame Load (0.2ms)[0m  SELECT "games".* FROM "games" WHERE "games"."away_team_id" = $1  [["away_team_id", 1]]
+  [1m[36mSport Load (0.3ms)[0m  [1mSELECT  "sports".* FROM "sports" WHERE "sports"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mTeam Load (0.4ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."id" IS NULL LIMIT 1
+  Rendered teams/show.html.erb within layouts/application (5.6ms)
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 2.2ms)
+
+ActionView::Template::Error (undefined method `name' for nil:NilClass):
+    4:   <ul>
+    5:     <% @games.each do |game| %>
+    6:       <li>
+    7:         <span><%= (Team.find_by(id: game.away_team_id)).name %> vs </span>
+    8:         <span><%= game.location %></span>
+    9:         <span><%= game.schedule %></span>
+   10:       </li>
+  app/views/teams/show.html.erb:7:in `block in _app_views_teams_show_html_erb__4337049016655372047_70134272941280'
+  app/views/teams/show.html.erb:5:in `each'
+  app/views/teams/show.html.erb:5:in `_app_views_teams_show_html_erb__4337049016655372047_70134272941280'
+
+
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (8.4ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.0ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (80.8ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (70.3ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (155.3ms)
+
+
+Started GET "/teams/1" for ::1 at 2016-08-25 18:25:38 -0500
+Processing by TeamsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTeam Load (0.2ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mGame Load (0.2ms)[0m  SELECT "games".* FROM "games" WHERE "games"."home_team_id" = $1  [["home_team_id", 1]]
+  [1m[36mGame Load (0.2ms)[0m  [1mSELECT "games".* FROM "games" WHERE "games"."away_team_id" = $1[0m  [["away_team_id", 1]]
+  [1m[35mSport Load (0.3ms)[0m  SELECT  "sports".* FROM "sports" WHERE "sports"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mTeam Load (0.3ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."id" IS NULL LIMIT 1[0m
+  [1m[35mTeam Load (0.2ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered teams/show.html.erb within layouts/application (5.3ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+Completed 200 OK in 30ms (Views: 25.0ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/assets/games.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-08-25 18:25:38 -0500
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-08-25 18:25:38 -0500
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2016-08-25 18:25:38 -0500
+
+
+Started GET "/assets/sports.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-08-25 18:25:38 -0500
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for ::1 at 2016-08-25 18:25:38 -0500
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2016-08-25 18:25:38 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-08-25 18:25:38 -0500
+
+
+Started GET "/teams/1" for ::1 at 2016-08-25 18:26:46 -0500
+Processing by TeamsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTeam Load (0.2ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mGame Load (0.2ms)[0m  SELECT "games".* FROM "games" WHERE "games"."home_team_id" = $1  [["home_team_id", 1]]
+  [1m[36mGame Load (0.1ms)[0m  [1mSELECT "games".* FROM "games" WHERE "games"."away_team_id" = $1[0m  [["away_team_id", 1]]
+  [1m[35mSport Load (0.2ms)[0m  SELECT  "sports".* FROM "sports" WHERE "sports"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mTeam Load (0.3ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."id" IS NULL LIMIT 1[0m
+  Rendered teams/show.html.erb within layouts/application (4.9ms)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 1.1ms)
+
+ActionView::Template::Error (undefined method `name' for nil:NilClass):
+     5:     <% @games.each do |game| %>
+     6:       <li>
+     7:         <% home = Team.find_by(id: game.away_team_id) %>
+     8:         <span><%= home.name %> vs </span>
+     9:         <span><%= game.location %></span>
+    10:         <span><%= game.schedule %></span>
+    11:       </li>
+  app/views/teams/show.html.erb:8:in `block in _app_views_teams_show_html_erb__4337049016655372047_70134297072780'
+  app/views/teams/show.html.erb:5:in `each'
+  app/views/teams/show.html.erb:5:in `_app_views_teams_show_html_erb__4337049016655372047_70134297072780'
+
+
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (8.3ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.1ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (82.8ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (68.8ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.7ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (159.0ms)
+
+
+Started GET "/teams/1" for ::1 at 2016-08-25 18:27:21 -0500
+Processing by TeamsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mTeam Load (0.2ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mGame Load (0.2ms)[0m  [1mSELECT "games".* FROM "games" WHERE "games"."home_team_id" = $1[0m  [["home_team_id", 1]]
+  [1m[35mGame Load (0.2ms)[0m  SELECT "games".* FROM "games" WHERE "games"."away_team_id" = $1  [["away_team_id", 1]]
+  [1m[36mSport Load (0.2ms)[0m  [1mSELECT  "sports".* FROM "sports" WHERE "sports"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mTeam Load (0.3ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."id" IS NULL LIMIT 1
+  [1m[36mTeam Load (0.2ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered teams/show.html.erb within layouts/application (4.3ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 27ms (Views: 23.3ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/assets/games.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-08-25 18:27:21 -0500
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-08-25 18:27:21 -0500
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for ::1 at 2016-08-25 18:27:21 -0500
+
+
+Started GET "/assets/sports.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-08-25 18:27:21 -0500
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2016-08-25 18:27:21 -0500
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2016-08-25 18:27:21 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-08-25 18:27:21 -0500
+
+
+Started GET "/teams/1" for ::1 at 2016-08-25 18:28:04 -0500
+Processing by TeamsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mTeam Load (0.2ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mGame Load (0.2ms)[0m  [1mSELECT "games".* FROM "games" WHERE "games"."home_team_id" = $1[0m  [["home_team_id", 1]]
+  [1m[35mGame Load (0.2ms)[0m  SELECT "games".* FROM "games" WHERE "games"."away_team_id" = $1  [["away_team_id", 1]]
+  [1m[36mSport Load (0.2ms)[0m  [1mSELECT  "sports".* FROM "sports" WHERE "sports"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mTeam Load (0.2ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mTeam Load (0.3ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."id" IS NULL LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."id" IS NULL LIMIT 1
+  Rendered teams/show.html.erb within layouts/application (4.6ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 25ms (Views: 20.7ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/assets/games.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-08-25 18:28:04 -0500
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-08-25 18:28:04 -0500
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2016-08-25 18:28:04 -0500
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for ::1 at 2016-08-25 18:28:04 -0500
+
+
+Started GET "/assets/sports.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-08-25 18:28:04 -0500
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2016-08-25 18:28:04 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-08-25 18:28:04 -0500
+
+
+Started GET "/teams/1" for ::1 at 2016-08-25 18:28:12 -0500
+Processing by TeamsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mTeam Load (0.3ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mGame Load (0.2ms)[0m  [1mSELECT "games".* FROM "games" WHERE "games"."home_team_id" = $1[0m  [["home_team_id", 1]]
+  [1m[35mGame Load (0.2ms)[0m  SELECT "games".* FROM "games" WHERE "games"."away_team_id" = $1  [["away_team_id", 1]]
+  [1m[36mSport Load (0.2ms)[0m  [1mSELECT  "sports".* FROM "sports" WHERE "sports"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mTeam Load (0.2ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mTeam Load (0.3ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."id" IS NULL LIMIT 1[0m
+  Rendered teams/show.html.erb within layouts/application (6.9ms)
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 1.4ms)
+
+ActionView::Template::Error (undefined method `name' for nil:NilClass):
+     5:     <% @games.each do |game| %>
+     6:       <li>
+     7:         <% home = Team.find_by(id: game.home_team_id) %>
+     8:         <span><%= home.name %> vs </span>
+     9:         <span><%= game.location %></span>
+    10:         <span><%= game.schedule %></span>
+    11:       </li>
+  app/views/teams/show.html.erb:8:in `block in _app_views_teams_show_html_erb__4337049016655372047_70134276047000'
+  app/views/teams/show.html.erb:5:in `each'
+  app/views/teams/show.html.erb:5:in `_app_views_teams_show_html_erb__4337049016655372047_70134276047000'
+
+
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.8ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.8ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (82.5ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (74.6ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (157.8ms)
+
+
+Started GET "/teams/1" for ::1 at 2016-08-25 18:28:20 -0500
+Processing by TeamsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mTeam Load (0.3ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mGame Load (0.2ms)[0m  [1mSELECT "games".* FROM "games" WHERE "games"."home_team_id" = $1[0m  [["home_team_id", 1]]
+  [1m[35mGame Load (0.2ms)[0m  SELECT "games".* FROM "games" WHERE "games"."away_team_id" = $1  [["away_team_id", 1]]
+  [1m[36mSport Load (0.2ms)[0m  [1mSELECT  "sports".* FROM "sports" WHERE "sports"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mTeam Load (0.2ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mTeam Load (0.3ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."id" IS NULL LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."id" IS NULL LIMIT 1
+  Rendered teams/show.html.erb within layouts/application (4.5ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 27ms (Views: 23.1ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/assets/games.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-08-25 18:28:20 -0500
+
+
+Started GET "/assets/sports.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-08-25 18:28:20 -0500
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2016-08-25 18:28:20 -0500
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for ::1 at 2016-08-25 18:28:20 -0500
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2016-08-25 18:28:20 -0500
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-08-25 18:28:20 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-08-25 18:28:20 -0500
+
+
+Started GET "/teams/1" for ::1 at 2016-08-25 18:30:52 -0500
+Processing by TeamsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mTeam Load (0.2ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mGame Load (0.2ms)[0m  [1mSELECT "games".* FROM "games" WHERE "games"."home_team_id" = $1[0m  [["home_team_id", 1]]
+  [1m[35mGame Load (0.2ms)[0m  SELECT "games".* FROM "games" WHERE "games"."away_team_id" = $1  [["away_team_id", 1]]
+  [1m[36mSport Load (0.2ms)[0m  [1mSELECT  "sports".* FROM "sports" WHERE "sports"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mTeam Load (0.2ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mTeam Load (0.2ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT 1  [["id", 2]]
+  Rendered teams/show.html.erb within layouts/application (3.2ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 24ms (Views: 20.5ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/assets/games.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-08-25 18:30:52 -0500
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2016-08-25 18:30:52 -0500
+
+
+Started GET "/assets/sports.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-08-25 18:30:52 -0500
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-08-25 18:30:52 -0500
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for ::1 at 2016-08-25 18:30:52 -0500
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2016-08-25 18:30:52 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-08-25 18:30:52 -0500
+
+
+Started GET "/teams/1" for ::1 at 2016-08-25 18:31:20 -0500
+Processing by TeamsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mTeam Load (0.4ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mGame Load (0.6ms)[0m  [1mSELECT "games".* FROM "games" WHERE "games"."home_team_id" = $1[0m  [["home_team_id", 1]]
+  [1m[35mGame Load (0.2ms)[0m  SELECT "games".* FROM "games" WHERE "games"."away_team_id" = $1  [["away_team_id", 1]]
+  [1m[36mSport Load (0.2ms)[0m  [1mSELECT  "sports".* FROM "sports" WHERE "sports"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mTeam Load (0.2ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered teams/show.html.erb within layouts/application (3.7ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 30ms (Views: 22.8ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/assets/games.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-08-25 18:31:20 -0500
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for ::1 at 2016-08-25 18:31:20 -0500
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2016-08-25 18:31:20 -0500
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2016-08-25 18:31:20 -0500
+
+
+Started GET "/assets/sports.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-08-25 18:31:20 -0500
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-08-25 18:31:20 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-08-25 18:31:20 -0500
+
+
+Started DELETE "/logout" for ::1 at 2016-08-25 18:32:09 -0500
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"SMC5O1xCF2tzt3w0m+vPGhVQQV3ctXbMm6kRnMBJuvb5+zZg9aj7hgkKfdxvBoPLaR3e7tG4WabYXaGDgAtecA=="}
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-25 18:32:09 -0500
+Processing by IndexController#index as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+  Rendered index/index.html.erb within layouts/application (2.5ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+Completed 200 OK in 20ms (Views: 18.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/new" for ::1 at 2016-08-25 18:32:11 -0500
+Processing by UsersController#new as HTML
+  Rendered _errors.html.erb (0.6ms)
+  Rendered users/new.html.erb within layouts/application (26.8ms)
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+Completed 200 OK in 49ms (Views: 47.3ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/users" for ::1 at 2016-08-25 18:32:35 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"7TkGYk8KS8XZHFPSdxf03xFx+QU+LjWV2RYIjghSzRNcAok55uCnKKOhUjqD+rgObTxmtjMjGv+a4riRSBAplQ==", "user"=>{"first_name"=>"gaf", "last_name"=>"gaf", "email"=>"gaf@gaf.gaf", "phone"=>"1234567890", "phone_approval"=>"0", "password"=>"[FILTERED]"}, "commit"=>"Create User"}
+Unpermitted parameter: phone_approval
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "users" ("first_name", "last_name", "email", "phone", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["first_name", "gaf"], ["last_name", "gaf"], ["email", "gaf@gaf.gaf"], ["phone", "1234567890"], ["password_digest", "$2a$10$kinLRBKfXoVZ7xRVuPm.3.ny5bz5yeyDAEymN/V/MxRjpN2PmJj5a"], ["created_at", "2016-08-25 23:32:35.369997"], ["updated_at", "2016-08-25 23:32:35.369997"]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/users/2
+Completed 302 Found in 86ms (ActiveRecord: 1.0ms)
+
+
+Started GET "/users/2" for ::1 at 2016-08-25 18:32:35 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+  Rendered users/show.html.erb within layouts/application (10.6ms)
+Completed 500 Internal Server Error in 16ms (ActiveRecord: 0.2ms)
+
+ActionView::Template::Error (uninitialized constant User::Roster):
+    1: <h1><%= @user.first_name %>'s Profile page</h1>
+    2:   <div>
+    3:     <% if @user.teams.length > 0 %>
+    4:       <h2>My teams</h2>
+    5:         <div id="teams_info">
+    6:           <% @user.teams.each do |team| %>
+  app/views/users/show.html.erb:3:in `_app_views_users_show_html_erb___876890956311846318_70134235179280'
+
+
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (8.3ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.4ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (79.0ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (73.6ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.7ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (157.2ms)
+
+
+Started GET "/" for ::1 at 2016-08-25 18:32:47 -0500
+Processing by IndexController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  Rendered index/index.html.erb within layouts/application (1.4ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+Completed 200 OK in 18ms (Views: 16.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2016-08-25 18:32:50 -0500
+Processing by IndexController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  Rendered index/index.html.erb within layouts/application (1.8ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+Completed 200 OK in 26ms (Views: 25.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/teams" for ::1 at 2016-08-25 18:32:54 -0500
+Processing by TeamsController#index as HTML
+  [1m[36mTeam Load (0.3ms)[0m  [1mSELECT "teams".* FROM "teams"[0m
+  Rendered teams/index.html.erb within layouts/application (1.7ms)
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+Completed 200 OK in 22ms (Views: 20.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/teams/new" for ::1 at 2016-08-25 18:33:01 -0500
+Processing by TeamsController#new as HTML
+  [1m[36mSport Load (0.3ms)[0m  [1mSELECT "sports".* FROM "sports"[0m
+  Rendered teams/_form.html.erb (6.2ms)
+  Rendered teams/new.html.erb within layouts/application (8.2ms)
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+Completed 200 OK in 26ms (Views: 24.5ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/teams" for ::1 at 2016-08-25 18:33:15 -0500
+Processing by TeamsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"qEc4CI/cRFwwT+utKkyHU7+ZhX1bucPVCI6fVfPkiUgZfLdTJjaosUry6kXeocuCw9Qazla07L9Lei9Ks6Ztzg==", "team"=>{"sport_id"=>"1", "name"=>"2pa", "mascot_name"=>"renalsd", "mascot_url"=>""}, "commit"=>"Create Team"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.4ms)
+
+NoMethodError (undefined method `id' for nil:NilClass):
+  app/controllers/teams_controller.rb:28:in `post_params'
+  app/controllers/teams_controller.rb:16:in `create'
+
+
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.3ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (81.2ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (75.7ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (164.1ms)
+
+
+Started GET "/login" for ::1 at 2016-08-25 18:33:34 -0500
+Processing by SessionsController#new as HTML
+  Rendered _errors.html.erb (0.1ms)
+  Rendered sessions/new.html.erb within layouts/application (5.5ms)
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+Completed 200 OK in 30ms (Views: 28.7ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/login?aciton=post" for ::1 at 2016-08-25 18:33:40 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"SbfdD5ZS1wDW3dn99yZkNOBagBuX5MPzsw4Q4FYD3AX4jFJUP7g77axg2BUDyyjlnBcfqJrp7Jnw+qD/FkE4gw==", "user"=>{"email"=>"gaf@gaf.gaf", "password"=>"[FILTERED]"}, "commit"=>"login", "aciton"=>"post"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT 1[0m  [["email", "gaf@gaf.gaf"]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 79ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2016-08-25 18:33:40 -0500
+Processing by IndexController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+  Rendered index/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 16ms (Views: 15.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/teams" for ::1 at 2016-08-25 18:33:44 -0500
+Processing by TeamsController#index as HTML
+  [1m[36mTeam Load (0.3ms)[0m  [1mSELECT "teams".* FROM "teams"[0m
+  Rendered teams/index.html.erb within layouts/application (1.3ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+Completed 200 OK in 35ms (Views: 33.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/team/new" for ::1 at 2016-08-25 18:33:45 -0500
+
+ActionController::RoutingError (No route matches [GET] "/team/new"):
+  actionpack (4.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.1) lib/rails/engine.rb:518:in `call'
+  railties (4.2.1) lib/rails/application.rb:164:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.7ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.6ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (123.2ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (73.1ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (160.8ms)
+
+
+Started GET "/teams/new" for ::1 at 2016-08-25 18:33:52 -0500
+Processing by TeamsController#new as HTML
+  [1m[36mSport Load (0.3ms)[0m  [1mSELECT "sports".* FROM "sports"[0m
+  Rendered teams/_form.html.erb (5.3ms)
+  Rendered teams/new.html.erb within layouts/application (6.8ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+Completed 200 OK in 28ms (Views: 26.5ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/teams" for ::1 at 2016-08-25 18:34:05 -0500
+Processing by TeamsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"a8V0kRcfXYUxriXg58xlDRPspJ7KHVBp52v8FLQ6Ugza/vvKvvWxaEsTJAgTISncb6E7LccQfwOkn0wL9Hi2ig==", "team"=>{"sport_id"=>"1", "name"=>"fgaaah", "mascot_name"=>"duffl", "mascot_url"=>""}, "commit"=>"Create Team"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "teams" ("name", "sport_id", "mascot_name", "mascot_url", "captain_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "fgaaah"], ["sport_id", 1], ["mascot_name", "duffl"], ["mascot_url", ""], ["captain_id", 2], ["created_at", "2016-08-25 23:34:05.410183"], ["updated_at", "2016-08-25 23:34:05.410183"]]
+  [1m[35m (15.5ms)[0m  COMMIT
+Redirected to http://localhost:3000/teams
+Completed 302 Found in 21ms (ActiveRecord: 16.2ms)
+
+
+Started GET "/teams" for ::1 at 2016-08-25 18:34:05 -0500
+Processing by TeamsController#index as HTML
+  [1m[36mTeam Load (0.3ms)[0m  [1mSELECT "teams".* FROM "teams"[0m
+  Rendered teams/index.html.erb within layouts/application (1.3ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+Completed 200 OK in 18ms (Views: 17.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/teams/2" for ::1 at 2016-08-25 18:34:07 -0500
+Processing by TeamsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mTeam Load (0.3ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mGame Load (1.4ms)[0m  SELECT "games".* FROM "games" WHERE "games"."home_team_id" = $1  [["home_team_id", 2]]
+  [1m[36mGame Load (0.5ms)[0m  [1mSELECT "games".* FROM "games" WHERE "games"."away_team_id" = $1[0m  [["away_team_id", 2]]
+  [1m[35mSport Load (0.2ms)[0m  SELECT  "sports".* FROM "sports" WHERE "sports"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mTeam Load (0.2ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mTeam Load (0.2ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered teams/show.html.erb within layouts/application (5.5ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+Completed 200 OK in 36ms (Views: 28.4ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/teams/1" for ::1 at 2016-08-25 18:34:13 -0500
+Processing by TeamsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTeam Load (0.4ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mGame Load (0.3ms)[0m  SELECT "games".* FROM "games" WHERE "games"."home_team_id" = $1  [["home_team_id", 1]]
+  [1m[36mGame Load (0.2ms)[0m  [1mSELECT "games".* FROM "games" WHERE "games"."away_team_id" = $1[0m  [["away_team_id", 1]]
+  [1m[35mSport Load (0.2ms)[0m  SELECT  "sports".* FROM "sports" WHERE "sports"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mTeam Load (0.4ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mTeam Load (0.3ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  Rendered teams/show.html.erb within layouts/application (5.1ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+Completed 200 OK in 33ms (Views: 26.9ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/teams/1" for ::1 at 2016-08-25 18:34:29 -0500
+Processing by TeamsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTeam Load (0.2ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mGame Load (0.2ms)[0m  SELECT "games".* FROM "games" WHERE "games"."home_team_id" = $1  [["home_team_id", 1]]
+  [1m[36mGame Load (0.2ms)[0m  [1mSELECT "games".* FROM "games" WHERE "games"."away_team_id" = $1[0m  [["away_team_id", 1]]
+  [1m[35mSport Load (0.2ms)[0m  SELECT  "sports".* FROM "sports" WHERE "sports"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mTeam Load (0.2ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mTeam Load (0.2ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  Rendered teams/show.html.erb within layouts/application (3.7ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+Completed 200 OK in 22ms (Views: 18.6ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/assets/sports.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-08-25 18:34:29 -0500
+
+
+Started GET "/assets/games.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-08-25 18:34:29 -0500
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2016-08-25 18:34:29 -0500
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-08-25 18:34:29 -0500
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2016-08-25 18:34:29 -0500
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for ::1 at 2016-08-25 18:34:29 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-08-25 18:34:29 -0500
+
+
+Started GET "/teams/1" for ::1 at 2016-08-25 18:35:27 -0500
+Processing by TeamsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTeam Load (0.2ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mGame Load (0.1ms)[0m  SELECT "games".* FROM "games" WHERE "games"."home_team_id" = $1  [["home_team_id", 1]]
+  [1m[36mGame Load (0.2ms)[0m  [1mSELECT "games".* FROM "games" WHERE "games"."away_team_id" = $1[0m  [["away_team_id", 1]]
+  [1m[35mSport Load (0.2ms)[0m  SELECT  "sports".* FROM "sports" WHERE "sports"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mTeam Load (0.2ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered teams/show.html.erb within layouts/application (4.2ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+Completed 200 OK in 22ms (Views: 18.1ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/assets/games.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-08-25 18:35:27 -0500
+
+
+Started GET "/assets/sports.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-08-25 18:35:27 -0500
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-08-25 18:35:27 -0500
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2016-08-25 18:35:27 -0500
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2016-08-25 18:35:27 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-08-25 18:35:27 -0500
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for ::1 at 2016-08-25 18:35:27 -0500
+
+
+Started GET "/teams/1" for ::1 at 2016-08-25 18:36:12 -0500
+Processing by TeamsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mTeam Load (0.2ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mGame Load (0.2ms)[0m  [1mSELECT "games".* FROM "games" WHERE "games"."home_team_id" = $1[0m  [["home_team_id", 1]]
+  [1m[35mGame Load (0.2ms)[0m  SELECT "games".* FROM "games" WHERE "games"."away_team_id" = $1  [["away_team_id", 1]]
+  [1m[36mSport Load (0.3ms)[0m  [1mSELECT  "sports".* FROM "sports" WHERE "sports"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mTeam Load (0.2ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mTeam Load (0.2ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered teams/show.html.erb within layouts/application (5.2ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+Completed 200 OK in 24ms (Views: 19.7ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/assets/games.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-08-25 18:36:12 -0500
+
+
+Started GET "/assets/sports.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-08-25 18:36:12 -0500
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-08-25 18:36:12 -0500
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2016-08-25 18:36:12 -0500
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2016-08-25 18:36:12 -0500
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for ::1 at 2016-08-25 18:36:12 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-08-25 18:36:12 -0500
+
+
+Started GET "/teams/1" for ::1 at 2016-08-25 18:37:34 -0500
+Processing by TeamsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTeam Load (0.2ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mGame Load (0.2ms)[0m  SELECT "games".* FROM "games" WHERE "games"."home_team_id" = $1  [["home_team_id", 1]]
+  [1m[36mGame Load (0.2ms)[0m  [1mSELECT "games".* FROM "games" WHERE "games"."away_team_id" = $1[0m  [["away_team_id", 1]]
+Completed 500 Internal Server Error in 27ms (ActiveRecord: 4.0ms)
+
+NoMethodError (undefined method `order_by' for #<Array:0x007f92d3a53b20>):
+  app/models/team.rb:17:in `games'
+  app/controllers/teams_controller.rb:8:in `show'
+
+
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.7ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.1ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.1ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (76.2ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.7ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (68.1ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (153.4ms)
+
+
+Started GET "/teams/1" for ::1 at 2016-08-25 18:38:01 -0500
+Processing by TeamsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mTeam Load (0.2ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mGame Load (0.2ms)[0m  [1mSELECT "games".* FROM "games" WHERE "games"."home_team_id" = $1[0m  [["home_team_id", 1]]
+  [1m[35mGame Load (0.3ms)[0m  SELECT "games".* FROM "games" WHERE "games"."away_team_id" = $1  [["away_team_id", 1]]
+Completed 500 Internal Server Error in 26ms (ActiveRecord: 3.6ms)
+
+NameError (undefined local variable or method `updated_at' for #<TeamsController:0x007f92d636fb08>):
+  app/controllers/teams_controller.rb:8:in `show'
+
+
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.1ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.7ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (90.2ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (88.3ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (173.7ms)
+
+
+Started GET "/teams/1" for ::1 at 2016-08-25 18:38:33 -0500
+Processing by TeamsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTeam Load (0.2ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mGame Load (0.3ms)[0m  SELECT "games".* FROM "games" WHERE "games"."home_team_id" = $1  [["home_team_id", 1]]
+  [1m[36mGame Load (0.3ms)[0m  [1mSELECT "games".* FROM "games" WHERE "games"."away_team_id" = $1[0m  [["away_team_id", 1]]
+Completed 500 Internal Server Error in 31ms (ActiveRecord: 3.7ms)
+
+NameError (undefined local variable or method `updated_at' for #<TeamsController:0x007f92d3f691a0>):
+  app/controllers/teams_controller.rb:8:in `show'
+
+
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.6ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.6ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.8ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (91.5ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.7ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.7ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (70.9ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (162.7ms)
+
+
+Started GET "/teams/1" for ::1 at 2016-08-25 18:39:14 -0500
+Processing by TeamsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mTeam Load (0.2ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mGame Load (0.1ms)[0m  [1mSELECT "games".* FROM "games" WHERE "games"."home_team_id" = $1[0m  [["home_team_id", 1]]
+  [1m[35mGame Load (0.2ms)[0m  SELECT "games".* FROM "games" WHERE "games"."away_team_id" = $1  [["away_team_id", 1]]
+  [1m[36mSport Load (0.2ms)[0m  [1mSELECT  "sports".* FROM "sports" WHERE "sports"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mTeam Load (0.2ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mTeam Load (0.2ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered teams/show.html.erb within layouts/application (12.5ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+Completed 200 OK in 69ms (Views: 40.1ms | ActiveRecord: 6.5ms)
+
+
+Started GET "/assets/games.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-08-25 18:39:14 -0500
+
+
+Started GET "/assets/sports.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-08-25 18:39:14 -0500
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2016-08-25 18:39:14 -0500
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2016-08-25 18:39:14 -0500
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-08-25 18:39:14 -0500
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for ::1 at 2016-08-25 18:39:14 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-08-25 18:39:14 -0500
+
+
+Started GET "/teams/1" for ::1 at 2016-08-25 19:06:27 -0500
+Processing by TeamsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTeam Load (0.2ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mGame Load (0.2ms)[0m  SELECT "games".* FROM "games" WHERE "games"."home_team_id" = $1  [["home_team_id", 1]]
+  [1m[36mGame Load (0.2ms)[0m  [1mSELECT "games".* FROM "games" WHERE "games"."away_team_id" = $1[0m  [["away_team_id", 1]]
+  [1m[35mSport Load (0.2ms)[0m  SELECT  "sports".* FROM "sports" WHERE "sports"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mTeam Load (0.2ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mTeam Load (0.2ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered teams/show.html.erb within layouts/application (16.7ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+Completed 200 OK in 72ms (Views: 43.1ms | ActiveRecord: 7.2ms)
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-08-25 19:06:27 -0500
+
+
+Started GET "/assets/games.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-08-25 19:06:27 -0500
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2016-08-25 19:06:27 -0500
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2016-08-25 19:06:27 -0500
+
+
+Started GET "/assets/sports.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-08-25 19:06:27 -0500
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for ::1 at 2016-08-25 19:06:27 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-08-25 19:06:27 -0500
+
+
+Started GET "/teams/1" for ::1 at 2016-08-25 19:11:55 -0500
+Processing by TeamsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mTeam Load (0.2ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mGame Load (0.2ms)[0m  [1mSELECT "games".* FROM "games" WHERE "games"."home_team_id" = $1[0m  [["home_team_id", 1]]
+  [1m[35mGame Load (0.3ms)[0m  SELECT "games".* FROM "games" WHERE "games"."away_team_id" = $1  [["away_team_id", 1]]
+  [1m[36mSport Load (0.2ms)[0m  [1mSELECT  "sports".* FROM "sports" WHERE "sports"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mTeam Load (0.2ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered teams/show.html.erb within layouts/application (5.8ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+Completed 200 OK in 32ms (Views: 25.9ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/assets/games.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-08-25 19:11:56 -0500
+
+
+Started GET "/assets/sports.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-08-25 19:11:56 -0500
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2016-08-25 19:11:56 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-08-25 19:11:56 -0500
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-08-25 19:11:56 -0500
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for ::1 at 2016-08-25 19:11:56 -0500
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2016-08-25 19:11:56 -0500
+
+
+Started GET "/teams/1" for ::1 at 2016-08-25 19:12:25 -0500
+Processing by TeamsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTeam Load (0.2ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mGame Load (0.4ms)[0m  SELECT "games".* FROM "games" WHERE "games"."home_team_id" = $1  [["home_team_id", 1]]
+  [1m[36mGame Load (0.2ms)[0m  [1mSELECT "games".* FROM "games" WHERE "games"."away_team_id" = $1[0m  [["away_team_id", 1]]
+  [1m[35mSport Load (0.2ms)[0m  SELECT  "sports".* FROM "sports" WHERE "sports"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mTeam Load (0.2ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mTeam Load (0.2ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered teams/show.html.erb within layouts/application (6.6ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+Completed 200 OK in 31ms (Views: 25.5ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/assets/games.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-08-25 19:12:25 -0500
+
+
+Started GET "/assets/sports.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-08-25 19:12:25 -0500
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for ::1 at 2016-08-25 19:12:25 -0500
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-08-25 19:12:25 -0500
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2016-08-25 19:12:25 -0500
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2016-08-25 19:12:25 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-08-25 19:12:25 -0500
+
+
+Started GET "/teams/1" for ::1 at 2016-08-25 19:13:30 -0500
+Processing by TeamsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mTeam Load (0.3ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mGame Load (0.3ms)[0m  [1mSELECT "games".* FROM "games" WHERE "games"."home_team_id" = $1[0m  [["home_team_id", 1]]
+  [1m[35mGame Load (0.3ms)[0m  SELECT "games".* FROM "games" WHERE "games"."away_team_id" = $1  [["away_team_id", 1]]
+  [1m[36mSport Load (0.3ms)[0m  [1mSELECT  "sports".* FROM "sports" WHERE "sports"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mTeam Load (0.2ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mTeam Load (0.2ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered teams/show.html.erb within layouts/application (8.7ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+Completed 200 OK in 46ms (Views: 39.7ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/assets/games.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-08-25 19:13:30 -0500
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2016-08-25 19:13:30 -0500
+
+
+Started GET "/assets/application.self-09b2d29482dc4bcf01dbb8630989e5dc49eaf43f2f1af67443512753222190d9.css?body=1" for ::1 at 2016-08-25 19:13:30 -0500
+
+
+Started GET "/assets/sports.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-08-25 19:13:30 -0500
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2016-08-25 19:13:30 -0500
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for ::1 at 2016-08-25 19:13:30 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-08-25 19:13:30 -0500
+
+
+Started GET "/teams/1" for ::1 at 2016-08-25 19:14:00 -0500
+Processing by TeamsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTeam Load (0.3ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mGame Load (0.2ms)[0m  SELECT "games".* FROM "games" WHERE "games"."home_team_id" = $1  [["home_team_id", 1]]
+  [1m[36mGame Load (0.3ms)[0m  [1mSELECT "games".* FROM "games" WHERE "games"."away_team_id" = $1[0m  [["away_team_id", 1]]
+  [1m[35mSport Load (0.3ms)[0m  SELECT  "sports".* FROM "sports" WHERE "sports"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mTeam Load (0.2ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mTeam Load (0.2ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered teams/show.html.erb within layouts/application (7.6ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+Completed 200 OK in 33ms (Views: 27.7ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/assets/games.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-08-25 19:14:00 -0500
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2016-08-25 19:14:00 -0500
+
+
+Started GET "/assets/sports.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-08-25 19:14:00 -0500
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for ::1 at 2016-08-25 19:14:00 -0500
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2016-08-25 19:14:00 -0500
+
+
+Started GET "/assets/application.self-09b2d29482dc4bcf01dbb8630989e5dc49eaf43f2f1af67443512753222190d9.css?body=1" for ::1 at 2016-08-25 19:14:00 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-08-25 19:14:00 -0500
+
+
+Started GET "/teams/1" for ::1 at 2016-08-25 19:14:11 -0500
+Processing by TeamsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mTeam Load (0.4ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mGame Load (0.2ms)[0m  [1mSELECT "games".* FROM "games" WHERE "games"."home_team_id" = $1[0m  [["home_team_id", 1]]
+  [1m[35mGame Load (0.2ms)[0m  SELECT "games".* FROM "games" WHERE "games"."away_team_id" = $1  [["away_team_id", 1]]
+  [1m[36mSport Load (0.3ms)[0m  [1mSELECT  "sports".* FROM "sports" WHERE "sports"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mTeam Load (0.2ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mTeam Load (0.2ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered teams/show.html.erb within layouts/application (9.5ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+Completed 200 OK in 34ms (Views: 28.7ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/assets/games.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-08-25 19:14:11 -0500
+
+
+Started GET "/assets/application.self-09b2d29482dc4bcf01dbb8630989e5dc49eaf43f2f1af67443512753222190d9.css?body=1" for ::1 at 2016-08-25 19:14:11 -0500
+
+
+Started GET "/assets/sports.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-08-25 19:14:11 -0500
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2016-08-25 19:14:11 -0500
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2016-08-25 19:14:11 -0500
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for ::1 at 2016-08-25 19:14:11 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-08-25 19:14:11 -0500
+
+
+Started GET "/teams/1" for ::1 at 2016-08-25 19:17:00 -0500
+Processing by TeamsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTeam Load (0.8ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mGame Load (0.3ms)[0m  SELECT "games".* FROM "games" WHERE "games"."home_team_id" = $1  [["home_team_id", 1]]
+  [1m[36mGame Load (0.2ms)[0m  [1mSELECT "games".* FROM "games" WHERE "games"."away_team_id" = $1[0m  [["away_team_id", 1]]
+  [1m[35mSport Load (0.3ms)[0m  SELECT  "sports".* FROM "sports" WHERE "sports"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mTeam Load (0.3ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mTeam Load (0.2ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered teams/show.html.erb within layouts/application (10.5ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+Completed 200 OK in 37ms (Views: 30.6ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/teams/1" for ::1 at 2016-08-25 19:17:02 -0500
+Processing by TeamsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mTeam Load (0.3ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mGame Load (0.2ms)[0m  [1mSELECT "games".* FROM "games" WHERE "games"."home_team_id" = $1[0m  [["home_team_id", 1]]
+  [1m[35mGame Load (0.2ms)[0m  SELECT "games".* FROM "games" WHERE "games"."away_team_id" = $1  [["away_team_id", 1]]
+  [1m[36mSport Load (0.3ms)[0m  [1mSELECT  "sports".* FROM "sports" WHERE "sports"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mTeam Load (0.2ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered teams/show.html.erb within layouts/application (5.3ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+Completed 200 OK in 26ms (Views: 21.0ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/assets/application.self-09b2d29482dc4bcf01dbb8630989e5dc49eaf43f2f1af67443512753222190d9.css?body=1" for ::1 at 2016-08-25 19:17:02 -0500
+
+
+Started GET "/assets/games.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-08-25 19:17:02 -0500
+
+
+Started GET "/assets/sports.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-08-25 19:17:02 -0500
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for ::1 at 2016-08-25 19:17:02 -0500
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2016-08-25 19:17:02 -0500
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2016-08-25 19:17:02 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-08-25 19:17:03 -0500
+
+
+Started GET "/teams/1" for ::1 at 2016-08-25 19:19:40 -0500
+Processing by TeamsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTeam Load (0.2ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mGame Load (0.6ms)[0m  SELECT "games".* FROM "games" WHERE "games"."home_team_id" = $1  [["home_team_id", 1]]
+  [1m[36mGame Load (0.2ms)[0m  [1mSELECT "games".* FROM "games" WHERE "games"."away_team_id" = $1[0m  [["away_team_id", 1]]
+  [1m[35mSport Load (0.2ms)[0m  SELECT  "sports".* FROM "sports" WHERE "sports"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mTeam Load (0.3ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.1ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered teams/show.html.erb within layouts/application (6.3ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+Completed 200 OK in 28ms (Views: 23.5ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/assets/games.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-08-25 19:19:40 -0500
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2016-08-25 19:19:40 -0500
+
+
+Started GET "/assets/application.self-09b2d29482dc4bcf01dbb8630989e5dc49eaf43f2f1af67443512753222190d9.css?body=1" for ::1 at 2016-08-25 19:19:40 -0500
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2016-08-25 19:19:40 -0500
+
+
+Started GET "/assets/sports.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-08-25 19:19:40 -0500
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for ::1 at 2016-08-25 19:19:40 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-08-25 19:19:40 -0500
