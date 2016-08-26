@@ -2123,3 +2123,168 @@ Started GET "/assets/games" for ::1 at 2016-08-26 14:23:27 -0500
 
 
 Started GET "/assets/sports" for ::1 at 2016-08-26 14:23:27 -0500
+  [1m[36m (3.9ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL) [0m
+  [1m[35m (1.0ms)[0m  CREATE UNIQUE INDEX  "unique_schema_migrations" ON "schema_migrations"  ("version")
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateUsers (20160824213245)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (3.8ms)[0m  [1mCREATE TABLE "users" ("id" serial primary key, "first_name" character varying, "last_name" character varying, "email" character varying, "phone" character varying, "phone_approval" boolean DEFAULT 'f', "password_digest" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20160824213245"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+Migrating to CreateTeams (20160825020129)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (3.4ms)[0m  [1mCREATE TABLE "teams" ("id" serial primary key, "name" character varying NOT NULL, "captain_id" integer NOT NULL, "sport_id" integer NOT NULL, "mascot_name" character varying, "mascot_url" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20160825020129"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+Migrating to CreateSports (20160825143949)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (3.3ms)[0m  [1mCREATE TABLE "sports" ("id" serial primary key, "name" character varying, "max_players" integer, "min_players" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20160825143949"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+Migrating to CreateGames (20160825192427)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (3.2ms)[0m  [1mCREATE TABLE "games" ("id" serial primary key, "home_team_id" integer, "away_team_id" integer, "home_team_score" integer, "away_team_score" integer, "schedule" timestamp, "location" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20160825192427"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+Migrating to CreateRosters (20160826021852)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (1.8ms)[0m  [1mCREATE TABLE "rosters" ("id" serial primary key, "player_id" integer, "team_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20160826021852"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (3.1ms)[0m  [1mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'games'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (1.5ms)[0m  SELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'rosters'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+
+  [1m[36m (1.5ms)[0m  [1mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'sports'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (1.5ms)[0m  SELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'teams'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+
+  [1m[36m (1.4ms)[0m  [1mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'users'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "users" ("first_name", "last_name", "email", "phone", "password_digest", "phone_approval", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["first_name", "Kunal"], ["last_name", "Patel"], ["email", "kunal@gmail.com"], ["phone", "123-456-7890"], ["password_digest", "password"], ["phone_approval", "t"], ["created_at", "2016-08-26 19:31:51.092305"], ["updated_at", "2016-08-26 19:31:51.092305"]]
+  [1m[35m (1.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("first_name", "last_name", "email", "phone", "password_digest", "phone_approval", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"  [["first_name", "Amy"], ["last_name", "Plant"], ["email", "amy@gmail.com"], ["phone", "123-456-7890"], ["password_digest", "password"], ["phone_approval", "t"], ["created_at", "2016-08-26 19:31:51.109063"], ["updated_at", "2016-08-26 19:31:51.109063"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "users" ("first_name", "last_name", "email", "phone", "password_digest", "phone_approval", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["first_name", "Craig"], ["last_name", "Waterman"], ["email", "craig@gmail.com"], ["phone", "123-456-7890"], ["password_digest", "password"], ["phone_approval", "t"], ["created_at", "2016-08-26 19:31:51.110861"], ["updated_at", "2016-08-26 19:31:51.110861"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "users" ("first_name", "last_name", "email", "phone", "password_digest", "phone_approval", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"  [["first_name", "John"], ["last_name", "Linder"], ["email", "john@gmail.com"], ["phone", "123-456-7890"], ["password_digest", "password"], ["phone_approval", "t"], ["created_at", "2016-08-26 19:31:51.112611"], ["updated_at", "2016-08-26 19:31:51.112611"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "users" ("first_name", "last_name", "email", "phone", "password_digest", "phone_approval", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["first_name", "Matt"], ["last_name", "Baker"], ["email", "matt@gmail.com"], ["phone", "123-456-7890"], ["password_digest", "password"], ["phone_approval", "t"], ["created_at", "2016-08-26 19:31:51.114326"], ["updated_at", "2016-08-26 19:31:51.114326"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("first_name", "last_name", "email", "phone", "password_digest", "phone_approval", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"  [["first_name", "Duke"], ["last_name", "Greene"], ["email", "duke@gmail.com"], ["phone", "123-456-7890"], ["password_digest", "password"], ["phone_approval", "t"], ["created_at", "2016-08-26 19:31:51.116059"], ["updated_at", "2016-08-26 19:31:51.116059"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "users" ("first_name", "last_name", "email", "phone", "password_digest", "phone_approval", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["first_name", "Ellie"], ["last_name", "Poley"], ["email", "ellie@gmail.com"], ["phone", "123-456-7890"], ["password_digest", "password"], ["phone_approval", "t"], ["created_at", "2016-08-26 19:31:51.118053"], ["updated_at", "2016-08-26 19:31:51.118053"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "users" ("first_name", "last_name", "email", "phone", "password_digest", "phone_approval", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"  [["first_name", "Avner"], ["last_name", "Shanan"], ["email", "avner@gmail.com"], ["phone", "123-456-7890"], ["password_digest", "password"], ["phone_approval", "t"], ["created_at", "2016-08-26 19:31:51.119909"], ["updated_at", "2016-08-26 19:31:51.119909"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "users" ("first_name", "last_name", "email", "phone", "password_digest", "phone_approval", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["first_name", "Alyssa"], ["last_name", "Diaz"], ["email", "alyssa@gmail.com"], ["phone", "123-456-7890"], ["password_digest", "password"], ["phone_approval", "t"], ["created_at", "2016-08-26 19:31:51.121793"], ["updated_at", "2016-08-26 19:31:51.121793"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "users" ("first_name", "last_name", "email", "phone", "password_digest", "phone_approval", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"  [["first_name", "Pete"], ["last_name", "Macaluso"], ["email", "pete@gmail.com"], ["phone", "123-456-7890"], ["password_digest", "password"], ["phone_approval", "t"], ["created_at", "2016-08-26 19:31:51.123564"], ["updated_at", "2016-08-26 19:31:51.123564"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "teams" ("name", "captain_id", "sport_id", "mascot_name", "mascot_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Red Pandas"], ["captain_id", 1], ["sport_id", 1], ["mascot_name", "Panda"], ["mascot_url", "http://seveninchesofyourtime.com/wp-content/uploads/2014/05/Yawning-Red-Panda.jpg"], ["created_at", "2016-08-26 19:31:51.130427"], ["updated_at", "2016-08-26 19:31:51.130427"]]
+  [1m[35m (0.7ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "teams" ("name", "captain_id", "sport_id", "mascot_name", "mascot_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["name", "Salamanders"], ["captain_id", 2], ["sport_id", 1], ["mascot_name", "Salamanders"], ["mascot_url", "https://upload.wikimedia.org/wikipedia/commons/4/41/Salamander_head.png"], ["created_at", "2016-08-26 19:31:51.133666"], ["updated_at", "2016-08-26 19:31:51.133666"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "teams" ("name", "captain_id", "sport_id", "mascot_name", "mascot_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Wolves"], ["captain_id", 3], ["sport_id", 2], ["mascot_name", "Wolves"], ["mascot_url", "http://subtlemix.com/wp-content/uploads/Wolf-un-dominated-wolves-19664762-1600-1200.jpg"], ["created_at", "2016-08-26 19:31:51.135704"], ["updated_at", "2016-08-26 19:31:51.135704"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "sports" ("name", "min_players", "max_players", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["name", "Basketball"], ["min_players", 3], ["max_players", 5], ["created_at", "2016-08-26 19:31:51.144120"], ["updated_at", "2016-08-26 19:31:51.144120"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "sports" ("name", "min_players", "max_players", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Soccer"], ["min_players", 7], ["max_players", 11], ["created_at", "2016-08-26 19:31:51.146514"], ["updated_at", "2016-08-26 19:31:51.146514"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "rosters" ("player_id", "team_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["player_id", 1], ["team_id", 1], ["created_at", "2016-08-26 19:31:51.153536"], ["updated_at", "2016-08-26 19:31:51.153536"]]
+  [1m[36m (6.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "rosters" ("player_id", "team_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["player_id", 2], ["team_id", 2], ["created_at", "2016-08-26 19:31:51.161699"], ["updated_at", "2016-08-26 19:31:51.161699"]]
+  [1m[35m (6.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "rosters" ("player_id", "team_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["player_id", 3], ["team_id", 3], ["created_at", "2016-08-26 19:31:51.169651"], ["updated_at", "2016-08-26 19:31:51.169651"]]
+  [1m[36m (5.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "rosters" ("player_id", "team_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["player_id", 4], ["team_id", 1], ["created_at", "2016-08-26 19:31:51.177208"], ["updated_at", "2016-08-26 19:31:51.177208"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "rosters" ("player_id", "team_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["player_id", 5], ["team_id", 2], ["created_at", "2016-08-26 19:31:51.179969"], ["updated_at", "2016-08-26 19:31:51.179969"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "rosters" ("player_id", "team_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["player_id", 6], ["team_id", 3], ["created_at", "2016-08-26 19:31:51.182333"], ["updated_at", "2016-08-26 19:31:51.182333"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "rosters" ("player_id", "team_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["player_id", 7], ["team_id", 1], ["created_at", "2016-08-26 19:31:51.184488"], ["updated_at", "2016-08-26 19:31:51.184488"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "rosters" ("player_id", "team_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["player_id", 8], ["team_id", 2], ["created_at", "2016-08-26 19:31:51.186057"], ["updated_at", "2016-08-26 19:31:51.186057"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "rosters" ("player_id", "team_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["player_id", 9], ["team_id", 3], ["created_at", "2016-08-26 19:31:51.187691"], ["updated_at", "2016-08-26 19:31:51.187691"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "rosters" ("player_id", "team_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["player_id", 10], ["team_id", 1], ["created_at", "2016-08-26 19:31:51.189213"], ["updated_at", "2016-08-26 19:31:51.189213"]]
+  [1m[35m (0.3ms)[0m  COMMIT
