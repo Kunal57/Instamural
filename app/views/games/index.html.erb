@@ -6,32 +6,16 @@
 	<%= link_to 'Create Game', new_game_path %>
 
 	<% if @games.length > 0 %>
-	<% @games.each do |game| %>
-		<h2><%= link_to game.id, game %></h2>
-		<p><%= game.created_at.strftime("%B, %d, %Y") %></p>
-	<% end %>
-
-	<p>
-	<%= link_to 'Create Game', new_game_path %>
-	</p>
-	<div>
-	<% @games.each do |game| %>
-		<% @home_team = Team.find(game.home_team_id)  %>
-
-		<% @sport = Sport.find(@home_team.sport_id) %>
-
-		<%= @sport.name %> :
-
-		<%= link_to @home_team.name, @home_team %>
-
-		vs.
-		<% if game.away_team_id != nil %>
-			<% @away_team = Team.find(game.away_team_id)  %>
-			<%= link_to @away_team.name, @away_team %>
-		<% else %>
-			TBD
+		<% @games.each do |game| %>
+			<%= game.sport.name %> :
+			<%= link_to game.home_team.name, game.home_team %>
+			vs.
+			<% if game.away_team != nil %>
+				<%= link_to game.away_team.name, away_team %>
+			<% else %>
+				TBD
+			<% end %>
 		<% end %>
-
 	<% end %>
 </div>
 
