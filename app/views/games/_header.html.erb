@@ -1,0 +1,11 @@
+<!-- Main jumbotron for a primary marketing message or call to action -->
+<div class="jumbotron">
+  <div class="container">
+    <br />
+    <h2>Scheduled Games</h2>
+    <p>Manage sports teams online, organize schedules, find players and activity partners, and join ohter athletes in your area.</p>
+    <% if !logged_in? %>
+      <p><a class="btn btn-primary btn-lg" href="<%= new_user_path %>" role="button">Join Now &raquo;</a></p>
+    <% end %>
+  </div>
+</div>

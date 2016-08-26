@@ -1,8 +1,13 @@
-<h1>All Games</h1>
+<%= render 'header' %>
 
-<%= link_to 'Create Game', new_game_path %>
+<div class="container">
 
-<% @games.each do |game| %>
-	<h2><%= link_to game.id, game %></h2>
-	<p><%= game.created_at.strftime("%B, %d, %Y") %></p>
-<% end %>
+	<h1>All Games</h1>
+	<%= link_to 'Create Game', new_game_path %>
+
+	<% @games.each do |game| %>
+		<h2><%= link_to game.id, game %></h2>
+		<p><%= game.created_at.strftime("%B, %d, %Y") %></p>
+	<% end %>
+
+</div>

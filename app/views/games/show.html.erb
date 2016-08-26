@@ -1,16 +1,16 @@
-<h1>
-	Game Number: <%= @game.id %>
-</h1>
+<%= render 'header' %>
 
-<p>
-	Created: <%= time_ago_in_words(@game.created_at) %>
-	| <%= link_to 'Edit', edit_game_path(@game) %>
-	| <%= link_to 'Delete', game_path(@game), method: :delete, data: { confirm: 'Are you sure?'} %>
-</p>
+<div class="container">
 
-<p>
-	Schedule: <%= @game.schedule %>
-</p>
-<p>
-	Location: <%= @game.location %>
-</p>
+	<h1>Game: <%= @game.id %></h1>
+
+	<p>
+		Created: <%= time_ago_in_words(@game.created_at) %>
+		| <%= link_to 'Edit', edit_game_path(@game) %>
+		| <%= link_to 'Delete', game_path(@game), method: :delete, data: { confirm: 'Are you sure?'} %>
+	</p>
+
+	<p>Schedule: <%= @game.schedule %></p>
+	<p>Location: <%= @game.location %></p>
+
+</div>

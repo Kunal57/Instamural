@@ -1,15 +1,18 @@
+<%= render 'header' %>
 
-<h1>Welcome back!</h1>
+<div class="container">
+  <h1>Welcome back!</h1>
 
-<%= render '/errors' %>
+  <%= render '/errors' %>
 
-<%= form_for @user, url: {aciton: "post"} do |f| %>
-  <%= f.label :email %>
-  <%= f.email_field :email %><br>
-  <%= f.label :password %>
-  <%= f.password_field :password %>
-  <%= f.submit 'login' %>
+  <%= form_for @user, url: {aciton: "post"} do |f| %>
+    <%= f.label :email %>
+    <%= f.email_field :email %><br>
+    <%= f.label :password %>
+    <%= f.password_field :password %>
+    <%= f.submit 'login' %>
 
-<% end %>
+  <% end %>
 
-<%= link_to 'create account', new_user_path %>
+  <%= link_to 'create account', new_user_path %>
+</div>

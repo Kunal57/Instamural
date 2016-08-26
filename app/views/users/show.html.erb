@@ -1,37 +1,40 @@
-<h1><%= @user.first_name %>'s Profile page</h1>
-  <div>
-    <% if @user.teams.length > 0 %>
-      <h2>My teams</h2>
-        <div id="teams_info">
-          <% @user.teams.each do |team| %>
-            <h3 id="team_name"><%= team.name %></h3>
-              <p><%= team.record %></p>
-                <% if team.games.length > 0 %>
-                  <h4>Upcoming games:</h4>
-                    <div id="captian_new_game">
-                      <% if @user.id == team.captain_id %>
-                        <%= link_to 'schedule a game', new_game_path %>
-                      <% end %>
-                    </div>
-                        <ul>
-                        <% team.games.each do |game| %>
-                          <li><%= game.datetime %> <%= game.away_team %> vs <%= game.home_team %></li>
-                          <p>at <%= game.location %></p>
+<%= render 'header' %>
+
+<div class="container">
+  <h1><%= @user.first_name %>'s Profile page</h1>
+    <div>
+      <% if @user.teams.length > 0 %>
+        <h2>My teams</h2>
+          <div id="teams_info">
+            <% @user.teams.each do |team| %>
+              <h3 id="team_name"><%= team.name %></h3>
+                <p><%= team.record %></p>
+                  <% if team.games.length > 0 %>
+                    <h4>Upcoming games:</h4>
+                      <div id="captian_new_game">
+                        <% if @user.id == team.captain_id %>
+                          <%= link_to 'schedule a game', new_game_path %>
                         <% end %>
-                      </ul>
-                <% else %>
-                  <h4>No games scheduled for <%= team.name %> at this time.</h4>
-                <% end %>
-          <% end %>
-        </div>
-      <% else %>
-      <h2>Get in the game, it looks like you aren't on a team yet.  Join a team or create your own below!</h2>
+                      </div>
+                          <ul>
+                          <% team.games.each do |game| %>
+                            <li><%= game.datetime %> <%= game.away_team %> vs <%= game.home_team %></li>
+                            <p>at <%= game.location %></p>
+                          <% end %>
+                        </ul>
+                  <% else %>
+                    <h4>No games scheduled for <%= team.name %> at this time.</h4>
+                  <% end %>
+            <% end %>
+          </div>
+        <% else %>
+        <h2>Get in the game, it looks like you aren't on a team yet.  Join a team or create your own below!</h2>
 
-    <% end %>
-  </div>
+      <% end %>
+    </div>
 
-<%= button_to "join a team", teams_path, form_class: "button" %>
-<%= button_to "create a team", new_team_path, form_class: "button" %>
+  <%= button_to "join a team", teams_path, form_class: "button" %>
+  <%= button_to "create a team", new_team_path, form_class: "button" %>
 
-<h2>You have won <%= @user.wins %> out of <%= @use.teams.games_played.length %></h2>
-
+  <h2>You have won <%= @user.wins %> out of <%= @use.teams.games_played.length %></h2>
+</div>

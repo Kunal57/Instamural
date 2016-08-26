@@ -1,16 +1,14 @@
-<h1>
-	<%= @sport.name %>
-</h1>
+<%= render 'header' %>
 
-<p>
-	Created: <%= time_ago_in_words(@sport.created_at) %>
-	| <%= link_to 'Edit', edit_sport_path(@sport) %>
-	| <%= link_to 'Delete', sport_path(@sport), method: :delete, data: { confirm: 'Are you sure?'} %>
-</p>
+<div class="container">
+	<h1><%= @sport.name %></h1>
 
-<p>
-	Max Players: <%= @sport.max_players %>
-</p>
-<p>
-	Min Players: <%= @sport.min_players %>
-</p>
+	<p>
+		Created: <%= time_ago_in_words(@sport.created_at) %>
+		| <%= link_to 'Edit', edit_sport_path(@sport) %>
+		| <%= link_to 'Delete', sport_path(@sport), method: :delete, data: { confirm: 'Are you sure?'} %>
+	</p>
+
+	<p>Max Players: <%= @sport.max_players %></p>
+	<p>Min Players: <%= @sport.min_players %></p>
+</div>
