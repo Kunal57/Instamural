@@ -23,10 +23,18 @@
 		</div>
 	</div>
 
-	<div class="form-group">
-		<%= f.label :datetime, "Date:", class: "col-md-2 control-label" %>
+
+	<div class="form-group"> <!-- Date input -->
+		<%= f.label :date, "Date:", class: "col-md-2 control-label" %>
 		<div class="col-md-4">
-			<%= f.text_field :schedule, class: "form-control", placeholder: "Format as YYYY-MM-DD" %>
+			<input class="form-control" id="date" name="game[schedule]"  placeholder="MM/DD/YYY" type="text"/>
+		</div>
+	</div>
+
+	<div class="form-group">
+		<%= f.label :time, "Time:", class: "col-md-2 control-label" %>
+		<div class="col-md-1">
+			<%= f.text_field :time, class: "form-control" %>
 		</div>
 	</div>
 
@@ -37,3 +45,17 @@
 		</div>
 	</div>
 <% end %>
+
+<script>
+    $(document).ready(function(){
+      var date_input=$('input[name="game[schedule]"');
+      var container=$('.bootstrap-iso form').length>0 ? $('.bootstrap-iso form').parent() : "body";
+      var options={
+        format: 'mm/dd/yyyy',
+        container: container,
+        todayHighlight: true,
+        autoclose: true,
+      };
+      date_input.datepicker(options);
+    })
+</script>

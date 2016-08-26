@@ -54,10 +54,10 @@ Roster.create(player_id: 8, team_id: 2)
 Roster.create(player_id: 9, team_id: 3)
 Roster.create(player_id: 10, team_id: 1)
 
-Game.create(schedule: "2016-08-26 01:00:00", location: "Grand Park", home_team_id: 1, away_team_id: 2, home_team_score: 100, away_team_score: 99)
+Game.create(schedule: "2016-08-26", time: "01:00:00", location: "Grand Park", home_team_id: 1, away_team_id: 2, home_team_score: 100, away_team_score: 99)
 
-Game.create(schedule: "2016-08-27 01:00:00", location: "DBC", home_team_id: 3, away_team_id: 1)
+Game.create(schedule: "2016-08-27", time: "01:00:00", location: "DBC", home_team_id: 3, away_team_id: 1)
 
-Game.create(schedule: "2016-08-28 01:00:00", location: "The River", home_team_id: 2, away_team_id: 3)
+Game.create(schedule: "2016-08-28", time: "01:00:00", location: "The River", home_team_id: 2, away_team_id: 3)
 
-Game.create(schedule: "2016-08-26 01:00:00", location: "Grand Park", home_team_id: 1, away_team_id: 3)
+Game.create(schedule: "2016-08-26", time: "01:00:00", location: "Grand Park", home_team_id: 1, away_team_id: 3)
