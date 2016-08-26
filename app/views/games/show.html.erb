@@ -1,5 +1,7 @@
 <h1>
-	Game Number: <%= @game.id %>
+	<%= @sport.name %> :
+	<%= @home_team.name.capitalize %> vs.
+	<%= @away_team %>
 </h1>
 
 <p>
@@ -7,6 +9,7 @@
 	| <%= link_to 'Edit', edit_game_path(@game) %>
 	| <%= link_to 'Delete', game_path(@game), method: :delete, data: { confirm: 'Are you sure?'} %>
 </p>
+
 
 <p>
 	Schedule: <%= @game.schedule %>

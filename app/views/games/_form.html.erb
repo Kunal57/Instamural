@@ -7,6 +7,11 @@
 			<% end %>
 		</ul>
 	<% end %>
+  <p>
+    <%= f.label :team %>
+    <%= f.collection_select(:home_team_id, Team.all, :id, :name, :prompt => 'Select') %>
+  </p>
+
 	<p>
 		<%= f.label :location %>
 		<%= f.text_field :location %>

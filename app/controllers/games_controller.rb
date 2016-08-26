@@ -20,6 +20,14 @@ class GamesController < ApplicationController
 
 	def show
 		@game = Game.find(params[:id])
+		@home_team = Team.find(@game.home_team_id)
+		@sport = Sport.find(@home_team.sport_id)
+		if @game.away_team_id != nil
+			@away_team = Team.find(@game.away_team_id)
+			@away_team = @away_team.name
+		else
+			@away_team = "TBD"
+		end
 	end
 
 	def edit
@@ -47,7 +55,7 @@ class GamesController < ApplicationController
 	private
 
 		def post_params
-			params.require(:game).permit(:location, :schedule)
+			params.require(:game).permit(:location, :schedule, :home_team_id)
 		end
 
 end
