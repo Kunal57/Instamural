@@ -5,5 +5,5 @@ class Sport < ActiveRecord::Base
 	validates :min_players, numericality: { greater_than: 0, message: "must be greater than 0" }
 
 	has_many :teams
-	has_many :games
+	has_many :games, through: :teams
 end
