@@ -1,4 +1,6 @@
-<%= form_for @team do |f| %>
+
+<%= form_for @team, :html => {:class => "form-horizontal"} do |f| %>
+
 	<% if @team.errors.any? %>
 		<h2><%= pluralize(@team.errors.count, "error") %> prevented this post from saving.</h2>
 		<ul>
@@ -7,30 +9,42 @@
 			<% end %>
 		</ul>
 	<% end %>
-  <p>
-    <%= f.label :sport %>
-    <%= f.collection_select(:sport_id, Sport.all, :id, :name, :prompt => 'Select') %>
-    <%= link_to 'add a sport', new_sport_path  %>
-  </p>
-	<p>
-		<%= f.label :name %>
-		<%= f.text_field :name %>
-	</p>
 
-	<p>
-		<%= f.label :mascot_name %>
-		<%= f.text_field :mascot_name %>
-	</p>
+	<!-- Select Basic -->
+	<div class="form-group">
+	  <label class="col-md-2 control-label" for="selectbasic">Sport:</label>
+	  <div class="col-md-4">
 
+	    <%= f.collection_select :sport_id, Sport.all, :id, :name, {:include_blank => true}, {class: "form-control"} %>
+	    <p>don't see the sport you want? <%= link_to 'add a sport', new_sport_path  %></p>
+	  </div>
+	</div>
 
+	<div class="form-group">
+    <%= f.label :name, "Team name:", class: "col-md-2 control-label" %>
+    <div class="col-md-8">
+      <%= f.text_field :name, class: "form-control" %>
+    </div>
+  </div>
 
-  </p>
-  <p>
-		<%= f.label :mascot_url %>
-		<%= f.text_field :mascot_url %>
-	</p>
+	<div class="form-group">
+		<%= f.label :mascot_name, "Mascot name:", class: "col-md-2 control-label" %>
+		<div class="col-md-8">
+			<%= f.text_field :mascot_name, class: "form-control" %>
+		</div>
+	</div>
 
-	<p>
-		<%= f.submit %>
-	</p>
+	<div class="form-group">
+		<%= f.label :mascot_url, "Mascot url:", class: "col-md-2 control-label" %>
+		<div class="col-md-8">
+			<%= f.text_field :mascot_url, class: "form-control" %>
+		</div>
+	</div>
+
+	<div class="form-group">
+		<label class="col-md-2 control-label" for=""></label>
+		<div class="col-md-6">
+			<%= f.submit "Submit", class: "col-md-2 btn btn-primary" %>
+		</div>
+	</div>
 <% end %>
