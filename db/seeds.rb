@@ -13,7 +13,6 @@
 #   )
 # end
 
-
 User.create(first_name: "Kunal", last_name: "Patel", email: "kunal@gmail.com", phone: "123-456-7890", password_digest: "password", phone_approval: true)
 
 User.create(first_name: "Amy", last_name: "Plant", email: "amy@gmail.com", phone: "123-456-7890", password_digest: "password", phone_approval: true)

@@ -1,17 +1,22 @@
-<h1>All Games</h1>
+<%= render 'header' %>
 
-<p>
-<%= link_to 'Create Game', new_game_path %>
-</p>
-<div>
-<% @games.each do |game| %>
-	<% @home_team = Team.find(game.home_team_id)  %>
+<div class="container">
 
-	<% @sport = Sport.find(@home_team.sport_id) %>
+	<h1>All Games</h1>
+	<%= link_to 'Create Game', new_game_path %>
 
-	<%= @sport.name %> :
+	<% if @games.length > 0 %>
+	<% @games.each do |game| %>
+		<h2><%= link_to game.id, game %></h2>
+		<p><%= game.created_at.strftime("%B, %d, %Y") %></p>
+	<% end %>
 
-	<%= link_to @home_team.name, @home_team %>
+	<p>
+	<%= link_to 'Create Game', new_game_path %>
+	</p>
+	<div>
+	<% @games.each do |game| %>
+		<% @home_team = Team.find(game.home_team_id)  %>
 
 	vs.
 	<% if game.away_team_id != nil %>
@@ -23,6 +28,15 @@
 			<button>Play <%= @home_team.name %></button>
 		</p>
 	<% end %>
+		vs.
+		<% if game.away_team_id != nil %>
+			<% @away_team = Team.find(game.away_team_id)  %>
+			<%= link_to @away_team.name, @away_team %>
+		<% else %>
+			TBD
+		<% end %>
 
-<% end %>
+	<% end %>
 </div>
+
+<%= render '/nav_secondary' %>

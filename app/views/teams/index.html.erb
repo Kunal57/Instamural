@@ -1,5 +1,15 @@
-<ul>
-  <% @teams.each do |team| %>
-    <li><%= link_to team.name, team_path(team) %></li>
-  <% end %>
-</ul>
+<%= render 'header' %>
+
+<div class="container">
+  <div class="row">
+    <% @teams.each do |team| %>
+      <div class="col-md-4">
+        <h2><%= team.name %></h2>
+        <p><%= team.sport.name %></p>
+        <p><a class="btn btn-default" href="<%= team_path(team) %>" role="button">Visit team &raquo;</a></p>
+      </div>
+    <% end %>
+  </div>
+
+  <%= render '/nav_secondary' %>
+</div> <!-- /container -->

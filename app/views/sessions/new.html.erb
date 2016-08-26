@@ -1,15 +1,34 @@
+<%= render 'header' %>
 
-<h1>Welcome back!</h1>
+<div class="container">
+  <h1>Welcome back!</h1>
+  <br />
+  <%= render '/errors' %>
 
-<%= render '/errors' %>
+  <%= form_for @user, url: {aciton: "post"}, :html => {:class => "form-horizontal"} do |f| %>
+  <div class="form-group">
+    <%= f.label :email, "Email:", class: "col-md-2 control-label" %>
+    <div class="col-md-4">
+      <%= f.text_field :email, class: "form-control" %>
+    </div>
+  </div>
 
-<%= form_for @user, url: {aciton: "post"} do |f| %>
-  <%= f.label :email %>
-  <%= f.email_field :email %><br>
-  <%= f.label :password %>
-  <%= f.password_field :password %>
-  <%= f.submit 'login' %>
+  <div class="form-group">
+    <%= f.label :password, "Password:", class: "col-md-2 control-label" %>
+    <div class="col-md-4">
+      <%= f.password_field :password, class: "form-control" %>
+    </div>
+  </div>
 
-<% end %>
+  <div class="form-group">
+    <label class="col-md-2 control-label" for=""></label>
+    <div class="col-md-6">
+      <%= f.submit "Submit", class: "col-md-2 btn btn-primary" %>
+    </div>
+  </div>
 
-<%= link_to 'create account', new_user_path %>
+  <% end %>
+
+</div>
+
+<%= render '/nav_secondary' %>
