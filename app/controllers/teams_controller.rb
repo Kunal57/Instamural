@@ -5,6 +5,7 @@ class TeamsController < ApplicationController
 
   def show
     @team = Team.find_by(id: params[:id])
+    @games = @team.games.sort_by(&:updated_at)
   end
 
   def new
