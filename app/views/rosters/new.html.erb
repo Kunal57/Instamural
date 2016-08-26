@@ -1,8 +1,15 @@
-<h1>Would you like to join <%= @team.name %>?</h1>
+<%= render 'header' %>
+
+<div class="container">
+  <h1>Would you like to join <%= @team.name %>?</h1>
 
 
-<p><%= @team.name %> is a team that plays <%= @team.sport %>. Click <%= link_to('here', team_path(@team)) %>  if you would like to check out their team profile.</p>
-
-<%= button_to "Join Team",team_rosters_path(@team), { action: "create", data: {confirm: "Join this team?"}} %>
+  <span><%= @team.name %> is a team that plays <%= @team.sport.name %>. </span>
 
 
+  <%= button_to "Join Team",team_rosters_path(@team), { action: "create", data: {confirm: "Join this team?"}} %>
+
+
+</div>
+
+<%= render '/nav_secondary' %>

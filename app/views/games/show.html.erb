@@ -4,17 +4,17 @@
 <div class="container">
 
 	<h1>
-		<%= @sport.name %>: <%= @home_team.name.capitalize %> vs. <%= @away_team %>
+		<%= link_to @sport.name, @sport %>: <%= link_to @home_team.name.capitalize, @home_team %> vs. <%= link_to @away_team, @away_team %>
 	</h1>
 
-	<p>
-		Created: <%= time_ago_in_words(@game.created_at) %>
+	<span>
+		Created: <%= time_ago_in_words(@game.created_at) %> ago
 		| <%= link_to 'Edit', edit_game_path(@game) %>
 		| <%= link_to 'Delete', game_path(@game), method: :delete, data: { confirm: 'Are you sure?'} %>
-	</p>
+	</span>
 
-	<p>Schedule: <%= @game.schedule %></p>
-	<p>Location: <%= @game.location %></p>
+	<span>Scheduled: <%= @game.schedule %></span>
+	<span>Location: <%= @game.location %></span>
 
 </div>
 

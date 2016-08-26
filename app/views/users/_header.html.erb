@@ -4,8 +4,10 @@
     <br />
     <h2>Welcome</h2>
     <p>Manage sports teams online, organize schedules, find players and activity partners, and join ohter athletes in your area.</p>
-    <% if !logged_in? %>
-      <p><a class="btn btn-primary btn-lg" href="<%= new_user_path %>" role="button">Join Now &raquo;</a></p>
+    <% if logged_in? %>
+      <p><a class="btn btn-primary btn-lg" href="<%= new_team_path %>" role="button">Create a Team &raquo;</a></p>
+      <p><a class="btn btn-primary btn-lg" href="<%= new_game_path %>" role="button">Add a Game &raquo;</a></p>
+
     <% end %>
   </div>
 </div>
