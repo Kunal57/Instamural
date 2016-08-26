@@ -2082,3 +2082,44 @@ Started GET "/assets/games" for ::1 at 2016-08-26 11:19:07 -0500
 
 
 Started GET "/assets/stats" for ::1 at 2016-08-26 11:19:07 -0500
+
+
+Started GET "/teams" for ::1 at 2016-08-26 14:23:26 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by TeamsController#index as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered teams/_header.html.erb (21.0ms)
+  [1m[36mTeam Load (0.6ms)[0m  [1mSELECT "teams".* FROM "teams"[0m
+  [1m[35mSport Load (0.9ms)[0m  SELECT  "sports".* FROM "sports" WHERE "sports"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "sports".* FROM "sports" WHERE "sports"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mSport Load (0.3ms)[0m  SELECT  "sports".* FROM "sports" WHERE "sports"."id" = $1 LIMIT 1  [["id", 2]]
+  Rendered _nav_secondary.html.erb (0.4ms)
+  Rendered teams/index.html.erb within layouts/application (56.9ms)
+Completed 200 OK in 404ms (Views: 372.5ms | ActiveRecord: 7.1ms)
+
+
+Started GET "/assets/application.self-66996597171ad2c972472e1232057eebe0bc1b4a5a65851fc3f71b9f3280950a.css?body=1" for ::1 at 2016-08-26 14:23:26 -0500
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2016-08-26 14:23:26 -0500
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2016-08-26 14:23:26 -0500
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for ::1 at 2016-08-26 14:23:26 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-08-26 14:23:26 -0500
+
+
+Started GET "/assets/carousel.css" for ::1 at 2016-08-26 14:23:26 -0500
+
+
+Started GET "/assets/teams" for ::1 at 2016-08-26 14:23:27 -0500
+
+
+Started GET "/assets/games" for ::1 at 2016-08-26 14:23:27 -0500
+
+
+Started GET "/assets/sports" for ::1 at 2016-08-26 14:23:27 -0500
