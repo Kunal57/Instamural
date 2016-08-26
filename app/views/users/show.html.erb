@@ -8,7 +8,7 @@
           <div id="teams_info">
             <% @user.teams.each do |team| %>
               <h3 id="team_name"><%= team.name %></h3>
-                <p><%#= team.record %></p>
+                <p><%= team.games_won.length %> wins / <%= team.games_played.length %> played</p>
                   <% if team.games.length > 0 %>
                     <h4>Upcoming games:</h4>
                       <div id="captian_new_game">
@@ -18,7 +18,7 @@
                       </div>
                           <ul>
                           <% team.games.each do |game| %>
-                            <li><%= game.datetime %> <%= game.away_team %> vs <%= game.home_team %></li>
+                            <li><%#= game.datetime %> <%= game.away_team.name %> vs <%= game.home_team.name %></li>
                             <p>at <%= game.location %></p>
                           <% end %>
                         </ul>

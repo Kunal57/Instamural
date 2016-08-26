@@ -10,7 +10,7 @@ class User < ActiveRecord::Base
   def wins
     wins = 0
     self.teams.each do |team|
-      wins += team.wins
+      wins += team.games_won.length
     end
     wins
   end
