@@ -1,11 +1,11 @@
 class User < ActiveRecord::Base
   has_secure_password
 
-  has_many  :attendance
-  has_many  :roster
-  belongs_to  :team, foreign_key: :captian_id
-  has_many  :teams, through: :roster
-  has_many  :games, through: :teams
+  # has_many  :attendance
+  has_many  :rosters, foreign_key: :player_id
+  has_many  :squads, class_name: Team, foreign_key: :captain_id
+  has_many  :teams, through: :rosters
+  # has_many  :games, through: :teams
 
   def wins
     wins = 0
@@ -14,5 +14,14 @@ class User < ActiveRecord::Base
     end
     wins
   end
+
+  def games
+    games = []
+      self.teams.each do |team |
+        games += team.games
+      end
+    games
+  end
+
 
 end
