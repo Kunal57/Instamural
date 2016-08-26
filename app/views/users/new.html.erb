@@ -5,19 +5,61 @@
 
   <div class="errors"> <%= render '/errors' %> </div>
 
-  <%= form_for @user, url: { action: "create" } do |f| %>
-    <%= f.label :first_name %>
-    <%= f.text_field :first_name %>
-    <%= f.label :last_name %>
-    <%= f.text_field :last_name %>
-    <%= f.label :email %>
-    <%= f.email_field :email %>
-    <%= f.label :phone %>
-    <%= f.text_field :phone %>
-    <%= f.label :SMS? %>
-    <%= f.check_box :phone_approval %>
-    <%= f.label :password %>
-    <%= f.password_field :password %>
-    <%= f.submit %>
-  <% end %>
+  <%= form_for @user,url: { action: "create" }, :html => {:class => "form-horizontal"} do |f| %>
+
+
+    <div class="form-group">
+      <%= f.label :first_name, "First name:", class: "col-md-2 control-label" %>
+      <div class="col-md-4">
+        <%= f.text_field :first_name, class: "form-control" %>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <%= f.label :last_name, "Last name:", class: "col-md-2 control-label" %>
+      <div class="col-md-4">
+        <%= f.text_field :last_name, class: "form-control" %>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <%= f.label :email, "Email:", class: "col-md-2 control-label" %>
+      <div class="col-md-4">
+        <%= f.text_field :email, class: "form-control" %>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <%= f.label :phone, "Phone:", class: "col-md-2 control-label" %>
+      <div class="col-md-4">
+        <%= f.text_field :phone, class: "form-control" %>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label class="col-md-5 control-label" for="checkboxes">Send me messages about upcoming games.</label>
+      <div class="col-md-4">
+        <label class="checkbox" for="checkboxes-0">
+          <%= f.check_box :phone_approval %>
+        </label>
+      </div>
+    </div>
+
+      <div class="form-group">
+        <%= f.label :password, "Password:", class: "col-md-2 control-label" %>
+        <div class="col-md-4">
+          <%= f.password_field :password, class: "form-control" %>
+        </div>
+      </div>
+
+      <div class="form-group">
+    		<label class="col-md-2 control-label" for=""></label>
+    		<div class="col-md-6">
+    			<%= f.submit "Submit", class: "col-md-2 btn btn-primary" %>
+    		</div>
+    	</div>
+
+    <% end %>
 </div>
+
+<%= render '/nav_secondary' %>
