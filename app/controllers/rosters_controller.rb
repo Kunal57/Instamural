@@ -6,7 +6,6 @@ class RostersController < ApplicationController
   end
 
   def create
-    p "IM working
     @team = Team.find(params[:team_id])
     @roster = Roster.new(player_id: current_user.id, team_id: @team.id)
     if @roster.save

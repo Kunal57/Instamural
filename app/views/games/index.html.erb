@@ -3,15 +3,15 @@
 <div class="container">
 
 	<h1>All Games</h1>
-	<%= link_to 'Create Game', new_game_path %>
 
 	<% if @games.length > 0 %>
 		<% @games.each do |game| %>
-			<%= game.sport.name %> :
+
+			<h2><%= link_to game.sport.name, game %></h2>
 			<%= link_to game.home_team.name, game.home_team %>
 			vs.
 			<% if game.away_team != nil %>
-				<%= link_to game.away_team.name, away_team %>
+				<%= link_to game.away_team.name, game.away_team %>
 			<% else %>
 				TBD
 			<% end %>

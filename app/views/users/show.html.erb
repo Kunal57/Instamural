@@ -2,24 +2,19 @@
 
 <div class="container">
   <h1><%= @user.first_name %>'s Profile page</h1>
+  <h3>You have won <%= @user.wins %> out of <%= @user.player_games_played.length %></h3>
     <div>
       <% if @user.teams.length > 0 %>
-        <h2>My teams</h2>
+        <h2><%= @user.first_name %>'s teams</h2>
           <div id="teams_info">
             <% @user.teams.each do |team| %>
               <h3 id="team_name"><%= team.name %></h3>
-                <p><%= team.games_won.length %> wins / <%= team.games_played.length %> played</p>
+                <span><%= team.games_won.length %> wins / <%= team.games_played.length %> played</span>
                   <% if team.games.length > 0 %>
                     <h4>Upcoming games:</h4>
-                      <div id="captian_new_game">
-                        <% if @user.id == team.captain_id %>
-                          <%= link_to 'schedule a game', new_game_path %>
-                        <% end %>
-                      </div>
                           <ul>
                           <% team.games.each do |game| %>
-                            <li><%#= game.datetime %> <%= game.away_team.name %> vs <%= game.home_team.name %></li>
-                            <p>at <%= game.location %></p>
+                            <li><%#= game.datetime %> <span><%= link_to game.home_team.name, game.home_team %> vs <%= link_to game.away_team.name, game.away_team %> at <%= game.location %></span></li>
                           <% end %>
                         </ul>
                   <% else %>
@@ -32,11 +27,6 @@
 
       <% end %>
     </div>
-
-  <%= button_to "join a team", teams_path, form_class: "button" %>
-  <%= button_to "create a team", new_team_path, form_class: "button" %>
-
-  <h2>You have won <%= @user.wins %> out of <%= @user.player_games_played.length %></h2>
 </div>
 
 <%= render '/nav_secondary' %>

@@ -2,7 +2,8 @@
 <%= render 'header' %>
 
 <div class="container">
-  <span><%= @team.name %>: <%= @team.sport.name %></span>
+  <h1><%= @team.name %></h1>
+  <h2><%= link_to @team.sport.name, sport_path %></h2>
   <!-- Need Game model done to calculate -->
   <span>Games Won: <%#=  %></span>
   <div>
@@ -14,33 +15,53 @@
     <%# end %>
   </div>
 
-  <p>Upcoming Games:</p>
+  <h3>Upcoming Games</h3>
   <!-- Need Game model finished up to calculate -->
   <ul>
     <% @games.each do |game| %>
+      <% if game.played? == false %>
       <li>
         <% home = Team.find_by(id: game.home_team_id) %>
         <% away = Team.find_by(id: game.away_team_id) %>
-        <span>-<%= home.name %> vs <%= away.name %></span>
-        <span>-at: <%= game.location %></span>
-        <span>-when: <%= game.schedule %></span>
+        <span><%= link_to home.name, home %> vs<% if away == nil %>
+          TBD
+        <% else %>
+          <%= link_to away.name, away %> at <%= game.location %> on <%= game.schedule %>
+        <% end %></span>
+      </li>
+      <% end %>
+    <% end %>
+  </ul>
+
+  <h3>Games Played</h3>
+  <!-- Need Game model finished up to calculate -->
+  <ul>
+    <% @games.each do |game| %>
+    <% if game.played? == true %>
+      <li>
+        <% home = Team.find_by(id: game.home_team_id) %>
+        <% away = Team.find_by(id: game.away_team_id) %>
+        <span><%= link_to home.name, home %> vs
+        <% if away == nil %>
+          TBD
+        <% else %>
+          <%= link_to away.name, away %> at <%= game.location %> on <%= game.schedule %>
+        <% end %>
+      </span>
+      <% end %>
       </li>
     <% end %>
   </ul>
 
-  <p>Games Played:</p>
-  <!-- Need Game model finished up to calculate -->
+  <h3>Players</h3>
   <ul>
-    <% @games.each do |game| %>
+    <% @team.players.each do |player| %>
       <li>
-        <% home = Team.find_by(id: game.home_team_id) %>
-        <% away = Team.find_by(id: game.away_team_id) %>
-        <span>-<%= home.name %> vs <%= away.name %></span>
-        <span>-at: <%= game.location %></span>
-        <span>-when: <%= game.schedule %></span>
+        <span><%= link_to player.first_name, player %></span>
       </li>
     <% end %>
   </ul>
+  <span><%= link_to "Join this Team", new_team_roster_path(@team) %></span>
 </div>
 
 <%= render '/nav_secondary' %>

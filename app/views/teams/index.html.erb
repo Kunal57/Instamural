@@ -4,8 +4,8 @@
   <div class="row">
     <% @teams.each do |team| %>
       <div class="col-md-4">
-        <h2><%= team.name %></h2>
-        <p><%= team.sport.name %></p>
+        <h2><%= link_to team.name, team %></h2>
+        <p><%= link_to team.sport.name, team.sport %></p>
         <p><a class="btn btn-default" href="<%= team_path(team) %>" role="button">Visit team &raquo;</a></p>
       </div>
     <% end %>
