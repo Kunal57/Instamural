@@ -1,6 +1,6 @@
 # Instamural
 
-An application for students on college campuses to set up personal intermural leagues, giving them the ability to create teams and schedule games.
+Instamural is your source for everything intramural sports and fitness. Check game schedules and results, communicate with team members, and receive real-time campus recreation updates – directly through our web application. Instamural makes managing your college intramural sports and rec life easier than ever!
 
 ### Team
 
